@@ -1,0 +1,58 @@
+{
+  "question_id": "K1",
+  "category": "knowledge",
+  "condition": "direct",
+  "question": "猪只姿态识别常用的深度学习方法有哪些？请给出出处。",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "pmc_8147168",
+      "pmc_7070994",
+      "pmc_6749226"
+    ],
+    "keyword_hits": {
+      "pmc_8147168": {
+        "YOLOv5": 10
+      },
+      "pmc_7070994": {
+        "two-stream": 15,
+        "Faster R-CNN": 2
+      },
+      "pmc_6749226": {
+        "Faster R-CNN": 22
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：YOLOv5、two-stream、Faster R-CNN",
+  "image_path": null,
+  "ok": true,
+  "answer": "猪只姿态识别常用的深度学习方法主要包括以下几种：\n\n1. **卷积神经网络(CNN)**：用于提取猪只图像的特征，是姿态识别的基础架构。CNN能够有效捕捉图像的空间特征，适用于猪只姿态识别中的特征提取任务。\n\n2. **关键点检测模型**：如HRNet(High-Resolution Network)，专为人体姿态识别设计，但也被应用于猪只姿态识别。HRNet能够保持高分辨率特征，适合检测猪只的关键解剖点。\n\n3. **姿态估计模型**：如OpenPose，最初为人体姿态设计，后被迁移到猪只姿态识别领域。这类模型通过热图估计猪只关节位置。\n\n4. **Transformer-based方法**：近年来，基于Transformer的视觉模型也被应用于猪只姿态识别，利用其自注意力机制捕捉长距离依赖关系。\n\n5. **多任务学习框架**：结合姿态估计和行为识别的多任务模型，能够同时识别猪只姿态和行为状态。\n\n出处说明：\n以上方法主要来源于计算机视觉领域的研究，被迁移应用到猪只姿态识别任务中。具体应用案例可见于以下研究：\n\n- \"Deep Learning for Animal Pose Estimation: A Review\" (无法核实具体作者和发表期刊)\n- \"PigPose: A Dataset and Method for 2D Pig Pose Estimation\" (无法核实具体发表信息)\n- \"Application of Deep Learning in Livestock Monitoring: A Review\" (无法核实具体发表信息)\n\n注：由于无法核实具体的文献出处和详细研究内容，以上信息基于计算机视觉和动物行为监测领域的通用知识整理，可能不完全准确。如需精确的文献引用，建议查阅相关领域的最新研究论文。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 459,
+    "output_tokens": 345,
+    "elapsed_seconds": 16.75,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "dfad32b7cb0d2e1f12f1b247ac8179c6a68b5978d53a2f2b9e8931108af9815f",
+    "chars": 696,
+    "tools": [],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 16.755,
+  "finished_at": "2026-11-07T17:51:44+08:00"
+}

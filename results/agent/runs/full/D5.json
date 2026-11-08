@@ -1,0 +1,84 @@
+{
+  "question_id": "D5",
+  "category": "data",
+  "condition": "full",
+  "question": "P2-007 在这 30 天里体重从多少长到了多少？",
+  "answerable": true,
+  "expected": {
+    "numbers": [
+      {
+        "label": "起始体重",
+        "value": 81.14,
+        "tol": 1.2171,
+        "unit": "kg"
+      },
+      {
+        "label": "结束体重",
+        "value": 97.78,
+        "tol": 1.4667,
+        "unit": "kg"
+      }
+    ],
+    "tokens": [
+      "P2-007"
+    ]
+  },
+  "evidence_hint": "query_pig_records 返回的首末体重",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据查询结果，P2-007这头猪在最近30天（2026-10-08至2026-11-06）的体重变化情况如下：\n\n**起始体重**：81.14 kg（2026-10-08）\n**结束体重**：97.78 kg（2026-11-06）\n**总增重**：16.64 kg\n**日均增重**：约0.555 kg/天\n\n这头猪在这30天内保持了稳定的增重趋势，从81.14公斤增长到97.78公斤，总增重16.64公斤，日均增重约0.555公斤，表现良好。\n\n*注：数据为模拟数据，仅用于验证工具调用链路与报表口径，不代表任何真实养殖场，不可用于生产决策。*",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [
+    {
+      "tool": "query_pig_records",
+      "args": {
+        "pig_id": "P2-007",
+        "start_date": "2026-10-08",
+        "end_date": "2026-11-06",
+        "metrics": [
+          "weight_kg"
+        ]
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": true,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 2,
+    "tool_calls": 1,
+    "input_tokens": 5176,
+    "output_tokens": 253,
+    "elapsed_seconds": 53.27,
+    "used_tools": [
+      "query_pig_records"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 53.267,
+  "finished_at": "2026-11-07T18:24:59+08:00"
+}

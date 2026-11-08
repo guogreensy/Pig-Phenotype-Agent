@@ -1,0 +1,56 @@
+{
+  "question_id": "D6",
+  "category": "data",
+  "condition": "direct",
+  "question": "这个猪场一共有几个栏位、多少头猪？",
+  "answerable": true,
+  "expected": {
+    "numbers": [
+      {
+        "label": "栏位数",
+        "value": 4.0,
+        "tol": 0.5,
+        "unit": "个"
+      },
+      {
+        "label": "猪只数",
+        "value": 48.0,
+        "tol": 0.5,
+        "unit": "头"
+      }
+    ],
+    "tokens": []
+  },
+  "evidence_hint": "list_pens 返回的栏位与猪只数量（4 个栏位，共 48 头猪）",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据模拟数据，这个猪场共有4个栏位，48头猪。\n\n数据为模拟，时间范围为2026-10-08至2026-11-06。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 459,
+    "output_tokens": 38,
+    "elapsed_seconds": 10.78,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "dfad32b7cb0d2e1f12f1b247ac8179c6a68b5978d53a2f2b9e8931108af9815f",
+    "chars": 696,
+    "tools": [],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 10.779,
+  "finished_at": "2026-11-07T17:56:20+08:00"
+}

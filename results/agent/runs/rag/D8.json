@@ -1,0 +1,215 @@
+{
+  "question_id": "D8",
+  "category": "data",
+  "condition": "rag",
+  "question": "P4-003 这头猪最近 7 天的活动指数是否偏低？",
+  "answerable": true,
+  "expected": {
+    "numbers": [],
+    "tokens": [
+      "P4-003"
+    ],
+    "z_score": -5.099
+  },
+  "evidence_hint": "注入场景 low_activity_P4-003；构建时验证 z < -3（实测 z=-5.10）",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据检索到的知识库信息，我无法确定P4-003这头猪最近7天的活动指数是否偏低，因为：\n\n1. 检索结果中没有找到关于P4-003这头猪的具体活动数据\n2. 没有找到明确的猪只活动指数正常范围或偏低判断标准\n3. 虽然检索到了一些关于猪只活动监测与健康关系的文献，但没有具体的数值标准来判断活动指数是否偏低\n\n知识库中提到猪只活动监测对健康监测有价值，异常或受限的活动模式可能表明存在潜在问题，但没有提供具体的数值标准来判断活动指数是否偏低。\n\n要回答P4-003这头猪最近7天的活动指数是否偏低，需要：\n1. 获取P4-003这头猪最近7天的具体活动指数数据\n2. 有明确的猪只活动指数正常范围或偏低判断标准",
+  "stop_reason": "forced_answer",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "pmc_7423952#0055",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Animals and experimental design",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.5236
+    },
+    {
+      "index": 2,
+      "chunk_id": "pmc_6749226#0040",
+      "title": "Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs",
+      "section": "3. Experimental Results and Discussion",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749226/",
+      "license": "CC BY",
+      "score": 0.4851
+    },
+    {
+      "index": 3,
+      "chunk_id": "pmc_5730557#0050",
+      "title": "Automated tracking to measure behavioural changes in pigs for health and welfare monitoring",
+      "section": "Animals",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5730557/",
+      "license": "CC BY",
+      "score": 0.4696
+    },
+    {
+      "index": 4,
+      "chunk_id": "pmc_11013991#0088",
+      "title": "Pattern Mining-Based Pig Behavior Analysis for Health and Welfare Monitoring",
+      "section": "3.3.3. Pig Behavior Analysis Results",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11013991/",
+      "license": "CC BY",
+      "score": 0.4687
+    },
+    {
+      "index": 5,
+      "chunk_id": "local_README#0001",
+      "title": "README.md",
+      "section": "",
+      "url": "data/README.md",
+      "license": "本项目自有文档",
+      "score": 0.4686
+    },
+    {
+      "index": 6,
+      "chunk_id": "pmc_5730557#0037",
+      "title": "Automated tracking to measure behavioural changes in pigs for health and welfare monitoring",
+      "section": "Discussion",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5730557/",
+      "license": "CC BY",
+      "score": 0.4949
+    },
+    {
+      "index": 7,
+      "chunk_id": "pmc_5110645#0024",
+      "title": "Early detection of health and welfare compromises through automated detection of behavioural changes in pigs",
+      "section": "Towards quantification of behavioural changes",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5110645/",
+      "license": "CC BY",
+      "score": 0.4943
+    },
+    {
+      "index": 8,
+      "chunk_id": "pmc_11252330#0023",
+      "title": "Deep learning pose detection model for sow locomotion",
+      "section": "Video preprocessing and annotation",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11252330/",
+      "license": "CC BY",
+      "score": 0.4899
+    },
+    {
+      "index": 9,
+      "chunk_id": "pmc_8614322#0046",
+      "title": "Deep-Learning-Based Automatic Monitoring of Pigs’ Physico-Temporal Activities at Different Greenhouse Gas Concentrations",
+      "section": "2.4.3. Pig-Moving Detection and Activity-Scoring Algorithm",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8614322/",
+      "license": "CC BY",
+      "score": 0.4877
+    },
+    {
+      "index": 10,
+      "chunk_id": "pmc_5110645#0007",
+      "title": "Early detection of health and welfare compromises through automated detection of behavioural changes in pigs",
+      "section": "Pig behaviours associated with compromised health and welfare",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5110645/",
+      "license": "CC BY",
+      "score": 0.4751
+    },
+    {
+      "index": 11,
+      "chunk_id": "pmc_11833201#0044",
+      "title": "RGB-based machine vision for enhanced pig disease symptoms monitoring and health management: a review",
+      "section": "Early detection and tracking of disease symptoms",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11833201/",
+      "license": "CC BY-NC",
+      "score": 0.4541
+    },
+    {
+      "index": 12,
+      "chunk_id": "pmc_11013991#0050",
+      "title": "Pattern Mining-Based Pig Behavior Analysis for Health and Welfare Monitoring",
+      "section": "2.4.3. Analysis of Pigs’ Movements",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11013991/",
+      "license": "CC BY",
+      "score": 0.5339
+    },
+    {
+      "index": 13,
+      "chunk_id": "pmc_11013991#0105",
+      "title": "Pattern Mining-Based Pig Behavior Analysis for Health and Welfare Monitoring",
+      "section": "5. Conclusions",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11013991/",
+      "license": "CC BY",
+      "score": 0.533
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "活动指数 猪只 P4-003"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 359.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "猪只活动指数 正常范围 标准"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 406.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "猪只活动指数 偏低 标准"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 453.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "猪只活动指数 正常值 偏低判断"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 390.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "猪只活动指数 健康监测 异常"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 375.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": true
+  },
+  "metrics": {
+    "model_calls": 6,
+    "tool_calls": 5,
+    "input_tokens": 22036,
+    "output_tokens": 339,
+    "elapsed_seconds": 27.58,
+    "used_tools": [
+      "search_knowledge"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "73157381dd888bd98cdd9d27c39737fcfb1ca289e130a8d33b43693b2d97e846",
+    "chars": 799,
+    "tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 27.57,
+  "finished_at": "2026-11-07T18:10:40+08:00"
+}

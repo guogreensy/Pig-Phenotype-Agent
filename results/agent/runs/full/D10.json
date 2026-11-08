@@ -1,0 +1,91 @@
+{
+  "question_id": "D10",
+  "category": "data",
+  "condition": "full",
+  "question": "P1 栏最近 7 天的平均躺卧比例是多少？",
+  "answerable": true,
+  "expected": {
+    "numbers": [
+      {
+        "label": "P1 平均躺卧比例",
+        "value": 0.585,
+        "tol": 0.02,
+        "unit": ""
+      }
+    ],
+    "tokens": [
+      "P1"
+    ]
+  },
+  "evidence_hint": "比例型指标，检验小数精度",
+  "image_path": null,
+  "ok": true,
+  "answer": "P1 栏最近 7 天（2026-10-31 至 2026-11-06）的平均躺卧比例是 58.5%。\n\n这个数据基于模拟数据集，共包含 84 条记录。躺卧比例反映了猪只在栏位中的休息状态，58.5% 的比例表明猪只在该时间段内有较多时间处于躺卧状态。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [
+    {
+      "tool": "aggregate_metric",
+      "args": {
+        "metric": "lying_ratio",
+        "group_by": "pen",
+        "start_date": "2026-10-31",
+        "end_date": "2026-11-06",
+        "pen_id": "P1",
+        "stat": "mean"
+      },
+      "ok": false,
+      "error": "不支持的参数 pen_id",
+      "ms": 0.0
+    },
+    {
+      "tool": "aggregate_metric",
+      "args": {
+        "metric": "lying_ratio",
+        "group_by": "pen",
+        "start_date": "2026-10-31",
+        "end_date": "2026-11-06",
+        "stat": "mean"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": true,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 3,
+    "tool_calls": 2,
+    "input_tokens": 6204,
+    "output_tokens": 231,
+    "elapsed_seconds": 20.53,
+    "used_tools": [
+      "aggregate_metric"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 20.532,
+  "finished_at": "2026-11-07T18:26:37+08:00"
+}

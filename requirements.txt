@@ -1,0 +1,30 @@
+# 依赖说明
+#
+# 本项目在当前机器上「零安装」即可运行：下列依赖在 data_science 环境中已存在，
+# 直接使用该环境的解释器运行即可，无需 pip install。
+#
+#   C:\Users\Programs\Miniconda3\envs\data_science\python.exe
+#
+# 已实测存在的版本（Python 3.9.25）：
+requests==2.32.5          # HTTP 调用视觉模型 API
+pillow==11.3.0            # 图片校验、EXIF 纠正、缩放与裁剪
+pandas==2.3.3             # 实验结果表格处理
+numpy==1.26.4
+scikit-learn==1.5.1       # 指标交叉核对（实现中为纯 Python 手算，测试中用它对照）
+matplotlib==3.9.2         # 实验图表
+seaborn==0.13.2
+openpyxl==3.1.5           # 可选：导出 xlsx
+tornado==6.5.1            # Web 服务（已随 Jupyter 安装）
+
+# ---------------------------------------------------------------------------
+# 需求说明书建议但本机未安装、且已有等价替代的：
+#
+# gradio        -> 用 tornado + 原生 JS 单页替代。
+#                  原因：gradio 4.44.1 要求 pillow<11，会降级现有 pillow 11.3.0
+#                  并影响同环境下的其它项目；新版 gradio 要求 Python>=3.10。
+# pytest        -> 用标准库 unittest 替代（等价覆盖，零安装）。
+# python-dotenv -> 用 config.load_dotenv 自行解析 .env（约 30 行）。
+#
+# 如确需安装（需先征得使用人同意），最小集合为：
+#   pip install gradio==4.44.1 pytest python-dotenv
+# 安装前请注意 gradio 会把 pillow 降级到 <11。

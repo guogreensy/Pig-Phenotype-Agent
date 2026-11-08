@@ -1,0 +1,259 @@
+{
+  "question_id": "U3",
+  "category": "unanswerable",
+  "condition": "full",
+  "question": "这个猪场的疫苗免疫程序是怎样的？",
+  "answerable": false,
+  "expected": {
+    "doc_ids": [],
+    "must_admit": true
+  },
+  "evidence_hint": "知识库只泛泛提到疫苗研究，没有任何免疫程序内容",
+  "image_path": null,
+  "ok": true,
+  "answer": "经过多次搜索，我在知识库中没有找到关于这个猪场具体疫苗免疫程序的信息。搜索结果主要涉及猪行为分析、姿态识别、健康监测等技术内容，但没有包含具体的疫苗免疫计划或接种程序。\n\n如果您需要了解该猪场的疫苗免疫程序，建议您：\n1. 查询养殖场的实际管理文档或记录\n2. 咨询养殖场的技术管理人员\n3. 查看养殖场的标准操作规程(SOP)\n\n数据为模拟，以上信息基于当前知识库检索结果，无法提供具体的疫苗免疫程序细节。",
+  "stop_reason": "forced_answer",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "local_experiment_report#0004",
+      "title": "experiment_report.md",
+      "section": "6. 实验流程与控制变量",
+      "url": "docs/experiment_report.md",
+      "license": "本项目自有文档",
+      "score": 0.3379
+    },
+    {
+      "index": 2,
+      "chunk_id": "local_technical_report#0003",
+      "title": "technical_report.md",
+      "section": "3. 技术选型与理由",
+      "url": "docs/technical_report.md",
+      "license": "本项目自有文档",
+      "score": 0.331
+    },
+    {
+      "index": 3,
+      "chunk_id": "pmc_11013991#0056",
+      "title": "Pattern Mining-Based Pig Behavior Analysis for Health and Welfare Monitoring",
+      "section": "2.4.5. Pigs’ Behavioral Sequential Patterns",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11013991/",
+      "license": "CC BY",
+      "score": 0.3291
+    },
+    {
+      "index": 4,
+      "chunk_id": "local_README#0003",
+      "title": "README.md",
+      "section": "4. 文件说明",
+      "url": "data/README.md",
+      "license": "本项目自有文档",
+      "score": 0.3238
+    },
+    {
+      "index": 5,
+      "chunk_id": "pmc_7423952#0020",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Estimating anchor boxes",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.3189
+    },
+    {
+      "index": 6,
+      "chunk_id": "local_technical_report#0008",
+      "title": "technical_report.md",
+      "section": "6.2 逐样本记录字段",
+      "url": "docs/technical_report.md",
+      "license": "本项目自有文档",
+      "score": 0.3667
+    },
+    {
+      "index": 7,
+      "chunk_id": "pmc_11013991#0051",
+      "title": "Pattern Mining-Based Pig Behavior Analysis for Health and Welfare Monitoring",
+      "section": "2.4.3. Analysis of Pigs’ Movements",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11013991/",
+      "license": "CC BY",
+      "score": 0.3555
+    },
+    {
+      "index": 8,
+      "chunk_id": "pmc_8147168#0006",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.4748
+    },
+    {
+      "index": 9,
+      "chunk_id": "pmc_11833201#0007",
+      "title": "RGB-based machine vision for enhanced pig disease symptoms monitoring and health management: a review",
+      "section": "INTRODUCTION",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11833201/",
+      "license": "CC BY-NC",
+      "score": 0.4743
+    },
+    {
+      "index": 10,
+      "chunk_id": "pmc_6749226#0012",
+      "title": "Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749226/",
+      "license": "CC BY",
+      "score": 0.4598
+    },
+    {
+      "index": 11,
+      "chunk_id": "pmc_11833201#0012",
+      "title": "RGB-based machine vision for enhanced pig disease symptoms monitoring and health management: a review",
+      "section": "INTRODUCTION",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11833201/",
+      "license": "CC BY-NC",
+      "score": 0.4596
+    },
+    {
+      "index": 12,
+      "chunk_id": "pmc_5110645#0001",
+      "title": "Early detection of health and welfare compromises through automated detection of behavioural changes in pigs",
+      "section": "",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5110645/",
+      "license": "CC BY",
+      "score": 0.4713
+    },
+    {
+      "index": 13,
+      "chunk_id": "pmc_11013991#0105",
+      "title": "Pattern Mining-Based Pig Behavior Analysis for Health and Welfare Monitoring",
+      "section": "5. Conclusions",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11013991/",
+      "license": "CC BY",
+      "score": 0.4701
+    },
+    {
+      "index": 14,
+      "chunk_id": "pmc_11833201#0013",
+      "title": "RGB-based machine vision for enhanced pig disease symptoms monitoring and health management: a review",
+      "section": "INTRODUCTION",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11833201/",
+      "license": "CC BY-NC",
+      "score": 0.4508
+    },
+    {
+      "index": 15,
+      "chunk_id": "pmc_11013991#0099",
+      "title": "Pattern Mining-Based Pig Behavior Analysis for Health and Welfare Monitoring",
+      "section": "3.3.3. Pig Behavior Analysis Results",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11013991/",
+      "license": "CC BY",
+      "score": 0.4688
+    },
+    {
+      "index": 16,
+      "chunk_id": "pmc_8614322#0045",
+      "title": "Deep-Learning-Based Automatic Monitoring of Pigs’ Physico-Temporal Activities at Different Greenhouse Gas Concentrations",
+      "section": "2.4.2. Pig-Tracking Algorithm",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8614322/",
+      "license": "CC BY",
+      "score": 0.4667
+    },
+    {
+      "index": 17,
+      "chunk_id": "pmc_11013991#0049",
+      "title": "Pattern Mining-Based Pig Behavior Analysis for Health and Welfare Monitoring",
+      "section": "2.4.2. Analysis of Locations Where Aggressive Behaviors Occur",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11013991/",
+      "license": "CC BY",
+      "score": 0.4647
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "疫苗免疫程序",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 406.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "免疫程序 疫苗接种",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 406.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "猪场 养殖管理 疫苗",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 469.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "猪病防控 免疫计划",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 656.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "猪场管理 养殖流程",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 781.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": true
+  },
+  "metrics": {
+    "model_calls": 6,
+    "tool_calls": 5,
+    "input_tokens": 29405,
+    "output_tokens": 278,
+    "elapsed_seconds": 33.27,
+    "used_tools": [
+      "search_knowledge"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 33.252,
+  "finished_at": "2026-11-07T18:42:22+08:00"
+}

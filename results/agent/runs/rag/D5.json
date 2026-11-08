@@ -1,0 +1,286 @@
+{
+  "question_id": "D5",
+  "category": "data",
+  "condition": "rag",
+  "question": "P2-007 在这 30 天里体重从多少长到了多少？",
+  "answerable": true,
+  "expected": {
+    "numbers": [
+      {
+        "label": "起始体重",
+        "value": 81.14,
+        "tol": 1.2171,
+        "unit": "kg"
+      },
+      {
+        "label": "结束体重",
+        "value": 97.78,
+        "tol": 1.4667,
+        "unit": "kg"
+      }
+    ],
+    "tokens": [
+      "P2-007"
+    ]
+  },
+  "evidence_hint": "query_pig_records 返回的首末体重",
+  "image_path": null,
+  "ok": true,
+  "answer": "很抱歉，我在知识库中未能找到关于P2-007号猪只在30天内体重变化的具体数据。我检索了多个相关关键词，包括猪只个体识别、体重监测、耳标识别等，但没有找到包含P2-007号猪只具体体重记录的信息。\n\n知识库中提到了一些关于猪只体重监测的一般性信息，如：\n- RFID技术可用于识别猪只个体特征\n- 体重监测对早期发现健康问题很重要\n- 猪只行为监测可以辅助健康评估\n\n但没有找到P2-007号猪只的具体体重数据。如果您需要查询该猪只的体重信息，可能需要直接访问养殖场的数据库或记录系统。",
+  "stop_reason": "forced_answer",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "pmc_7423952#0016",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Group-wise measures for the food restriction experiment",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.3821
+    },
+    {
+      "index": 2,
+      "chunk_id": "pmc_11252330#0057",
+      "title": "Deep learning pose detection model for sow locomotion",
+      "section": "Modelling",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11252330/",
+      "license": "CC BY",
+      "score": 0.3766
+    },
+    {
+      "index": 3,
+      "chunk_id": "pmc_7070994#0017",
+      "title": "Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks",
+      "section": "2.1.1. Data Acquisition",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7070994/",
+      "license": "CC BY",
+      "score": 0.3745
+    },
+    {
+      "index": 4,
+      "chunk_id": "local_data_card#0002",
+      "title": "data_card.md",
+      "section": "标签体系",
+      "url": "docs/data_card.md",
+      "license": "本项目自有文档",
+      "score": 0.3734
+    },
+    {
+      "index": 5,
+      "chunk_id": "pmc_7423952#0020",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Estimating anchor boxes",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.3728
+    },
+    {
+      "index": 6,
+      "chunk_id": "pmc_8147168#0047",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "4.3. Discussion",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.5081
+    },
+    {
+      "index": 7,
+      "chunk_id": "local_technical_report#0001",
+      "title": "technical_report.md",
+      "section": "",
+      "url": "docs/technical_report.md",
+      "license": "本项目自有文档",
+      "score": 0.5001
+    },
+    {
+      "index": 8,
+      "chunk_id": "local_README#0001",
+      "title": "README.md",
+      "section": "",
+      "url": "data/README.md",
+      "license": "本项目自有文档",
+      "score": 0.4983
+    },
+    {
+      "index": 9,
+      "chunk_id": "pmc_11833201#0062",
+      "title": "RGB-based machine vision for enhanced pig disease symptoms monitoring and health management: a review",
+      "section": "Monitoring behavior and activity for disease prevention",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11833201/",
+      "license": "CC BY-NC",
+      "score": 0.496
+    },
+    {
+      "index": 10,
+      "chunk_id": "pmc_11635830#0040",
+      "title": "Determining the posture and location of pigs using an object detection model under different lighting conditions",
+      "section": "Detection And Localization Of Pigs",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11635830/",
+      "license": "CC BY-NC-ND",
+      "score": 0.4905
+    },
+    {
+      "index": 11,
+      "chunk_id": "pmc_11013991#0105",
+      "title": "Pattern Mining-Based Pig Behavior Analysis for Health and Welfare Monitoring",
+      "section": "5. Conclusions",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11013991/",
+      "license": "CC BY",
+      "score": 0.4636
+    },
+    {
+      "index": 12,
+      "chunk_id": "pmc_8147168#0002",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "Abstract",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.4629
+    },
+    {
+      "index": 13,
+      "chunk_id": "pmc_11833201#0075",
+      "title": "RGB-based machine vision for enhanced pig disease symptoms monitoring and health management: a review",
+      "section": "Integrating deep learning and RGB Imaging techniques for enhanced detection and monitoring",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11833201/",
+      "license": "CC BY-NC",
+      "score": 0.4618
+    },
+    {
+      "index": 14,
+      "chunk_id": "pmc_11013991#0024",
+      "title": "Pattern Mining-Based Pig Behavior Analysis for Health and Welfare Monitoring",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11013991/",
+      "license": "CC BY",
+      "score": 0.4499
+    },
+    {
+      "index": 15,
+      "chunk_id": "pmc_7423952#0055",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Animals and experimental design",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.4942
+    },
+    {
+      "index": 16,
+      "chunk_id": "pmc_11013991#0012",
+      "title": "Pattern Mining-Based Pig Behavior Analysis for Health and Welfare Monitoring",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11013991/",
+      "license": "CC BY",
+      "score": 0.4752
+    },
+    {
+      "index": 17,
+      "chunk_id": "pmc_5110645#0036",
+      "title": "Early detection of health and welfare compromises through automated detection of behavioural changes in pigs",
+      "section": "Other modalities",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5110645/",
+      "license": "CC BY",
+      "score": 0.5172
+    },
+    {
+      "index": 18,
+      "chunk_id": "pmc_8147168#0008",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.4917
+    },
+    {
+      "index": 19,
+      "chunk_id": "pmc_11252330#0011",
+      "title": "Deep learning pose detection model for sow locomotion",
+      "section": "Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11252330/",
+      "license": "CC BY",
+      "score": 0.4883
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "P2-007 体重 30天 增长",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 437.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "P2-007 猪只 体重 数据",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 437.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "猪只体重数据 30天 增长记录",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 453.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "猪只体重记录表 个体识别",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 313.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "猪只个体识别 耳标 体重监测",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 8796.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": true
+  },
+  "metrics": {
+    "model_calls": 6,
+    "tool_calls": 5,
+    "input_tokens": 23445,
+    "output_tokens": 340,
+    "elapsed_seconds": 55.83,
+    "used_tools": [
+      "search_knowledge"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "73157381dd888bd98cdd9d27c39737fcfb1ca289e130a8d33b43693b2d97e846",
+    "chars": 799,
+    "tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 55.827,
+  "finished_at": "2026-11-07T18:08:46+08:00"
+}

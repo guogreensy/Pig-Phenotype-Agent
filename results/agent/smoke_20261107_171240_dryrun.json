@@ -1,0 +1,205 @@
+{
+  "generated_at": "2026-11-07T17:12:40+08:00",
+  "mode": "dry-run",
+  "tools": [
+    "list_pens",
+    "query_pig_records",
+    "aggregate_metric",
+    "detect_anomalies",
+    "analyze_pig_posture",
+    "list_sample_images",
+    "search_knowledge",
+    "fetch_passage"
+  ],
+  "tool_stats": {
+    "calls": 3,
+    "failed": 0,
+    "success_rate": 1.0,
+    "by_tool": {
+      "list_pens": 3
+    }
+  },
+  "prompts": {
+    "version": "1.0",
+    "sha256": "bd73226eba28d74dd295161c24bd3b7f862d2b33df34177782b57d8029c45edc",
+    "chars": 1067,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 6
+  },
+  "records": [
+    {
+      "kind": "data",
+      "report": {
+        "question": "最近一周哪个栏位的猪采食量偏低？P2-007 这头猪的情况要不要重点关注？",
+        "answer": "（试运行）已依次完成规划、工具调用与回答，链路正常。",
+        "ok": true,
+        "error": null,
+        "stop_reason": "answered",
+        "stop_reason_cn": "正常作答",
+        "citations": [],
+        "tool_trace": [
+          {
+            "tool": "list_pens",
+            "args": {},
+            "ok": true,
+            "error": null,
+            "ms": 0.0
+          }
+        ],
+        "flags": {
+          "uses_simulated_data": true,
+          "uses_knowledge": false,
+          "uses_vision": false,
+          "has_citations": false,
+          "degraded": false
+        },
+        "metrics": {
+          "model_calls": 2,
+          "tool_calls": 1,
+          "input_tokens": 200,
+          "output_tokens": 40,
+          "elapsed_seconds": 0.06,
+          "used_tools": [
+            "list_pens"
+          ]
+        },
+        "degraded": [],
+        "prompt_meta": {
+          "version": "1.0",
+          "sha256": "bd73226eba28d74dd295161c24bd3b7f862d2b33df34177782b57d8029c45edc",
+          "chars": 1067,
+          "tools": [
+            "list_pens",
+            "query_pig_records",
+            "aggregate_metric",
+            "detect_anomalies",
+            "analyze_pig_posture",
+            "list_sample_images",
+            "search_knowledge",
+            "fetch_passage"
+          ],
+          "max_steps": 6
+        }
+      }
+    },
+    {
+      "kind": "knowledge",
+      "report": {
+        "question": "猪只姿态识别常用的深度学习方法有哪些？请给出出处。",
+        "answer": "（试运行）已依次完成规划、工具调用与回答，链路正常。",
+        "ok": true,
+        "error": null,
+        "stop_reason": "answered",
+        "stop_reason_cn": "正常作答",
+        "citations": [],
+        "tool_trace": [
+          {
+            "tool": "list_pens",
+            "args": {},
+            "ok": true,
+            "error": null,
+            "ms": 0.0
+          }
+        ],
+        "flags": {
+          "uses_simulated_data": true,
+          "uses_knowledge": false,
+          "uses_vision": false,
+          "has_citations": false,
+          "degraded": false
+        },
+        "metrics": {
+          "model_calls": 2,
+          "tool_calls": 1,
+          "input_tokens": 200,
+          "output_tokens": 40,
+          "elapsed_seconds": 0.0,
+          "used_tools": [
+            "list_pens"
+          ]
+        },
+        "degraded": [],
+        "prompt_meta": {
+          "version": "1.0",
+          "sha256": "bd73226eba28d74dd295161c24bd3b7f862d2b33df34177782b57d8029c45edc",
+          "chars": 1067,
+          "tools": [
+            "list_pens",
+            "query_pig_records",
+            "aggregate_metric",
+            "detect_anomalies",
+            "analyze_pig_posture",
+            "list_sample_images",
+            "search_knowledge",
+            "fetch_passage"
+          ],
+          "max_steps": 6
+        }
+      }
+    },
+    {
+      "kind": "vision",
+      "report": {
+        "question": "这张图片里的猪是什么姿态？data/samples/dev/lying_lateral/test_pen1_tur_cam2_20250921_051726_0005.jpg",
+        "answer": "（试运行）已依次完成规划、工具调用与回答，链路正常。",
+        "ok": true,
+        "error": null,
+        "stop_reason": "answered",
+        "stop_reason_cn": "正常作答",
+        "citations": [],
+        "tool_trace": [
+          {
+            "tool": "list_pens",
+            "args": {},
+            "ok": true,
+            "error": null,
+            "ms": 0.0
+          }
+        ],
+        "flags": {
+          "uses_simulated_data": true,
+          "uses_knowledge": false,
+          "uses_vision": false,
+          "has_citations": false,
+          "degraded": false
+        },
+        "metrics": {
+          "model_calls": 2,
+          "tool_calls": 1,
+          "input_tokens": 200,
+          "output_tokens": 40,
+          "elapsed_seconds": 0.0,
+          "used_tools": [
+            "list_pens"
+          ]
+        },
+        "degraded": [],
+        "prompt_meta": {
+          "version": "1.0",
+          "sha256": "bd73226eba28d74dd295161c24bd3b7f862d2b33df34177782b57d8029c45edc",
+          "chars": 1067,
+          "tools": [
+            "list_pens",
+            "query_pig_records",
+            "aggregate_metric",
+            "detect_anomalies",
+            "analyze_pig_posture",
+            "list_sample_images",
+            "search_knowledge",
+            "fetch_passage"
+          ],
+          "max_steps": 6
+        }
+      }
+    }
+  ]
+}

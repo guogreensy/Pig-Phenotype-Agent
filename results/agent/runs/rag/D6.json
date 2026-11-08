@@ -1,0 +1,174 @@
+{
+  "question_id": "D6",
+  "category": "data",
+  "condition": "rag",
+  "question": "这个猪场一共有几个栏位、多少头猪？",
+  "answerable": true,
+  "expected": {
+    "numbers": [
+      {
+        "label": "栏位数",
+        "value": 4.0,
+        "tol": 0.5,
+        "unit": "个"
+      },
+      {
+        "label": "猪只数",
+        "value": 48.0,
+        "tol": 0.5,
+        "unit": "头"
+      }
+    ],
+    "tokens": []
+  },
+  "evidence_hint": "list_pens 返回的栏位与猪只数量（4 个栏位，共 48 头猪）",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据项目知识库的文档信息，这个猪场的情况如下：\n\n**栏位数量：2个栏位**\n\n**猪只数量：** 文档中没有明确说明具体的猪只总数，但提到数据来自\"2个猪栏、8台固定相机\"，并且测试集包含不同姿态的猪只图像样本。\n\n需要注意的是，这些信息来自项目文档中关于数据集和实验设计的描述，主要针对的是用于猪只姿态识别研究的模拟数据集。文档中提到数据来自公开数据集，并且存在一些局限性，如仅覆盖特定品种和日龄段的商品猪，不能直接外推到其他类型的猪场。",
+  "stop_reason": "answered",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "pmc_7423952#0055",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Animals and experimental design",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.5417
+    },
+    {
+      "index": 2,
+      "chunk_id": "pmc_6749226#0012",
+      "title": "Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749226/",
+      "license": "CC BY",
+      "score": 0.5217
+    },
+    {
+      "index": 3,
+      "chunk_id": "pmc_7423952#0054",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Animals and experimental design",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.5111
+    },
+    {
+      "index": 4,
+      "chunk_id": "pmc_8147168#0047",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "4.3. Discussion",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.5097
+    },
+    {
+      "index": 5,
+      "chunk_id": "pmc_8147168#0004",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.4723
+    },
+    {
+      "index": 6,
+      "chunk_id": "local_data_card#0003",
+      "title": "data_card.md",
+      "section": "规模与分布（实测）",
+      "url": "docs/data_card.md",
+      "license": "本项目自有文档",
+      "score": 0.5524
+    },
+    {
+      "index": 7,
+      "chunk_id": "local_experiment_report#0001",
+      "title": "experiment_report.md",
+      "section": "",
+      "url": "docs/experiment_report.md",
+      "license": "本项目自有文档",
+      "score": 0.5483
+    },
+    {
+      "index": 8,
+      "chunk_id": "local_limitations#0001",
+      "title": "limitations.md",
+      "section": "",
+      "url": "docs/limitations.md",
+      "license": "本项目自有文档",
+      "score": 0.5443
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "猪场栏位数量 猪只总数 头数",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 688.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "栏位数量 猪只数量 实验设计",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 485.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "local_data_card#0003"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "local_limitations#0001"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 5,
+    "tool_calls": 4,
+    "input_tokens": 14779,
+    "output_tokens": 269,
+    "elapsed_seconds": 65.44,
+    "used_tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "73157381dd888bd98cdd9d27c39737fcfb1ca289e130a8d33b43693b2d97e846",
+    "chars": 799,
+    "tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 65.438,
+  "finished_at": "2026-11-07T18:09:52+08:00"
+}

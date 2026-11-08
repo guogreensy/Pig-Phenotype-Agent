@@ -1,0 +1,69 @@
+{
+  "question_id": "D3",
+  "category": "data",
+  "condition": "full",
+  "question": "最近 7 天有没有采食量异常的猪？如果有，是哪一头？",
+  "answerable": true,
+  "expected": {
+    "numbers": [],
+    "tokens": [
+      "P2-007"
+    ],
+    "z_score": -5.914
+  },
+  "evidence_hint": "注入场景 low_feed_P2-007；构建时验证其 z 分数确实低于 -3（实测 z=-5.91）",
+  "image_path": null,
+  "ok": true,
+  "answer": "是的，最近7天有采食量异常的猪。\n\n**异常猪只：P2-007**\n\n**异常情况：**\n- 采食量明显偏低\n- 平均采食量：1.626 kg/天\n- Z分数：-5.914（远低于正常范围）\n- 时间范围：2026-10-31 至 2026-11-06\n\n**背景数据：**\n- 整个猪群平均采食量：2.422 kg/天\n- 标准差：0.135 kg/天\n- 总检测猪数：48头\n\nP2-007的采食量显著低于平均水平，建议重点关注这头猪的健康状况和采食行为。\n\n*注：数据为模拟数据，仅用于验证工具调用链路与报表口径，不代表任何真实养殖场，不可用于生产决策。*",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [
+    {
+      "tool": "detect_anomalies",
+      "args": {
+        "metric": "feed_kg",
+        "days": 7,
+        "scope": "pig"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 16.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": true,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 2,
+    "tool_calls": 1,
+    "input_tokens": 4054,
+    "output_tokens": 236,
+    "elapsed_seconds": 77.78,
+    "used_tools": [
+      "detect_anomalies"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 77.781,
+  "finished_at": "2026-11-07T18:23:19+08:00"
+}

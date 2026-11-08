@@ -1,0 +1,170 @@
+{
+  "question_id": "U5",
+  "category": "unanswerable",
+  "condition": "rag",
+  "question": "这批猪的屠宰胴体品质如何？",
+  "answerable": false,
+  "expected": {
+    "doc_ids": [],
+    "must_admit": true
+  },
+  "evidence_hint": "只有在栏体重，没有屠宰或胴体测定数据",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据我对项目知识库的检索，**没有找到关于这批猪屠宰胴体品质的具体信息**。\n\n从检索结果来看，当前项目主要关注的是猪只姿态识别和行为分析，而非屠宰性能或胴体品质评估。项目文档中明确提到：\n\n**《局限性与适用边界》** 文档指出，系统不支持以下能力：\n- ❌ 背膘厚、肌内脂肪、体重、体尺的测量或估计\n- ❌ 疾病诊断、健康状态判定、用药建议\n\n这表明当前项目的主要功能是猪只姿态识别和行为监测，不包含屠宰胴体品质相关的数据或分析功能。\n\n如果您需要了解屠宰胴体品质信息，建议：\n1. 查询专门的屠宰性能数据库或研究报告\n2. 联系相关的屠宰场获取实测数据\n3. 查阅关于猪胴体品质评价的专业文献\n\n当前项目知识库中未包含您所需的屠宰胴体品质信息。",
+  "stop_reason": "answered",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "local_data_card#0003",
+      "title": "data_card.md",
+      "section": "规模与分布（实测）",
+      "url": "docs/data_card.md",
+      "license": "本项目自有文档",
+      "score": 0.4436
+    },
+    {
+      "index": 2,
+      "chunk_id": "local_limitations#0001",
+      "title": "limitations.md",
+      "section": "",
+      "url": "docs/limitations.md",
+      "license": "本项目自有文档",
+      "score": 0.4236
+    },
+    {
+      "index": 3,
+      "chunk_id": "local_README#0003",
+      "title": "README.md",
+      "section": "4. 文件说明",
+      "url": "data/README.md",
+      "license": "本项目自有文档",
+      "score": 0.4201
+    },
+    {
+      "index": 4,
+      "chunk_id": "local_experiment_report#0001",
+      "title": "experiment_report.md",
+      "section": "",
+      "url": "docs/experiment_report.md",
+      "license": "本项目自有文档",
+      "score": 0.4178
+    },
+    {
+      "index": 5,
+      "chunk_id": "pmc_11252330#0023",
+      "title": "Deep learning pose detection model for sow locomotion",
+      "section": "Video preprocessing and annotation",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11252330/",
+      "license": "CC BY",
+      "score": 0.4127
+    },
+    {
+      "index": 6,
+      "chunk_id": "local_limitations#0003",
+      "title": "limitations.md",
+      "section": "4.1 模型行为的实测局限",
+      "url": "docs/limitations.md",
+      "license": "本项目自有文档",
+      "score": 0.3893
+    },
+    {
+      "index": 7,
+      "chunk_id": "local_experiment_report#0002",
+      "title": "experiment_report.md",
+      "section": "2. 数据集来源与样本统计",
+      "url": "docs/experiment_report.md",
+      "license": "本项目自有文档",
+      "score": 0.3877
+    },
+    {
+      "index": 8,
+      "chunk_id": "local_data_card#0002",
+      "title": "data_card.md",
+      "section": "标签体系",
+      "url": "docs/data_card.md",
+      "license": "本项目自有文档",
+      "score": 0.3853
+    },
+    {
+      "index": 9,
+      "chunk_id": "pmc_11013991#0073",
+      "title": "Pattern Mining-Based Pig Behavior Analysis for Health and Welfare Monitoring",
+      "section": "3.2.2. Experimental Environment and Setup for Pig Behavior Recognition",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11013991/",
+      "license": "CC BY",
+      "score": 0.4518
+    },
+    {
+      "index": 10,
+      "chunk_id": "pmc_7423952#0055",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Animals and experimental design",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.4446
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "屠宰胴体品质 肉质指标",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 391.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "胴体品质 肉质 肌内脂肪 嫩度",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 375.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "屠宰性能 胴体性状 肉质评价",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 437.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 4,
+    "tool_calls": 3,
+    "input_tokens": 12923,
+    "output_tokens": 333,
+    "elapsed_seconds": 23.53,
+    "used_tools": [
+      "search_knowledge"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "73157381dd888bd98cdd9d27c39737fcfb1ca289e130a8d33b43693b2d97e846",
+    "chars": 799,
+    "tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 23.527,
+  "finished_at": "2026-11-07T18:21:35+08:00"
+}

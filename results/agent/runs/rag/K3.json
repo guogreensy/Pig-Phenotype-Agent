@@ -1,0 +1,130 @@
+{
+  "question_id": "K3",
+  "category": "knowledge",
+  "condition": "rag",
+  "question": "YOLOv5 是怎么用于单头猪的姿态检测的？",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "pmc_8147168"
+    ],
+    "keyword_hits": {
+      "pmc_8147168": {
+        "YOLOv5": 10
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：YOLOv5",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据项目知识库中的文献《Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration》，YOLOv5用于单头猪姿态检测的具体方法如下：\n\n## YOLOv5在单头猪姿态检测中的应用\n\n### 1. 模型选择\nYOLOv5提供了四个版本：YOLOv5s、YOLOv5m、YOLOv5l和YOLOv5x。研究测试发现：\n- **YOLOv5s**具有最快的检测速度和相对较高的准确性\n- 因此选择YOLOv5s作为单目标提取的模型\n\n### 2. 处理流程\n1. **输入处理**：将多猪图像输入网络，目标是快速检测出单个猪的身体\n2. **图像预处理**：将多角度单猪图像尺寸自适应调整为608×608\n3. **网络结构**：原始608×608×3图像输入到新增的focus结构中\n4. **特征提取**：通过切片操作将图像转换为304×304×12的特征图\n\n### 3. 技术优势\n- **速度优势**：YOLOv5相比YOLOv3和YOLOv4具有更快的训练速度和更高的准确性\n- **多尺度预测**：YOLOv3引入的多尺度预测机制能够显著改善小目标的检测效果\n- **单阶段检测**：YOLO系列是单阶段检测器，能够一步完成目标检测\n\n### 4. 应用场景\n该方法主要用于从包含多头猪的复杂场景中，快速准确地提取出单头猪的目标，为后续的姿态识别和分类提供基础。\n\n这种YOLOv5单目标提取的方法为猪只姿态检测系统提供了高效的前端处理能力，确保了后续姿态分析的准确性和实时性。",
+  "stop_reason": "answered",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "pmc_8147168#0028",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "3.2.1. Single-Target Extraction by Target Detection",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.6459
+    },
+    {
+      "index": 2,
+      "chunk_id": "pmc_8147168#0019",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "2.1. YOLOv5-Based Detection Network for a Single Pig",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.615
+    },
+    {
+      "index": 3,
+      "chunk_id": "pmc_11635830#0017",
+      "title": "Determining the posture and location of pigs using an object detection model under different lighting conditions",
+      "section": "Description Of The Detection Model",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11635830/",
+      "license": "CC BY-NC-ND",
+      "score": 0.6064
+    },
+    {
+      "index": 4,
+      "chunk_id": "pmc_8614322#0058",
+      "title": "Deep-Learning-Based Automatic Monitoring of Pigs’ Physico-Temporal Activities at Different Greenhouse Gas Concentrations",
+      "section": "3.4. Pig-Activity Detection and Tracking Model Performance",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8614322/",
+      "license": "CC BY",
+      "score": 0.5885
+    },
+    {
+      "index": 5,
+      "chunk_id": "pmc_7423952#0037",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Discussion",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.5846
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "YOLOv5 单头猪姿态检测",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 516.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_8147168#0028"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_8147168#0019"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 4,
+    "tool_calls": 3,
+    "input_tokens": 8049,
+    "output_tokens": 485,
+    "elapsed_seconds": 28.83,
+    "used_tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "73157381dd888bd98cdd9d27c39737fcfb1ca289e130a8d33b43693b2d97e846",
+    "chars": 799,
+    "tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 28.829,
+  "finished_at": "2026-11-07T18:12:41+08:00"
+}

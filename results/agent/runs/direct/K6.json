@@ -1,0 +1,50 @@
+{
+  "question_id": "K6",
+  "category": "knowledge",
+  "condition": "direct",
+  "question": "双流卷积网络如何识别猪只的视频行为？",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "pmc_7070994"
+    ],
+    "keyword_hits": {
+      "pmc_7070994": {
+        "two-stream": 15,
+        "Two-Stream": 3
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：two-stream、Two-Stream",
+  "image_path": null,
+  "ok": true,
+  "answer": "关于双流卷积网络识别猪只视频行为的问题，我无法从现有知识库中检索到具体信息，因此无法核实相关内容。\n\n双流卷积网络(Two-Stream Convolutional Network)是一种常用于视频行为识别的深度学习方法，它通常包含两个分支：\n1. 空间分支(Spatial Stream)：处理单帧图像，提取空间特征\n2. 时序分支(Temporal Stream)：处理光流信息，捕捉运动特征\n\n在猪只行为识别中，这种方法可能被用于识别如进食、饮水、站立、躺卧等行为模式。空间分支可以识别猪只的姿势和位置，而时序分支可以分析猪只的运动轨迹和行为变化。\n\n然而，具体的实现细节、模型架构、训练方法以及在实际猪只行为识别中的效果，我无法从现有知识库中核实相关信息。如果您需要更具体的技术细节，建议查阅计算机视觉和动物行为分析领域的专业文献。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 458,
+    "output_tokens": 198,
+    "elapsed_seconds": 16.95,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "dfad32b7cb0d2e1f12f1b247ac8179c6a68b5978d53a2f2b9e8931108af9815f",
+    "chars": 696,
+    "tools": [],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 16.946,
+  "finished_at": "2026-11-07T17:58:40+08:00"
+}

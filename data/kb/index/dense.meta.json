@@ -1,0 +1,15 @@
+{
+  "index_version": 1,
+  "model": "embedding-3",
+  "dim": 2048,
+  "chunks": 943,
+  "chunk_ids_sha256": "b63ea7fe9e39998aa98cc6ff8175e8078fb6a84f30fc8d20d6de6308f6fdc095",
+  "built_at": "2026-11-07T16:57:32+08:00",
+  "usage": {
+    "requests": 59,
+    "prompt_tokens": 144651,
+    "total_tokens": 144651
+  },
+  "chunks_file": "C:\\WorkSource\\DSH_workspace\\智能育种评估系统\\data\\kb\\chunks.jsonl",
+  "chunks_file_sha256": "1ff23db9c174b7dcb283e689d5218c7dc5e64fd07dce6917e8a30b7d0d9d0224"
+}

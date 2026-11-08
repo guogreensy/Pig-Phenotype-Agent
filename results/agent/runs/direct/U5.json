@@ -1,0 +1,43 @@
+{
+  "question_id": "U5",
+  "category": "unanswerable",
+  "condition": "direct",
+  "question": "这批猪的屠宰胴体品质如何？",
+  "answerable": false,
+  "expected": {
+    "doc_ids": [],
+    "must_admit": true
+  },
+  "evidence_hint": "只有在栏体重，没有屠宰或胴体测定数据",
+  "image_path": null,
+  "ok": true,
+  "answer": "我无法直接查询这批猪的屠宰胴体品质数据，因为我没有可用的工具来访问养殖场的胴体品质记录。\n\n胴体品质通常包括以下指标：\n- 胴体重\n- 胴体长\n- 背膘厚\n- 眼肌面积\n- 肉质评分\n- 脂肪含量\n- 水分含量\n\n如果您需要了解这批猪的胴体品质数据，建议您：\n1. 查看养殖场的生产记录系统\n2. 联系技术部门获取屠宰后的检测报告\n3. 查看最近一次胴体品质评估的结果\n\n数据为模拟，无法核实具体胴体品质数据。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 457,
+    "output_tokens": 157,
+    "elapsed_seconds": 28.42,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "dfad32b7cb0d2e1f12f1b247ac8179c6a68b5978d53a2f2b9e8931108af9815f",
+    "chars": 696,
+    "tools": [],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 28.41,
+  "finished_at": "2026-11-07T18:03:54+08:00"
+}

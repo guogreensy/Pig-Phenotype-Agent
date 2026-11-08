@@ -1,0 +1,47 @@
+{
+  "question_id": "V2",
+  "category": "vision",
+  "condition": "rag",
+  "question": "这张图片里的猪是什么姿态？data/experiment/images/v2.jpg",
+  "answerable": true,
+  "expected": {
+    "label": "standing",
+    "label_cn": "站立",
+    "doc_ids": []
+  },
+  "evidence_hint": "类别来自原图所在目录名（人工标注）；题目使用中性文件名避免泄漏",
+  "image_path": "data/experiment/images/v2.jpg",
+  "ok": true,
+  "answer": "我需要先查看这张图片来分析猪的姿态。不过，我目前无法直接访问或查看图片文件 `data/experiment/images/v2.jpg`。\n\n如果您能提供这张图片，我可以帮您分析猪的姿态。您可以：\n1. 上传图片文件\n2. 描述图片内容\n3. 或者提供图片的URL链接\n\n一旦我能够看到图片，我就可以帮您识别和分析猪的姿态特征。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 817,
+    "output_tokens": 88,
+    "elapsed_seconds": 14.89,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "73157381dd888bd98cdd9d27c39737fcfb1ca289e130a8d33b43693b2d97e846",
+    "chars": 799,
+    "tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 14.887,
+  "finished_at": "2026-11-07T18:45:35+08:00"
+}

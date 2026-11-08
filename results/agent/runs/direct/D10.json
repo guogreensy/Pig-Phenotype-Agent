@@ -1,0 +1,52 @@
+{
+  "question_id": "D10",
+  "category": "data",
+  "condition": "direct",
+  "question": "P1 栏最近 7 天的平均躺卧比例是多少？",
+  "answerable": true,
+  "expected": {
+    "numbers": [
+      {
+        "label": "P1 平均躺卧比例",
+        "value": 0.585,
+        "tol": 0.02,
+        "unit": ""
+      }
+    ],
+    "tokens": [
+      "P1"
+    ]
+  },
+  "evidence_hint": "比例型指标，检验小数精度",
+  "image_path": null,
+  "ok": true,
+  "answer": "我无法直接查询养殖数据，因为我没有可用的工具来访问模拟数据集。要获取 P1 栏最近 7 天的平均躺卧比例，需要调用相应的数据查询工具。\n\n根据我的知识，躺卧比例是评估猪只福利和健康状况的重要指标，通常通过视频监控系统自动计算。正常情况下，健康的猪只每天应有适当的躺卧休息时间，但具体数值会因猪只年龄、环境条件等因素而异。\n\n如果您能提供具体数据，我可以帮您分析这个躺卧比例是否在正常范围内，以及是否存在异常波动。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 460,
+    "output_tokens": 118,
+    "elapsed_seconds": 11.83,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "dfad32b7cb0d2e1f12f1b247ac8179c6a68b5978d53a2f2b9e8931108af9815f",
+    "chars": 696,
+    "tools": [],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 11.835,
+  "finished_at": "2026-11-07T17:56:55+08:00"
+}

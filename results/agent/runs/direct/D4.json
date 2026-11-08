@@ -1,0 +1,52 @@
+{
+  "question_id": "D4",
+  "category": "data",
+  "condition": "direct",
+  "question": "P3 栏在 2026-10-25 到 2026-10-31 期间的平均温度是多少？",
+  "answerable": true,
+  "expected": {
+    "numbers": [
+      {
+        "label": "P3 平均温度",
+        "value": 26.5857,
+        "tol": 0.3988,
+        "unit": "℃"
+      }
+    ],
+    "tokens": [
+      "P3"
+    ]
+  },
+  "evidence_hint": "注入场景 heat_stress_P3 的时间窗",
+  "image_path": null,
+  "ok": true,
+  "answer": "我无法核实 P3 栏在 2026-10-25 到 2026-10-31 期间的平均温度具体数值，因为我没有可用的工具来查询养殖场的温度数据。\n\n如果您需要这个信息，建议您直接查看养殖场的环境监测系统记录或咨询负责环境监控的技术人员。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 472,
+    "output_tokens": 66,
+    "elapsed_seconds": 5.05,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "dfad32b7cb0d2e1f12f1b247ac8179c6a68b5978d53a2f2b9e8931108af9815f",
+    "chars": 696,
+    "tools": [],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 5.055,
+  "finished_at": "2026-11-07T17:56:02+08:00"
+}

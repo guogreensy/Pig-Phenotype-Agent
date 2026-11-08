@@ -1,0 +1,373 @@
+{
+  "generated_at": "2026-11-07T17:16:06+08:00",
+  "mode": "live",
+  "tools": [
+    "list_pens",
+    "query_pig_records",
+    "aggregate_metric",
+    "detect_anomalies",
+    "analyze_pig_posture",
+    "list_sample_images",
+    "search_knowledge",
+    "fetch_passage"
+  ],
+  "tool_stats": {
+    "calls": 10,
+    "failed": 0,
+    "success_rate": 1.0,
+    "by_tool": {
+      "detect_anomalies": 2,
+      "query_pig_records": 1,
+      "aggregate_metric": 1,
+      "search_knowledge": 2,
+      "fetch_passage": 3,
+      "analyze_pig_posture": 1
+    }
+  },
+  "prompts": {
+    "version": "1.0",
+    "sha256": "bd73226eba28d74dd295161c24bd3b7f862d2b33df34177782b57d8029c45edc",
+    "chars": 1067,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 6
+  },
+  "records": [
+    {
+      "kind": "data",
+      "report": {
+        "question": "最近一周哪个栏位的猪采食量偏低？P2-007 这头猪的情况要不要重点关注？",
+        "answer": "根据最近一周（2026-10-31至2026-11-06）的数据分析结果：\n\n## 栏位采食量情况\n各栏位的平均采食量差异很小：\n- P1栏：2.442 kg/天\n- P2栏：2.402 kg/天  \n- P3栏：2.405 kg/天\n- P4栏：2.441 kg/天\n\n**结论**：没有发现采食量明显偏低的栏位，各栏位采食量都在正常范围内。\n\n## P2-007猪只情况\n**需要重点关注！** 这头猪存在严重的采食量异常：\n\n**异常指标**：\n- 采食量均值：1.626 kg/天（比群体均值2.422 kg低33%）\n- Z分数：-5.914（远低于-2.0的异常阈值）\n- 方向：显著偏低\n\n**详细数据**：\n- 7天内采食量在1.50-1.83 kg之间波动\n- 体重增长：96.22 kg → 97.78 kg（增重1.56 kg）\n- 活动指数：0.361-0.475（偏低）\n- 躺卧比例：0.5-0.675（偏高）\n\n**建议**：P2-007这头猪的采食量明显低于正常水平，虽然体重仍在增长，但增速可能受到影响，建议加强观察和干预。\n\n*注：以上数据为模拟数据，仅用于验证工具调用链路与报表口径，不代表任何真实养殖场，不可用于生产决策。*",
+        "ok": true,
+        "error": null,
+        "stop_reason": "answered",
+        "stop_reason_cn": "正常作答",
+        "citations": [],
+        "tool_trace": [
+          {
+            "tool": "detect_anomalies",
+            "args": {
+              "metric": "feed_kg",
+              "scope": "pen",
+              "days": 7
+            },
+            "ok": true,
+            "error": null,
+            "ms": 15.0
+          },
+          {
+            "tool": "detect_anomalies",
+            "args": {
+              "metric": "feed_kg",
+              "scope": "pig",
+              "days": 7
+            },
+            "ok": true,
+            "error": null,
+            "ms": 0.0
+          },
+          {
+            "tool": "query_pig_records",
+            "args": {
+              "pig_id": "P2-007",
+              "start_date": "2026-10-31",
+              "end_date": "2026-11-06",
+              "metrics": [
+                "feed_kg",
+                "weight_kg",
+                "activity_index",
+                "lying_ratio"
+              ]
+            },
+            "ok": true,
+            "error": null,
+            "ms": 0.0
+          },
+          {
+            "tool": "aggregate_metric",
+            "args": {
+              "metric": "feed_kg",
+              "group_by": "pen",
+              "start_date": "2026-10-31",
+              "end_date": "2026-11-06",
+              "stat": "mean"
+            },
+            "ok": true,
+            "error": null,
+            "ms": 0.0
+          }
+        ],
+        "flags": {
+          "uses_simulated_data": true,
+          "uses_knowledge": false,
+          "uses_vision": false,
+          "has_citations": false,
+          "degraded": false
+        },
+        "metrics": {
+          "model_calls": 5,
+          "tool_calls": 4,
+          "input_tokens": 12360,
+          "output_tokens": 586,
+          "elapsed_seconds": 111.98,
+          "used_tools": [
+            "detect_anomalies",
+            "query_pig_records",
+            "aggregate_metric"
+          ]
+        },
+        "degraded": [],
+        "prompt_meta": {
+          "version": "1.0",
+          "sha256": "bd73226eba28d74dd295161c24bd3b7f862d2b33df34177782b57d8029c45edc",
+          "chars": 1067,
+          "tools": [
+            "list_pens",
+            "query_pig_records",
+            "aggregate_metric",
+            "detect_anomalies",
+            "analyze_pig_posture",
+            "list_sample_images",
+            "search_knowledge",
+            "fetch_passage"
+          ],
+          "max_steps": 6
+        }
+      }
+    },
+    {
+      "kind": "knowledge",
+      "report": {
+        "question": "猪只姿态识别常用的深度学习方法有哪些？请给出出处。",
+        "answer": "根据项目知识库的检索结果，猪只姿态识别常用的深度学习方法主要包括以下几类：\n\n## 1. 目标检测方法\n\n**Faster R-CNN**\n- **特点**：结合区域提议网络(RPN)和ZFNet，能够精确定位猪只位置并进行姿态分类\n- **应用**：Zheng等人和Yang等人使用该方法识别猪只姿态和采食行为\n- **出处**：《Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks》\n\n**YOLO系列**\n- **特点**：单阶段检测器，速度快，支持多尺度预测\n- **版本演进**：YOLOv3引入多尺度预测，YOLOv4和YOLOv5在训练速度和精度上有显著提升\n- **应用**：用于猪只检测和姿态识别\n- **出处**：《Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration》\n\n**SSD (Single Shot MultiBox Detector)**\n- **特点**：轻量级检测器，适合实时应用\n- **应用**：结合MobileNet用于母猪饮水、排尿和爬跨行为的实时识别\n- **出处**：《Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks》\n\n## 2. 分割与识别方法\n\n**Mask R-CNN**\n- **特点**：结合实例分割和分类，能够精确分割猪只轮廓\n- **应用**：先分割猪只图像，然后提取特征进行爬跨行为识别\n- **出处**：《Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks》\n\n**DeepLabv3+**\n- **特点**：基于语义分割的网络，用于边缘提取\n- **应用**：与YOLOv5联合训练，用于猪只姿态识别\n- **出处**：《Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration》\n\n## 3. 特征提取网络\n\n**ResNet-50**\n- **特点**：深度残差网络，能有效解决深层网络训练问题\n- **应用**：与YOLO和Faster R-CNN结合，用于猪只姿态识别\n- **出处**：《Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs》\n\n## 4. 双流网络\n\n**Two-Stream Convolutional Networks**\n- **特点**：同时处理空间和时间特征\n- **应用**：用于猪只视频行为识别\n- **出处**：《Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks》\n\n这些方法各有优势，Faster R-CNN精度较高但速度较慢，YOLO系列速度快适合实时应用，Mask R-CNN能提供精确的分割结果，而双流网络则能更好地处理时序信息。研究者通常会根据具体应用场景选择合适的深度学习方法。",
+        "ok": true,
+        "error": null,
+        "stop_reason": "answered",
+        "stop_reason_cn": "正常作答",
+        "citations": [
+          {
+            "index": 1,
+            "chunk_id": "pmc_7070994#0053",
+            "title": "Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks",
+            "section": "3.2. Results and Discussion of the Experiments",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7070994/",
+            "license": "CC BY",
+            "score": 0.6197
+          },
+          {
+            "index": 2,
+            "chunk_id": "pmc_8147168#0051",
+            "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+            "section": "5. Conclusions",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+            "license": "CC BY",
+            "score": 0.6095
+          },
+          {
+            "index": 3,
+            "chunk_id": "pmc_6749226#0001",
+            "title": "Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs",
+            "section": "",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749226/",
+            "license": "CC BY",
+            "score": 0.6066
+          },
+          {
+            "index": 4,
+            "chunk_id": "pmc_6749226#0009",
+            "title": "Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs",
+            "section": "1. Introduction",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749226/",
+            "license": "CC BY",
+            "score": 0.597
+          },
+          {
+            "index": 5,
+            "chunk_id": "pmc_7423952#0047",
+            "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+            "section": "Individual pig profiles",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+            "license": "CC BY",
+            "score": 0.5969
+          },
+          {
+            "index": 6,
+            "chunk_id": "pmc_8147168#0019",
+            "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+            "section": "2.1. YOLOv5-Based Detection Network for a Single Pig",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+            "license": "CC BY",
+            "score": 0.6238
+          },
+          {
+            "index": 7,
+            "chunk_id": "pmc_8614322#0074",
+            "title": "Deep-Learning-Based Automatic Monitoring of Pigs’ Physico-Temporal Activities at Different Greenhouse Gas Concentrations",
+            "section": "5. Conclusions",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8614322/",
+            "license": "CC BY",
+            "score": 0.61
+          },
+          {
+            "index": 8,
+            "chunk_id": "pmc_7423952#0018",
+            "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+            "section": "Group-wise measures for the food restriction experiment",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+            "license": "CC BY",
+            "score": 0.6067
+          }
+        ],
+        "tool_trace": [
+          {
+            "tool": "search_knowledge",
+            "args": {
+              "query": "猪只姿态识别 深度学习方法 CNN",
+              "k": 5
+            },
+            "ok": true,
+            "error": null,
+            "ms": 750.0
+          },
+          {
+            "tool": "search_knowledge",
+            "args": {
+              "query": "猪只姿态识别 深度学习方法 YOLO ResNet Transformer",
+              "k": 5
+            },
+            "ok": true,
+            "error": null,
+            "ms": 813.0
+          },
+          {
+            "tool": "fetch_passage",
+            "args": {
+              "chunk_id": "pmc_7070994#0053"
+            },
+            "ok": true,
+            "error": null,
+            "ms": 0.0
+          },
+          {
+            "tool": "fetch_passage",
+            "args": {
+              "chunk_id": "pmc_8147168#0019"
+            },
+            "ok": true,
+            "error": null,
+            "ms": 0.0
+          },
+          {
+            "tool": "fetch_passage",
+            "args": {
+              "chunk_id": "pmc_7423952#0018"
+            },
+            "ok": true,
+            "error": null,
+            "ms": 0.0
+          }
+        ],
+        "flags": {
+          "uses_simulated_data": false,
+          "uses_knowledge": true,
+          "uses_vision": false,
+          "has_citations": true,
+          "degraded": false
+        },
+        "metrics": {
+          "model_calls": 6,
+          "tool_calls": 5,
+          "input_tokens": 22843,
+          "output_tokens": 772,
+          "elapsed_seconds": 70.95,
+          "used_tools": [
+            "search_knowledge",
+            "fetch_passage"
+          ]
+        },
+        "degraded": [],
+        "prompt_meta": {
+          "version": "1.0",
+          "sha256": "bd73226eba28d74dd295161c24bd3b7f862d2b33df34177782b57d8029c45edc",
+          "chars": 1067,
+          "tools": [
+            "list_pens",
+            "query_pig_records",
+            "aggregate_metric",
+            "detect_anomalies",
+            "analyze_pig_posture",
+            "list_sample_images",
+            "search_knowledge",
+            "fetch_passage"
+          ],
+          "max_steps": 6
+        }
+      }
+    },
+    {
+      "kind": "vision",
+      "report": {
+        "question": "这张图片里的猪是什么姿态？data/samples/dev/lying_lateral/test_pen1_tur_cam2_20250921_051726_0005.jpg",
+        "answer": "这张图片中的猪只姿态是**侧卧**。\n\n具体分析结果：\n- **姿态类别**：侧卧（lying_lateral）\n- **姿态描述**：可见主要猪只身体一侧贴地，躯干长轴大致水平贴附在地面上\n- **分析确定性**：确定（uncertain: false）\n\n从图片路径可以看出，这是一张来自侧卧姿态测试样本的图片，分析结果与图片标签一致，模型能够准确识别猪只的侧卧姿态。",
+        "ok": true,
+        "error": null,
+        "stop_reason": "answered",
+        "stop_reason_cn": "正常作答",
+        "citations": [],
+        "tool_trace": [
+          {
+            "tool": "analyze_pig_posture",
+            "args": {
+              "image_path": "data/samples/dev/lying_lateral/test_pen1_tur_cam2_20250921_051726_0005.jpg"
+            },
+            "ok": true,
+            "error": null,
+            "ms": 3579.0
+          }
+        ],
+        "flags": {
+          "uses_simulated_data": false,
+          "uses_knowledge": false,
+          "uses_vision": true,
+          "has_citations": false,
+          "degraded": false
+        },
+        "metrics": {
+          "model_calls": 2,
+          "tool_calls": 1,
+          "input_tokens": 3966,
+          "output_tokens": 162,
+          "elapsed_seconds": 13.58,
+          "used_tools": [
+            "analyze_pig_posture"
+          ]
+        },
+        "degraded": [],
+        "prompt_meta": {
+          "version": "1.0",
+          "sha256": "bd73226eba28d74dd295161c24bd3b7f862d2b33df34177782b57d8029c45edc",
+          "chars": 1067,
+          "tools": [
+            "list_pens",
+            "query_pig_records",
+            "aggregate_metric",
+            "detect_anomalies",
+            "analyze_pig_posture",
+            "list_sample_images",
+            "search_knowledge",
+            "fetch_passage"
+          ],
+          "max_steps": 6
+        }
+      }
+    }
+  ]
+}

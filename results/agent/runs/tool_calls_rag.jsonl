@@ -1,0 +1,113 @@
+{"seq": 1, "timestamp": "2026-11-07T17:52:07+08:00", "tool": "search_knowledge", "args": {"query": "P2-007 采食量", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 734.0}
+{"seq": 2, "timestamp": "2026-11-07T17:52:41+08:00", "tool": "search_knowledge", "args": {"query": "P2-007 猪只 采食量 数据", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 359.0}
+{"seq": 3, "timestamp": "2026-11-07T17:52:59+08:00", "tool": "search_knowledge", "args": {"query": "猪只采食量数据栏位", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 516.0}
+{"seq": 4, "timestamp": "2026-11-07T17:53:02+08:00", "tool": "search_knowledge", "args": {"query": "猪只数据集 采食量 栏位名称", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 422.0}
+{"seq": 5, "timestamp": "2026-11-07T17:53:23+08:00", "tool": "search_knowledge", "args": {"query": "养殖数据 采食量 栏位", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 375.0}
+{"seq": 1, "timestamp": "2026-11-07T17:53:39+08:00", "tool": "search_knowledge", "args": {"query": "猪只姿态识别 深度学习方法", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 422.0}
+{"seq": 2, "timestamp": "2026-11-07T17:53:42+08:00", "tool": "search_knowledge", "args": {"query": "猪姿态识别 CNN 模型 Faster R-CNN SSD", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 328.0}
+{"seq": 3, "timestamp": "2026-11-07T17:53:44+08:00", "tool": "search_knowledge", "args": {"query": "猪姿态识别 Two-Stream CNN ResNet Inception", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 344.0}
+{"seq": 1, "timestamp": "2026-11-07T18:04:30+08:00", "tool": "search_knowledge", "args": {"query": "采食量统计 栏位 平均值", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 657.0}
+{"seq": 2, "timestamp": "2026-11-07T18:05:08+08:00", "tool": "search_knowledge", "args": {"query": "采食量 栏位 统计 数据", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 422.0}
+{"seq": 3, "timestamp": "2026-11-07T18:05:27+08:00", "tool": "search_knowledge", "args": {"query": "栏位 采食量 平均值 统计", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 407.0}
+{"seq": 4, "timestamp": "2026-11-07T18:05:56+08:00", "tool": "search_knowledge", "args": {"query": "猪只 采食量 数据 统计", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 375.0}
+{"seq": 5, "timestamp": "2026-11-07T18:06:05+08:00", "tool": "search_knowledge", "args": {"query": "养殖数据 采食量 栏位", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 469.0}
+{"seq": 1, "timestamp": "2026-11-07T18:06:45+08:00", "tool": "search_knowledge", "args": {"query": "采食量异常检测 猪只 异常值", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 421.0}
+{"seq": 2, "timestamp": "2026-11-07T18:06:48+08:00", "tool": "search_knowledge", "args": {"query": "采食量 异常检测 猪只 最近7天", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 437.0}
+{"seq": 3, "timestamp": "2026-11-07T18:06:52+08:00", "tool": "search_knowledge", "args": {"query": "猪只采食量数据 异常检测", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 406.0}
+{"seq": 4, "timestamp": "2026-11-07T18:06:54+08:00", "tool": "search_knowledge", "args": {"query": "猪只采食量 数据集", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 593.0}
+{"seq": 5, "timestamp": "2026-11-07T18:07:00+08:00", "tool": "search_knowledge", "args": {"query": "猪只采食量 异常检测 实际应用", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 453.0}
+{"seq": 1, "timestamp": "2026-11-07T18:07:15+08:00", "tool": "search_knowledge", "args": {"query": "P3栏 温度 2026-10-25 2026-10-31", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 437.0}
+{"seq": 2, "timestamp": "2026-11-07T18:07:32+08:00", "tool": "search_knowledge", "args": {"query": "温度数据 P3栏 2026年10月", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 11047.0}
+{"seq": 3, "timestamp": "2026-11-07T18:07:36+08:00", "tool": "search_knowledge", "args": {"query": "环境温度 猪栏 温度记录", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 391.0}
+{"seq": 4, "timestamp": "2026-11-07T18:07:38+08:00", "tool": "search_knowledge", "args": {"query": "数据集 温度记录栏位", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 359.0}
+{"seq": 5, "timestamp": "2026-11-07T18:07:40+08:00", "tool": "search_knowledge", "args": {"query": "环境数据 温度 湿度 栏位", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 375.0}
+{"seq": 1, "timestamp": "2026-11-07T18:07:57+08:00", "tool": "search_knowledge", "args": {"query": "P2-007 体重 30天 增长", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 437.0}
+{"seq": 2, "timestamp": "2026-11-07T18:08:02+08:00", "tool": "search_knowledge", "args": {"query": "P2-007 猪只 体重 数据", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 437.0}
+{"seq": 3, "timestamp": "2026-11-07T18:08:07+08:00", "tool": "search_knowledge", "args": {"query": "猪只体重数据 30天 增长记录", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 453.0}
+{"seq": 4, "timestamp": "2026-11-07T18:08:09+08:00", "tool": "search_knowledge", "args": {"query": "猪只体重记录表 个体识别", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 313.0}
+{"seq": 5, "timestamp": "2026-11-07T18:08:25+08:00", "tool": "search_knowledge", "args": {"query": "猪只个体识别 耳标 体重监测", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 8796.0}
+{"seq": 1, "timestamp": "2026-11-07T18:09:10+08:00", "tool": "search_knowledge", "args": {"query": "猪场栏位数量 猪只总数 头数", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 688.0}
+{"seq": 2, "timestamp": "2026-11-07T18:09:24+08:00", "tool": "search_knowledge", "args": {"query": "栏位数量 猪只数量 实验设计", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 485.0}
+{"seq": 3, "timestamp": "2026-11-07T18:09:25+08:00", "tool": "fetch_passage", "args": {"chunk_id": "local_data_card#0003"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 4, "timestamp": "2026-11-07T18:09:27+08:00", "tool": "fetch_passage", "args": {"chunk_id": "local_limitations#0001"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 1, "timestamp": "2026-11-07T18:09:58+08:00", "tool": "search_knowledge", "args": {"query": "体重统计 栏位 平均 最近7天", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 531.0}
+{"seq": 2, "timestamp": "2026-11-07T18:10:00+08:00", "tool": "search_knowledge", "args": {"query": "体重 栏位 平均 统计 数据", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 375.0}
+{"seq": 3, "timestamp": "2026-11-07T18:10:02+08:00", "tool": "search_knowledge", "args": {"query": "猪只体重 栏位 统计 数据集", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 359.0}
+{"seq": 4, "timestamp": "2026-11-07T18:10:04+08:00", "tool": "search_knowledge", "args": {"query": "养殖数据 栏位 猪只 日增重 采食", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 438.0}
+{"seq": 5, "timestamp": "2026-11-07T18:10:06+08:00", "tool": "search_knowledge", "args": {"query": "模拟数据 栏位 猪只 体重 统计", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 438.0}
+{"seq": 1, "timestamp": "2026-11-07T18:10:15+08:00", "tool": "search_knowledge", "args": {"query": "活动指数 猪只 P4-003", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 359.0}
+{"seq": 2, "timestamp": "2026-11-07T18:10:17+08:00", "tool": "search_knowledge", "args": {"query": "猪只活动指数 正常范围 标准", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 406.0}
+{"seq": 3, "timestamp": "2026-11-07T18:10:19+08:00", "tool": "search_knowledge", "args": {"query": "猪只活动指数 偏低 标准", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 453.0}
+{"seq": 4, "timestamp": "2026-11-07T18:10:25+08:00", "tool": "search_knowledge", "args": {"query": "猪只活动指数 正常值 偏低判断", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 390.0}
+{"seq": 5, "timestamp": "2026-11-07T18:10:29+08:00", "tool": "search_knowledge", "args": {"query": "猪只活动指数 健康监测 异常", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 375.0}
+{"seq": 1, "timestamp": "2026-11-07T18:10:47+08:00", "tool": "search_knowledge", "args": {"query": "2026-11-06 饮水量 栏位 平均", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 390.0}
+{"seq": 2, "timestamp": "2026-11-07T18:10:54+08:00", "tool": "search_knowledge", "args": {"query": "饮水量 栏位 平均 2026-11-06", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 391.0}
+{"seq": 3, "timestamp": "2026-11-07T18:10:56+08:00", "tool": "search_knowledge", "args": {"query": "栏位 饮水量 数据 2026-11-06", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 469.0}
+{"seq": 4, "timestamp": "2026-11-07T18:10:59+08:00", "tool": "search_knowledge", "args": {"query": "猪只 饮水量 数据集", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 453.0}
+{"seq": 5, "timestamp": "2026-11-07T18:11:05+08:00", "tool": "search_knowledge", "args": {"query": "养殖数据 饮水量 栏位", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 375.0}
+{"seq": 1, "timestamp": "2026-11-07T18:11:14+08:00", "tool": "aggregate_metric", "args": {"metric": "躺卧比例", "group_by": "栏位", "start_date": "2026-10-31", "end_date": "2026-11-06"}, "ok": false, "error": "未注册的工具：aggregate_metric（可用：search_knowledge、fetch_passage）", "duration_ms": 0.0}
+{"seq": 2, "timestamp": "2026-11-07T18:11:21+08:00", "tool": "search_knowledge", "args": {"query": "躺卧比例 P1栏 数据", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 344.0}
+{"seq": 3, "timestamp": "2026-11-07T18:11:29+08:00", "tool": "search_knowledge", "args": {"query": "P1栏 数据集 躺卧比例 统计", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 359.0}
+{"seq": 4, "timestamp": "2026-11-07T18:11:35+08:00", "tool": "search_knowledge", "args": {"query": "躺卧比例 时间序列 栏位 统计数据", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 469.0}
+{"seq": 1, "timestamp": "2026-11-07T18:11:48+08:00", "tool": "search_knowledge", "args": {"query": "猪只姿态识别数据集 公开数据集", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 406.0}
+{"seq": 2, "timestamp": "2026-11-07T18:11:49+08:00", "tool": "fetch_passage", "args": {"chunk_id": "hf_dataset_readme#0001"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 3, "timestamp": "2026-11-07T18:11:52+08:00", "tool": "search_knowledge", "args": {"query": "猪姿态识别数据集 其他公开数据集", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 359.0}
+{"seq": 4, "timestamp": "2026-11-07T18:11:54+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_8147168#0001"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 1, "timestamp": "2026-11-07T18:12:23+08:00", "tool": "search_knowledge", "args": {"query": "YOLOv5 单头猪姿态检测", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 516.0}
+{"seq": 2, "timestamp": "2026-11-07T18:12:25+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_8147168#0028"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 3, "timestamp": "2026-11-07T18:12:26+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_8147168#0019"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 1, "timestamp": "2026-11-07T18:12:44+08:00", "tool": "search_knowledge", "args": {"query": "目标检测模型 猪只姿态 位置检测", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 484.0}
+{"seq": 2, "timestamp": "2026-11-07T18:12:45+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_11635830#0040"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 3, "timestamp": "2026-11-07T18:12:47+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_8614322#0039"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 4, "timestamp": "2026-11-07T18:12:49+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_7423952#0047"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 1, "timestamp": "2026-11-07T18:13:06+08:00", "tool": "search_knowledge", "args": {"query": "母猪行走姿态 深度学习 姿态检测模型 locomotion", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 406.0}
+{"seq": 2, "timestamp": "2026-11-07T18:13:09+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_11252330#0001"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 3, "timestamp": "2026-11-07T18:13:14+08:00", "tool": "search_knowledge", "args": {"query": "\"Deep learning pose detection model for sow locomotion\" 模型方法 架构", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 453.0}
+{"seq": 4, "timestamp": "2026-11-07T18:13:17+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_8147168#0051"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 5, "timestamp": "2026-11-07T18:13:18+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_6749226#0009"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 1, "timestamp": "2026-11-07T18:13:36+08:00", "tool": "search_knowledge", "args": {"query": "双流卷积网络 猪只 视频行为识别", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 422.0}
+{"seq": 2, "timestamp": "2026-11-07T18:13:42+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_7070994#0004"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 3, "timestamp": "2026-11-07T18:13:44+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_7070994#0014"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 4, "timestamp": "2026-11-07T18:13:46+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_7070994#0057"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 1, "timestamp": "2026-11-07T18:14:06+08:00", "tool": "search_knowledge", "args": {"query": "RGB图像 机器视觉 猪只疾病症状监测", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 360.0}
+{"seq": 2, "timestamp": "2026-11-07T18:14:07+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_11833201#0002"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 3, "timestamp": "2026-11-07T18:14:09+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_11833201#0043"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 4, "timestamp": "2026-11-07T18:14:12+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_11833201#0039"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 5, "timestamp": "2026-11-07T18:14:13+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_11833201#0085"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 1, "timestamp": "2026-11-07T18:14:32+08:00", "tool": "search_knowledge", "args": {"query": "猪只行为变化健康福利监测早期发现", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 500.0}
+{"seq": 2, "timestamp": "2026-11-07T18:14:39+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_11013991#0105"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 3, "timestamp": "2026-11-07T18:14:48+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_5110645#0001"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 4, "timestamp": "2026-11-07T18:14:51+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_5110645#0024"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 5, "timestamp": "2026-11-07T18:15:08+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_8147168#0002"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 1, "timestamp": "2026-11-07T18:15:29+08:00", "tool": "search_knowledge", "args": {"query": "妊娠期限位栏母猪行为识别 计算机视觉方法", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 453.0}
+{"seq": 2, "timestamp": "2026-11-07T18:15:31+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_8071751#0001"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 3, "timestamp": "2026-11-07T18:15:32+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_6749226#0004"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 4, "timestamp": "2026-11-07T18:15:35+08:00", "tool": "search_knowledge", "args": {"query": "妊娠母猪 行为识别 深度学习 计算机视觉 方法", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 437.0}
+{"seq": 5, "timestamp": "2026-11-07T18:15:36+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_7070994#0011"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 1, "timestamp": "2026-11-07T18:15:50+08:00", "tool": "search_knowledge", "args": {"query": "姿态识别实验 提示词 样本数量", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 531.0}
+{"seq": 2, "timestamp": "2026-11-07T18:15:52+08:00", "tool": "search_knowledge", "args": {"query": "提示词设计 A组 B组 C组", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 437.0}
+{"seq": 3, "timestamp": "2026-11-07T18:15:53+08:00", "tool": "fetch_passage", "args": {"chunk_id": "local_technical_report#0007"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 1, "timestamp": "2026-11-07T18:17:05+08:00", "tool": "search_knowledge", "args": {"query": "猪品种 大白 长白 杜洛克", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 516.0}
+{"seq": 2, "timestamp": "2026-11-07T18:17:11+08:00", "tool": "search_knowledge", "args": {"query": "猪品种 大白 长白 杜洛克 品种信息", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 406.0}
+{"seq": 3, "timestamp": "2026-11-07T18:17:24+08:00", "tool": "search_knowledge", "args": {"query": "猪只品种信息 大白 长白 杜洛克", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 406.0}
+{"seq": 4, "timestamp": "2026-11-07T18:17:40+08:00", "tool": "search_knowledge", "args": {"query": "猪只品种", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 391.0}
+{"seq": 5, "timestamp": "2026-11-07T18:17:46+08:00", "tool": "search_knowledge", "args": {"query": "品种", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 406.0}
+{"seq": 1, "timestamp": "2026-11-07T18:18:09+08:00", "tool": "search_knowledge", "args": {"query": "2025年3月 采食量 平均", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 438.0}
+{"seq": 2, "timestamp": "2026-11-07T18:18:11+08:00", "tool": "search_knowledge", "args": {"query": "采食量 平均值 2025年3月", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 375.0}
+{"seq": 3, "timestamp": "2026-11-07T18:18:16+08:00", "tool": "search_knowledge", "args": {"query": "采食量 数据集 统计", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 390.0}
+{"seq": 4, "timestamp": "2026-11-07T18:18:21+08:00", "tool": "search_knowledge", "args": {"query": "2025年3月 猪只 采食量", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 485.0}
+{"seq": 5, "timestamp": "2026-11-07T18:18:23+08:00", "tool": "search_knowledge", "args": {"query": "采食量 统计数据", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 421.0}
+{"seq": 1, "timestamp": "2026-11-07T18:18:43+08:00", "tool": "search_knowledge", "args": {"query": "疫苗免疫程序", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 421.0}
+{"seq": 2, "timestamp": "2026-11-07T18:18:52+08:00", "tool": "search_knowledge", "args": {"query": "免疫程序 疫苗接种", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 421.0}
+{"seq": 3, "timestamp": "2026-11-07T18:18:57+08:00", "tool": "search_knowledge", "args": {"query": "猪场 疫苗 预防接种", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 407.0}
+{"seq": 4, "timestamp": "2026-11-07T18:19:01+08:00", "tool": "search_knowledge", "args": {"query": "猪场管理 疫苗计划", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 359.0}
+{"seq": 5, "timestamp": "2026-11-07T18:19:05+08:00", "tool": "search_knowledge", "args": {"query": "猪场 疫苗接种计划", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 422.0}
+{"seq": 1, "timestamp": "2026-11-07T18:20:47+08:00", "tool": "search_knowledge", "args": {"query": "P5栏 采食量 最近一周", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 360.0}
+{"seq": 2, "timestamp": "2026-11-07T18:20:55+08:00", "tool": "search_knowledge", "args": {"query": "采食量 栏位 P5 数据", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 422.0}
+{"seq": 3, "timestamp": "2026-11-07T18:20:59+08:00", "tool": "search_knowledge", "args": {"query": "采食量 数据 统计 栏位", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 438.0}
+{"seq": 4, "timestamp": "2026-11-07T18:21:01+08:00", "tool": "search_knowledge", "args": {"query": "猪只 采食量 数据集", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 359.0}
+{"seq": 5, "timestamp": "2026-11-07T18:21:03+08:00", "tool": "search_knowledge", "args": {"query": "猪只数据 采食量 栏位统计", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 422.0}
+{"seq": 1, "timestamp": "2026-11-07T18:21:14+08:00", "tool": "search_knowledge", "args": {"query": "屠宰胴体品质 肉质指标", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 391.0}
+{"seq": 2, "timestamp": "2026-11-07T18:21:16+08:00", "tool": "search_knowledge", "args": {"query": "胴体品质 肉质 肌内脂肪 嫩度", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 375.0}
+{"seq": 3, "timestamp": "2026-11-07T18:21:19+08:00", "tool": "search_knowledge", "args": {"query": "屠宰性能 胴体性状 肉质评价", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 437.0}
+{"seq": 1, "timestamp": "2026-11-07T18:45:53+08:00", "tool": "analyze_image", "args": {"image_path": "data/experiment/images/v4.jpg"}, "ok": false, "error": "未注册的工具：analyze_image（可用：search_knowledge、fetch_passage）", "duration_ms": 0.0}

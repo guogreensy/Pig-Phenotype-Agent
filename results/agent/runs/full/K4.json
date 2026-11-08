@@ -1,0 +1,146 @@
+{
+  "question_id": "K4",
+  "category": "knowledge",
+  "condition": "full",
+  "question": "如何用目标检测模型确定猪只的姿态和位置？",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "pmc_11635830"
+    ],
+    "keyword_hits": {
+      "pmc_11635830": {
+        "object detection": 10,
+        "posture": 76
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：object detection、posture",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据检索到的知识，使用目标检测模型确定猪只姿态和位置的方法主要包括以下几个关键步骤：\n\n## 1. 目标检测与定位\n\n**核心方法**：使用目标检测模型在视频帧中检测猪只并精确定位其位置。\n\n**技术指标**：\n- 通过边界框（bounding box）来定位猪只位置\n- 使用交并比（IoU）来评估检测精度\n- 研究显示平均IoU可达94.6%，75%的检测框IoU高于0.955（《Determining the posture and location of pigs using an object detection model under different lighting conditions》）\n\n## 2. 姿态分类识别\n\n**主要姿态类别**：\n- 站立（standing）\n- 侧卧（lying lateral）\n- 其他卧姿（lying other）\n- 坐姿（sitting）\n\n**技术特点**：\n- 采用数据驱动的方法，通过大量样本学习姿态识别\n- 不依赖特定身体部位（如头部），而是基于猪只的整体结构特征\n- 能够处理头部被遮挡的情况，提高检测的鲁棒性（《Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs》）\n\n## 3. 多阶段处理流程\n\n**完整工作流程**：\n1. **姿态检测**：在视频帧中检测猪只姿态并定位位置\n2. **个体跟踪**：使用跟踪算法为每头猪分配唯一ID，并在连续帧中保持ID一致性\n3. **姿态评分**：对每头猪的姿态进行时间序列评分和分析\n\n**模型架构**：\n- 姿态检测模型和跟踪模型分别训练\n- 通过姿态评分算法将两个模型耦合，形成端到端的猪只姿态评分系统（《Deep-Learning-Based Automatic Monitoring of Pigs' Physico-Temporal Activities at Different Greenhouse Gas Concentrations》）\n\n## 4. 实际应用优势\n\n- **无需人工校准**：相比传统方法，不需要设置深度阈值或分割数量等参数\n- **全结构特征识别**：即使头部完全被遮挡，仍能基于整体结构特征识别行为\n- **实时监测能力**：能够持续监测猪只行为，为健康评估提供数据支持\n\n这种方法结合了计算机视觉和深度学习技术，能够实现猪只姿态的自动化、高精度检测和分析，为养殖场的智能化管理提供了重要技术支撑。",
+  "stop_reason": "answered",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "local_technical_report#0001",
+      "title": "technical_report.md",
+      "section": "",
+      "url": "docs/technical_report.md",
+      "license": "本项目自有文档",
+      "score": 0.6258
+    },
+    {
+      "index": 2,
+      "chunk_id": "pmc_8614322#0039",
+      "title": "Deep-Learning-Based Automatic Monitoring of Pigs’ Physico-Temporal Activities at Different Greenhouse Gas Concentrations",
+      "section": "2.4. Proposed Methodology",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8614322/",
+      "license": "CC BY",
+      "score": 0.619
+    },
+    {
+      "index": 3,
+      "chunk_id": "pmc_11635830#0040",
+      "title": "Determining the posture and location of pigs using an object detection model under different lighting conditions",
+      "section": "Detection And Localization Of Pigs",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11635830/",
+      "license": "CC BY-NC-ND",
+      "score": 0.6145
+    },
+    {
+      "index": 4,
+      "chunk_id": "local_experiment_report#0002",
+      "title": "experiment_report.md",
+      "section": "2. 数据集来源与样本统计",
+      "url": "docs/experiment_report.md",
+      "license": "本项目自有文档",
+      "score": 0.6046
+    },
+    {
+      "index": 5,
+      "chunk_id": "pmc_7423952#0047",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Individual pig profiles",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.5854
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "目标检测模型 猪只姿态检测 姿态识别",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 391.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_11635830#0040"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_8614322#0039"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_7423952#0047"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 5,
+    "tool_calls": 4,
+    "input_tokens": 17176,
+    "output_tokens": 638,
+    "elapsed_seconds": 316.14,
+    "used_tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 316.143,
+  "finished_at": "2026-11-07T18:36:51+08:00"
+}

@@ -1,0 +1,91 @@
+{
+  "question_id": "D4",
+  "category": "data",
+  "condition": "full",
+  "question": "P3 栏在 2026-10-25 到 2026-10-31 期间的平均温度是多少？",
+  "answerable": true,
+  "expected": {
+    "numbers": [
+      {
+        "label": "P3 平均温度",
+        "value": 26.5857,
+        "tol": 0.3988,
+        "unit": "℃"
+      }
+    ],
+    "tokens": [
+      "P3"
+    ]
+  },
+  "evidence_hint": "注入场景 heat_stress_P3 的时间窗",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据查询结果，P3 栏在 2026-10-25 到 2026-10-31 期间的平均温度是 **26.59°C**。\n\n这个数据是基于模拟数据集计算得出的，包含了该时间段内 84 个温度记录点的平均值。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [
+    {
+      "tool": "aggregate_metric",
+      "args": {
+        "metric": "temp_c",
+        "group_by": "pen",
+        "start_date": "2026-10-25",
+        "end_date": "2026-10-31",
+        "pen_id": "P3",
+        "stat": "mean"
+      },
+      "ok": false,
+      "error": "不支持的参数 pen_id",
+      "ms": 0.0
+    },
+    {
+      "tool": "aggregate_metric",
+      "args": {
+        "metric": "temp_c",
+        "group_by": "pen",
+        "start_date": "2026-10-25",
+        "end_date": "2026-10-31",
+        "stat": "mean"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": true,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 3,
+    "tool_calls": 2,
+    "input_tokens": 6234,
+    "output_tokens": 205,
+    "elapsed_seconds": 45.08,
+    "used_tools": [
+      "aggregate_metric"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 45.078,
+  "finished_at": "2026-11-07T18:24:05+08:00"
+}

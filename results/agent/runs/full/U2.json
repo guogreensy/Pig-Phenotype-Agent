@@ -1,0 +1,105 @@
+{
+  "question_id": "U2",
+  "category": "unanswerable",
+  "condition": "full",
+  "question": "2025 年 3 月这批猪的平均采食量是多少？",
+  "answerable": false,
+  "expected": {
+    "doc_ids": [],
+    "must_admit": true
+  },
+  "evidence_hint": "数据从 2026-10-08 开始，2025 年 3 月没有记录",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据查询结果，2025年3月这批猪的采食量数据不可用。\n\n**查询结果：**\n- 在2025年3月期间（2025-03-01至2025-03-31）没有找到任何采食量记录\n- 系统返回的记录数量为0\n\n**数据说明：**\n- 数据为模拟数据，仅用于验证工具调用链路与报表口径\n- 模拟数据的时间范围覆盖2026-10-08至2026-11-06，不包含2025年的数据\n- 当前可用的数据只到2026年11月6日\n\n如果您需要查看其他时间段的采食量数据，我可以帮您查询2026年期间的数据。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [
+    {
+      "tool": "list_pens",
+      "args": {},
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "aggregate_metric",
+      "args": {
+        "metric": "feed_kg",
+        "group_by": "pen",
+        "start_date": "2025-03-01",
+        "end_date": "2025-03-31",
+        "stat": "mean"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "query_pig_records",
+      "args": {
+        "start_date": "2025-03-01",
+        "end_date": "2025-03-31",
+        "metrics": [
+          "feed_kg"
+        ],
+        "limit": 10
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "query_pig_records",
+      "args": {
+        "start_date": "2026-10-01",
+        "end_date": "2026-10-31",
+        "metrics": [
+          "feed_kg"
+        ],
+        "limit": 10
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": true,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 5,
+    "tool_calls": 4,
+    "input_tokens": 12543,
+    "output_tokens": 369,
+    "elapsed_seconds": 41.81,
+    "used_tools": [
+      "list_pens",
+      "aggregate_metric",
+      "query_pig_records"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 41.816,
+  "finished_at": "2026-11-07T18:41:48+08:00"
+}

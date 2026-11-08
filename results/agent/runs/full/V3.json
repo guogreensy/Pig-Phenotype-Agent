@@ -1,0 +1,65 @@
+{
+  "question_id": "V3",
+  "category": "vision",
+  "condition": "full",
+  "question": "这张图片里的猪是什么姿态？data/experiment/images/v3.jpg",
+  "answerable": true,
+  "expected": {
+    "label": "sitting",
+    "label_cn": "坐姿",
+    "doc_ids": []
+  },
+  "evidence_hint": "类别来自原图所在目录名（人工标注）；题目使用中性文件名避免泄漏",
+  "image_path": "data/experiment/images/v3.jpg",
+  "ok": true,
+  "answer": "根据图片分析，这张图片中的猪只姿态是**侧卧**。\n\n具体分析结果：\n- **姿态类别**：侧卧（lying_lateral）\n- **姿态描述**：身体一侧贴地，躯干呈水平状态\n- **分析确定性**：确定（uncertain: false）\n\n这个姿态分析使用了GLM-4.1v-thinking-flash模型，通过结构化输出方式对猪只姿态进行了识别。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [
+    {
+      "tool": "analyze_pig_posture",
+      "args": {
+        "image_path": "data/experiment/images/v3.jpg"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 2484.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": true,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 2,
+    "tool_calls": 1,
+    "input_tokens": 4088,
+    "output_tokens": 128,
+    "elapsed_seconds": 57.42,
+    "used_tools": [
+      "analyze_pig_posture"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 57.426,
+  "finished_at": "2026-11-07T18:47:51+08:00"
+}

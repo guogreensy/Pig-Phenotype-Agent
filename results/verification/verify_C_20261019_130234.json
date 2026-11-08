@@ -1,0 +1,238 @@
+{
+  "kind": "real_api_verification",
+  "note": "真实调用记录；raw_text 为服务端原始返回，未做任何改写",
+  "provider": "zhipu",
+  "model": "glm-4.1v-thinking-flash",
+  "base_url": "https://open.bigmodel.cn/api/paas/v4/chat/completions",
+  "prompt_variant": "C",
+  "prompt_sha256": "e5c513d404ddacb484c5743abcf5c2f34d32bd457ead29bea2dd40f95db89b2f",
+  "params": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "image_max_side": 512,
+    "jpeg_quality": 90
+  },
+  "started_at": "2026-10-19T13:02:34",
+  "finished_at": "2026-10-19T13:03:06",
+  "requested": 8,
+  "success": 8,
+  "failed": 0,
+  "records": [
+    {
+      "index": 1,
+      "sample_id": "test_pen1_tur_cam2_20250921_050022_0000",
+      "image_path": "data\\samples\\test\\standing\\test_pen1_tur_cam2_20250921_050022_0000.jpg",
+      "true_label": "standing",
+      "image_sent": "276x353",
+      "estimated_visual_tokens": 90,
+      "request_success": true,
+      "http_status": 200,
+      "latency_seconds": 2.781,
+      "attempt": 2,
+      "input_tokens": 629,
+      "output_tokens": 199,
+      "error": null,
+      "raw_text": "<think>用户现在需要判断猪的姿态。看图片里的猪，身体是侧躺在地上的吗？不对，看它的姿势，躯干是否贴地？或者看四肢和支撑情况。这只猪看起来是侧卧在地面，因为身体的一侧贴地，体侧展开，不是俯卧那种胸腹贴地的。所以姿态应该是lying_lateral？然后检查各个条件：lying_lateral的定义是身体某一侧着地，躯干长轴大致水平贴地，可见一侧体侧。这里能看到猪的身体侧躺着，所以判断为lying_lateral。然后描述要简单，比如“身体侧躺于地面，躯干一侧贴附”之类的。然后uncertain设为false，因为没有不确定的情况。所以最终输出对应的JSON。</think><answer>{\"posture\": \"lying_lateral\", \"description\": \"身体侧躺于地面，躯干一侧贴附\", \"uncertain\": false, \"uncertainty_reason\": null}</answer>",
+      "parse": {
+        "json_valid": true,
+        "method": "extracted",
+        "error": null
+      },
+      "schema": {
+        "valid": true,
+        "posture": "lying_lateral",
+        "errors": [],
+        "warnings": []
+      }
+    },
+    {
+      "index": 2,
+      "sample_id": "test_pen1_tur_cam2_20250921_050022_0002",
+      "image_path": "data\\samples\\test\\lying_lateral\\test_pen1_tur_cam2_20250921_050022_0002.jpg",
+      "true_label": "lying_lateral",
+      "image_sent": "241x169",
+      "estimated_visual_tokens": 37,
+      "request_success": true,
+      "http_status": 200,
+      "latency_seconds": 2.735,
+      "attempt": 1,
+      "input_tokens": 553,
+      "output_tokens": 216,
+      "error": null,
+      "raw_text": "<think>用户现在需要判断那只最主要猪的姿态。看图片里的主要猪，它的四肢支撑？不，看姿态——这只猪应该是站立吗？不对，再看：站立是四肢支撑身体，躯干离开地面。但这只猪的后肢和前肢？或者看姿势，可能更接近站立？不对，再仔细看。哦，不对，看这只猪的四肢是否支撑，还有躯干位置。另外，有没有着地？如果躯干没有贴地，而是用四肢支撑，那可能是standing？不对，再看图片里主要猪的姿态：它似乎是用四肢支撑，躯干离开地面，所以属于standing？然后description要写“四肢支撑身体，躯干离开地面”。不确定的话设false。现在检查： posture如果是standing，description写“四肢支撑身体，躯干离开地面”；uncertain为false，因为可以判断。</think><answer>{\"posture\": \"standing\", \"description\": \"四肢支撑身体，躯干离开地面\", \"uncertain\": false, \"uncertainty_reason\": null}</answer>",
+      "parse": {
+        "json_valid": true,
+        "method": "extracted",
+        "error": null
+      },
+      "schema": {
+        "valid": true,
+        "posture": "standing",
+        "errors": [],
+        "warnings": []
+      }
+    },
+    {
+      "index": 3,
+      "sample_id": "test_pen1_tur_cam2_20250921_050022_0003",
+      "image_path": "data\\samples\\test\\lying_lateral\\test_pen1_tur_cam2_20250921_050022_0003.jpg",
+      "true_label": "lying_lateral",
+      "image_sent": "264x158",
+      "estimated_visual_tokens": 34,
+      "request_success": true,
+      "http_status": 200,
+      "latency_seconds": 3.328,
+      "attempt": 1,
+      "input_tokens": 553,
+      "output_tokens": 282,
+      "error": null,
+      "raw_text": "<think>用户现在需要判断最主要那只猪的姿态。看图片里的主要猪，它的姿态是站立吗？不，看它的位置，应该是站立？不对，再仔细看。哦，主要那头猪是四肢支撑，躯干离开地面，所以属于standing？不对，再看——等，主要猪的姿态：看图片里最显眼的猪，它四肢是否支撑？或者看姿势。哦，不对，可能我错了。再看，这只猪是站立还是侧卧？看图片中主要的猪，它的姿态是站立吗？不，看它的身体，是否有一侧贴地？不，这只猪是站立，因为四肢支撑，躯干离开地面。所以 posture 是 standing？然后 description 要描述体态。现在检查：standing 是四肢支撑，躯干离开地面。图中主要猪是站立状态，所以 posture 设为 standing，description 可以写“四肢支撑身体，躯干离开地面”。uncertain 为 false，因为没有不确定情况。所以最终结果：</think><answer>{\"posture\": \"standing\", \"description\": \"四肢支撑身体，躯干离开地面\", \"uncertain\": false, \"uncertainty_reason\": null}\n（注：经重新审视，若判断有误需调整，此处认为主要猪为站立姿态，故按此输出；实际若判断为其他则调整，此处以合理判断为基础。）</answer>",
+      "parse": {
+        "json_valid": true,
+        "method": "extracted",
+        "error": null
+      },
+      "schema": {
+        "valid": true,
+        "posture": "standing",
+        "errors": [],
+        "warnings": []
+      }
+    },
+    {
+      "index": 4,
+      "sample_id": "test_pen1_tur_cam2_20250921_050022_0006",
+      "image_path": "data\\samples\\test\\lying_lateral\\test_pen1_tur_cam2_20250921_050022_0006.jpg",
+      "true_label": "lying_lateral",
+      "image_sent": "184x141",
+      "estimated_visual_tokens": 22,
+      "request_success": true,
+      "http_status": 200,
+      "latency_seconds": 2.203,
+      "attempt": 1,
+      "input_tokens": 534,
+      "output_tokens": 178,
+      "error": null,
+      "raw_text": "<think>用户现在需要判断猪的姿态。看图片里的猪，身体是侧躺着，有一侧体侧贴地，属于lying_lateral吗？不对，再仔细看，或者看是否侧卧。不过再看，这只猪的身体姿势，应该是侧卧，因为身体一侧贴地，体侧展开？不对，可能我错了。哦，看姿态类别中的lying_lateral是身体某一侧着地，躯干长轴大致水平贴地，通常可见一侧体侧。而lying_other比如胸腹着地。现在看图片里的猪，看起来像是侧卧，所以判断为lying_lateral？然后检查是否符合条件。然后输出对应的JSON。</think><answer>{\"posture\": \"lying_lateral\", \"description\": \"身体一侧着地，可见一侧体侧\", \"uncertain\": false, \"uncertainty_reason\": null}</answer>",
+      "parse": {
+        "json_valid": true,
+        "method": "extracted",
+        "error": null
+      },
+      "schema": {
+        "valid": true,
+        "posture": "lying_lateral",
+        "errors": [],
+        "warnings": []
+      }
+    },
+    {
+      "index": 5,
+      "sample_id": "test_pen1_tur_cam2_20250921_052427_0000",
+      "image_path": "data\\samples\\test\\lying_other\\test_pen1_tur_cam2_20250921_052427_0000.jpg",
+      "true_label": "lying_other",
+      "image_sent": "233x474",
+      "estimated_visual_tokens": 100,
+      "request_success": true,
+      "http_status": 200,
+      "latency_seconds": 2.703,
+      "attempt": 1,
+      "input_tokens": 635,
+      "output_tokens": 194,
+      "error": null,
+      "raw_text": "<think>用户现在需要判断猪的姿态。看图片里的猪，身体是侧躺在地上，躯干长轴大概水平贴地，属于侧卧的一种？不对，再仔细看，侧卧是身体一侧贴地，体侧展开。这只猪看起来是侧卧在垫料上，所以姿态应该是lying_lateral？然后检查各个条件：standing是四肢支撑，这里没有；sitting是后躯着地前肢支撑，也不是；lying_other是比如胸腹着地，这里是侧卧，所以lying_lateral。然后description要写体态，比如“身体呈侧卧状态，躯干一侧贴地”。然后uncertain是否定，因为判断明确的话uncertain为false。所以最终结果。</think><answer>{\"posture\": \"lying_lateral\", \"description\": \"身体呈侧卧状态，躯干一侧贴地\", \"uncertain\": false, \"uncertainty_reason\": null}</answer>",
+      "parse": {
+        "json_valid": true,
+        "method": "extracted",
+        "error": null
+      },
+      "schema": {
+        "valid": true,
+        "posture": "lying_lateral",
+        "errors": [],
+        "warnings": []
+      }
+    },
+    {
+      "index": 6,
+      "sample_id": "test_pen1_tur_cam2_20250921_052427_0001",
+      "image_path": "data\\samples\\test\\lying_other\\test_pen1_tur_cam2_20250921_052427_0001.jpg",
+      "true_label": "lying_other",
+      "image_sent": "206x512",
+      "estimated_visual_tokens": 98,
+      "request_success": true,
+      "http_status": 200,
+      "latency_seconds": 4.016,
+      "attempt": 1,
+      "input_tokens": 625,
+      "output_tokens": 315,
+      "error": null,
+      "raw_text": "<think>用户现在需要判断这只猪的姿态。看图片里的主要猪，它的身体姿势是侧卧吗？不对，看姿态：这只猪的身体似乎是在侧卧状态，因为身体一侧贴地，体侧展开？不对，再仔细看。哦，看姿态类别中的lying_lateral是身体某一侧着地，躯干长轴大致水平贴地，通常可见一侧体侧。而如果看这只猪，它应该是侧卧？不对，再看：这只猪的身体姿态，是否是侧卧？或者看是否有四肢支撑？不，站立的话四肢要支撑，而这只猪看起来像是侧卧，身体一侧贴地，所以属于lying_lateral？不对，再检查。或者看姿态：这只猪的身体是侧卧，所以posture设为lying_lateral？然后description描述其体态。然后uncertain是否为false？\n\n现在看图片：主要的猪是身体呈侧卧状态，身体一侧贴地，躯干长轴大致水平，所以姿态是lying_lateral。然后description写“身体一侧贴地，呈现侧卧姿态”。uncertain为false，因为没有不确定因素。\n\n所以最终JSON：\n\n{\"posture\": \"lying_lateral\", \"description\": \"身体一侧贴地，呈现侧卧姿态\", \"uncertain\": false, \"uncertainty_reason\": null}</think><answer>{\"posture\": \"lying_lateral\", \"description\": \"身体一侧贴地，呈现侧卧姿态\", \"uncertain\": false, \"uncertainty_reason\": null}</answer>",
+      "parse": {
+        "json_valid": true,
+        "method": "extracted",
+        "error": null
+      },
+      "schema": {
+        "valid": true,
+        "posture": "lying_lateral",
+        "errors": [],
+        "warnings": []
+      }
+    },
+    {
+      "index": 7,
+      "sample_id": "test_pen1_tur_cam2_20250921_052427_0003",
+      "image_path": "data\\samples\\test\\standing\\test_pen1_tur_cam2_20250921_052427_0003.jpg",
+      "true_label": "standing",
+      "image_sent": "281x295",
+      "estimated_visual_tokens": 74,
+      "request_success": true,
+      "http_status": 200,
+      "latency_seconds": 3.172,
+      "attempt": 1,
+      "input_tokens": 609,
+      "output_tokens": 204,
+      "error": null,
+      "raw_text": "<think>用户现在需要判断最主要那只猪的姿态。看图片里的主要猪，它的四肢似乎没有完全支撑？不对，再仔细看。这只猪的身体是侧躺着吗？或者看姿态：如果躯干是否贴地？看图片里主要猪的姿态，它应该是侧卧着，因为身体侧面贴地，躯干长轴大概水平？不对，再看。哦，主要猪的姿态是侧卧吗？或者看四肢，如果是lying_lateral的话，是一侧着地，体侧展开。看图片里最前面的猪，身体是侧躺在地上，所以属于lying_lateral？然后检查各个条件。姿态判断为lying_lateral，然后描述是“身体一侧贴地，呈侧卧状态”，uncertain为false，因为没有不确定情况。所以构建JSON。</think><answer>{\"posture\": \"lying_lateral\", \"description\": \"身体一侧贴地，呈侧卧状态\", \"uncertain\": false, \"uncertainty_reason\": null}</answer>",
+      "parse": {
+        "json_valid": true,
+        "method": "extracted",
+        "error": null
+      },
+      "schema": {
+        "valid": true,
+        "posture": "lying_lateral",
+        "errors": [],
+        "warnings": []
+      }
+    },
+    {
+      "index": 8,
+      "sample_id": "test_pen1_tur_cam2_20250921_052427_0006",
+      "image_path": "data\\samples\\test\\lying_lateral\\test_pen1_tur_cam2_20250921_052427_0006.jpg",
+      "true_label": "lying_lateral",
+      "image_sent": "122x117",
+      "estimated_visual_tokens": 11,
+      "request_success": true,
+      "http_status": 200,
+      "latency_seconds": 4.14,
+      "attempt": 1,
+      "input_tokens": 515,
+      "output_tokens": 361,
+      "error": null,
+      "raw_text": "<think>用户现在需要判断猪的姿态。看图片里的主要猪，从可见的部分来看，这只猪的身体姿态应该是侧卧吗？不对，再仔细看。哦，可能更偏向于侧卧？或者看姿态定义。侧卧是身体某一侧着地，躯干长轴水平贴地，可见一侧体侧。而如果胸腹部贴地且四肢收拢可能是俯卧？不过这里需要看。但现在看图片中的主要猪，它的姿态更像侧卧还是其他？不对，再看。哦，可能这只猪是在躺卧，但如果是侧卧的话，那属于lying_lateral？不对，再检查。或者看姿态：如果猪的身体是侧躺着，那么属于lying_lateral。但如果图片显示的是它处于侧卧状态，所以判断为lying_lateral？然后description要描述体态。然后不确定的情况？这里图片虽然有点模糊，但能看到猪的体态，所以uncertain为false？然后posture判断。现在重新看：这只猪的姿态，从图片看，身体似乎是侧躺在地上，所以属于lying_lateral？不对，再想。或者可能是lying_other？不，侧卧和俯卧的区别。侧卧是一侧贴地，体侧展开；俯卧是胸腹贴地，四肢收拢。如果这只猪是一侧贴地，体侧展开，那就是lying_lateral。所以posture设为lying_lateral，description说“身体侧向贴地，躯干呈水平姿态”，然后uncertain为false，因为可以判断。</think><answer>{\"posture\": \"lying_lateral\", \"description\": \"身体侧向贴地，躯干呈水平姿态\", \"uncertain\": false, \"uncertainty_reason\": null}</answer>",
+      "parse": {
+        "json_valid": true,
+        "method": "extracted",
+        "error": null
+      },
+      "schema": {
+        "valid": true,
+        "posture": "lying_lateral",
+        "errors": [],
+        "warnings": []
+      }
+    }
+  ]
+}

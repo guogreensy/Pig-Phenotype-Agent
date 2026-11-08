@@ -1,0 +1,34 @@
+# 密钥与本地配置（绝不提交）
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 编辑器
+.vscode/
+
+# 下载缓存（可通过 scripts/build_dataset.py、scripts/fetch_corpus.py 重新获取）
+data/datasets/_cache/
+data/kb/cache/
+
+# 说明：以下两类产物**要**提交，便于 clone 后直接运行，故不在此忽略——
+#   data/samples/     姿态样本（数据集为 CC BY 4.0，允许再分发，署名见 docs/data_card.md）
+#   data/kb/index/    向量与词法索引（重建需消耗 embedding 额度，随库提交更省事）
+
+# 运行期临时文件
+*.log
+logs/
+results/figures/_tmp*
+tests/_tmp_env/
+tests/_tmp_out/
+tests/_tmp_rag/
+tests/_tmp_lexical/
+tests/_tmp_dense/
+tests/_tmp_retrieve/
+tests/_tmp_buildkb/
+tests/_tmp_tools/
+tests/_tmp_vision/

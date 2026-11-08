@@ -1,0 +1,103 @@
+{
+  "question_id": "U4",
+  "category": "unanswerable",
+  "condition": "full",
+  "question": "P5 栏最近一周的采食量怎么样？",
+  "answerable": false,
+  "expected": {
+    "doc_ids": [],
+    "must_admit": true
+  },
+  "evidence_hint": "只有 P1–P4 四个栏位，P5 不存在",
+  "image_path": null,
+  "ok": true,
+  "answer": "抱歉，系统中没有 P5 栏位。目前可用的栏位有：P1、P2、P3、P4。\n\n根据最近一周（2026-10-31 至 2026-11-06）的采食量数据，各栏位的平均采食量为：\n- **P1栏**：2.44 kg/头/天\n- **P2栏**：2.40 kg/头/天  \n- **P3栏**：2.41 kg/头/天\n- **P4栏**：2.44 kg/头/天\n\n数据为模拟数据，各栏位采食量相对稳定，差异不大。如果您需要查看某个具体栏位的详细采食记录，请告诉我正确的栏位编号。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [
+    {
+      "tool": "aggregate_metric",
+      "args": {
+        "metric": "feed_kg",
+        "group_by": "pen",
+        "start_date": "2026-10-31",
+        "end_date": "2026-11-06",
+        "pen": "P5"
+      },
+      "ok": false,
+      "error": "不支持的参数 pen",
+      "ms": 0.0
+    },
+    {
+      "tool": "query_pig_records",
+      "args": {
+        "pen_id": "P5",
+        "start_date": "2026-10-31",
+        "end_date": "2026-11-06",
+        "metrics": [
+          "feed_kg"
+        ]
+      },
+      "ok": false,
+      "error": "ToolError: 未知栏位 'P5'，可选：P1、P2、P3、P4",
+      "ms": 0.0
+    },
+    {
+      "tool": "list_pens",
+      "args": {},
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "aggregate_metric",
+      "args": {
+        "metric": "feed_kg",
+        "group_by": "pen",
+        "start_date": "2026-10-31",
+        "end_date": "2026-11-06"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": true,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 5,
+    "tool_calls": 4,
+    "input_tokens": 11305,
+    "output_tokens": 364,
+    "elapsed_seconds": 21.17,
+    "used_tools": [
+      "aggregate_metric",
+      "query_pig_records",
+      "list_pens"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 21.184,
+  "finished_at": "2026-11-07T18:42:43+08:00"
+}

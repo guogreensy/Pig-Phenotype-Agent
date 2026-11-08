@@ -1,0 +1,274 @@
+{
+  "question_id": "D7",
+  "category": "data",
+  "condition": "rag",
+  "question": "最近 7 天各栏位的平均体重是多少？",
+  "answerable": true,
+  "expected": {
+    "numbers": [
+      {
+        "label": "P1 平均体重",
+        "value": 105.6981,
+        "tol": 1.5855,
+        "unit": "kg"
+      },
+      {
+        "label": "P2 平均体重",
+        "value": 107.1477,
+        "tol": 1.6072,
+        "unit": "kg"
+      },
+      {
+        "label": "P3 平均体重",
+        "value": 104.2226,
+        "tol": 1.5633,
+        "unit": "kg"
+      },
+      {
+        "label": "P4 平均体重",
+        "value": 106.0046,
+        "tol": 1.5901,
+        "unit": "kg"
+      }
+    ],
+    "tokens": [
+      "P1",
+      "P2",
+      "P3",
+      "P4"
+    ]
+  },
+  "evidence_hint": "aggregate_metric(group_by=pen, metric=weight_kg)",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据我对项目知识库的检索，没有找到关于\"最近7天各栏位的平均体重\"的具体数据或统计方法。\n\n检索结果主要涉及：\n1. 猪只姿态识别数据集的信息\n2. 猪只行为监测的研究论文\n3. 数据集的技术报告和说明文档\n\n但没有找到关于体重统计、栏位分组或时间范围统计的相关信息。因此，我无法提供您询问的最近7天各栏位平均体重的具体数据。\n\n如果您需要这些信息，可能需要：\n1. 查询专门的养殖管理系统数据库\n2. 检查是否有专门的体重监测模块或报表\n3. 确认是否有体重数据的采集和存储功能",
+  "stop_reason": "forced_answer",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "local_experiment_report#0006",
+      "title": "experiment_report.md",
+      "section": "8.1 总体指标",
+      "url": "docs/experiment_report.md",
+      "license": "本项目自有文档",
+      "score": 0.4035
+    },
+    {
+      "index": 2,
+      "chunk_id": "local_technical_report#0008",
+      "title": "technical_report.md",
+      "section": "6.2 逐样本记录字段",
+      "url": "docs/technical_report.md",
+      "license": "本项目自有文档",
+      "score": 0.4001
+    },
+    {
+      "index": 3,
+      "chunk_id": "local_README#0002",
+      "title": "README.md",
+      "section": "3. 实际结果（2026-10-19 构建）",
+      "url": "data/README.md",
+      "license": "本项目自有文档",
+      "score": 0.3891
+    },
+    {
+      "index": 4,
+      "chunk_id": "pmc_7423952#0016",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Group-wise measures for the food restriction experiment",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.3883
+    },
+    {
+      "index": 5,
+      "chunk_id": "local_feasibility_report#0004",
+      "title": "feasibility_report.md",
+      "section": "4. 数据集",
+      "url": "docs/feasibility_report.md",
+      "license": "本项目自有文档",
+      "score": 0.3728
+    },
+    {
+      "index": 6,
+      "chunk_id": "local_data_card#0003",
+      "title": "data_card.md",
+      "section": "规模与分布（实测）",
+      "url": "docs/data_card.md",
+      "license": "本项目自有文档",
+      "score": 0.3972
+    },
+    {
+      "index": 7,
+      "chunk_id": "local_data_card#0001",
+      "title": "data_card.md",
+      "section": "",
+      "url": "docs/data_card.md",
+      "license": "本项目自有文档",
+      "score": 0.3909
+    },
+    {
+      "index": 8,
+      "chunk_id": "local_README#0001",
+      "title": "README.md",
+      "section": "",
+      "url": "data/README.md",
+      "license": "本项目自有文档",
+      "score": 0.5485
+    },
+    {
+      "index": 9,
+      "chunk_id": "pmc_7423952#0042",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Behavioural observations",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.5367
+    },
+    {
+      "index": 10,
+      "chunk_id": "hf_dataset_readme#0001",
+      "title": "Viewpoint-Aware Pig Posture Recognition（数据集说明）",
+      "section": "",
+      "url": "https://hf-mirror.com/datasets/anilbhujel/viewpoint-aware-pig-posture-recognition/raw/main/README.md",
+      "license": "CC BY 4.0（数据集卡片声明）",
+      "score": 0.5355
+    },
+    {
+      "index": 11,
+      "chunk_id": "pmc_7423952#0055",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Animals and experimental design",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.5037
+    },
+    {
+      "index": 12,
+      "chunk_id": "pmc_6749226#0012",
+      "title": "Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749226/",
+      "license": "CC BY",
+      "score": 0.4867
+    },
+    {
+      "index": 13,
+      "chunk_id": "pmc_8147168#0047",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "4.3. Discussion",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.4853
+    },
+    {
+      "index": 14,
+      "chunk_id": "pmc_5110645#0042",
+      "title": "Early detection of health and welfare compromises through automated detection of behavioural changes in pigs",
+      "section": "Feeding, drinking, and elimination behaviours",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5110645/",
+      "license": "CC BY",
+      "score": 0.4782
+    },
+    {
+      "index": 15,
+      "chunk_id": "pmc_11013991#0105",
+      "title": "Pattern Mining-Based Pig Behavior Analysis for Health and Welfare Monitoring",
+      "section": "5. Conclusions",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11013991/",
+      "license": "CC BY",
+      "score": 0.4755
+    },
+    {
+      "index": 16,
+      "chunk_id": "pmc_11635830#0040",
+      "title": "Determining the posture and location of pigs using an object detection model under different lighting conditions",
+      "section": "Detection And Localization Of Pigs",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11635830/",
+      "license": "CC BY-NC-ND",
+      "score": 0.4896
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "体重统计 栏位 平均 最近7天",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 531.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "体重 栏位 平均 统计 数据",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 375.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "猪只体重 栏位 统计 数据集",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 359.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "养殖数据 栏位 猪只 日增重 采食",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 438.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "模拟数据 栏位 猪只 体重 统计",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 438.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": true
+  },
+  "metrics": {
+    "model_calls": 6,
+    "tool_calls": 5,
+    "input_tokens": 27255,
+    "output_tokens": 348,
+    "elapsed_seconds": 19.05,
+    "used_tools": [
+      "search_knowledge"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "73157381dd888bd98cdd9d27c39737fcfb1ca289e130a8d33b43693b2d97e846",
+    "chars": 799,
+    "tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 19.057,
+  "finished_at": "2026-11-07T18:10:12+08:00"
+}

@@ -1,0 +1,43 @@
+{
+  "question_id": "U3",
+  "category": "unanswerable",
+  "condition": "direct",
+  "question": "这个猪场的疫苗免疫程序是怎样的？",
+  "answerable": false,
+  "expected": {
+    "doc_ids": [],
+    "must_admit": true
+  },
+  "evidence_hint": "知识库只泛泛提到疫苗研究，没有任何免疫程序内容",
+  "image_path": null,
+  "ok": true,
+  "answer": "我无法核实该猪场的具体疫苗免疫程序，因为我没有访问该场实际免疫记录的能力，也没有检索到相关的项目文档或知识库内容。\n\n如果您需要了解猪场疫苗免疫程序，通常需要咨询养殖场的技术负责人或查看场内的免疫记录档案。一般来说，猪场免疫程序会根据猪只的年龄、品种、当地疫病流行情况以及本场历史发病情况等因素制定，可能包括猪瘟、猪蓝耳病、猪伪狂犬病、口蹄疫等常见疫病的疫苗免疫。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 454,
+    "output_tokens": 111,
+    "elapsed_seconds": 9.27,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "dfad32b7cb0d2e1f12f1b247ac8179c6a68b5978d53a2f2b9e8931108af9815f",
+    "chars": 696,
+    "tools": [],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 9.269,
+  "finished_at": "2026-11-07T18:03:05+08:00"
+}

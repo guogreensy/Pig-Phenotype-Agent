@@ -1,0 +1,184 @@
+{
+  "question_id": "U5",
+  "category": "unanswerable",
+  "condition": "full",
+  "question": "这批猪的屠宰胴体品质如何？",
+  "answerable": false,
+  "expected": {
+    "doc_ids": [],
+    "must_admit": true
+  },
+  "evidence_hint": "只有在栏体重，没有屠宰或胴体测定数据",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据查询结果，我需要向您说明以下情况：\n\n## 当前系统功能限制\n\n**重要提醒：** 本系统目前**不支持**胴体品质相关的分析功能。根据系统文档明确说明：\n\n> ❌ **背膘厚、肌内脂肪、体重、体尺的测量或估计**\n> ❌ **疾病诊断、健康状态判定、用药建议**\n\n## 现有数据情况\n\n从栏位信息来看（数据为模拟）：\n- **栏位分布**：4个栏位（P1-P4），每栏12头猪，共48头猪\n- **当前体重**：平均体重106.86-109.12公斤（2026-11-06数据）\n- **养殖状态**：所有栏位均满栏，处于正常饲养状态\n\n## 关于胴体品质的专业建议\n\n虽然本系统无法直接分析胴体品质，但基于行业经验，胴体品质通常包括以下关键指标：\n\n**主要评定指标：**\n1. **胴体重**和**屠宰率**\n2. **背膘厚**（影响瘦肉率）\n3. **眼肌面积**（肌肉发育程度）\n4. **肉色**和**pH值**（肉质新鲜度）\n5. **肌内脂肪含量**（影响肉的风味和嫩度）\n\n**建议获取专业评估：**\n如需了解这批猪的胴体品质，建议：\n1. 联系专业屠宰场进行实际屠宰检测\n2. 委托第三方检测机构进行肉质分析\n3. 参考品种标准进行对比评估\n\n**数据为模拟**，以上信息仅供参考，不可用于实际生产决策。",
+  "stop_reason": "answered",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "local_data_card#0003",
+      "title": "data_card.md",
+      "section": "规模与分布（实测）",
+      "url": "docs/data_card.md",
+      "license": "本项目自有文档",
+      "score": 0.4487
+    },
+    {
+      "index": 2,
+      "chunk_id": "local_experiment_report#0001",
+      "title": "experiment_report.md",
+      "section": "",
+      "url": "docs/experiment_report.md",
+      "license": "本项目自有文档",
+      "score": 0.4266
+    },
+    {
+      "index": 3,
+      "chunk_id": "local_limitations#0001",
+      "title": "limitations.md",
+      "section": "",
+      "url": "docs/limitations.md",
+      "license": "本项目自有文档",
+      "score": 0.4252
+    },
+    {
+      "index": 4,
+      "chunk_id": "local_README#0003",
+      "title": "README.md",
+      "section": "4. 文件说明",
+      "url": "data/README.md",
+      "license": "本项目自有文档",
+      "score": 0.4237
+    },
+    {
+      "index": 5,
+      "chunk_id": "local_technical_report#0001",
+      "title": "technical_report.md",
+      "section": "",
+      "url": "docs/technical_report.md",
+      "license": "本项目自有文档",
+      "score": 0.4215
+    },
+    {
+      "index": 6,
+      "chunk_id": "pmc_11252330#0023",
+      "title": "Deep learning pose detection model for sow locomotion",
+      "section": "Video preprocessing and annotation",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11252330/",
+      "license": "CC BY",
+      "score": 0.4484
+    },
+    {
+      "index": 7,
+      "chunk_id": "pmc_7423952#0055",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Animals and experimental design",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.4358
+    },
+    {
+      "index": 8,
+      "chunk_id": "pmc_5110645#0007",
+      "title": "Early detection of health and welfare compromises through automated detection of behavioural changes in pigs",
+      "section": "Pig behaviours associated with compromised health and welfare",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5110645/",
+      "license": "CC BY",
+      "score": 0.4284
+    },
+    {
+      "index": 9,
+      "chunk_id": "pmc_11635830#0040",
+      "title": "Determining the posture and location of pigs using an object detection model under different lighting conditions",
+      "section": "Detection And Localization Of Pigs",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11635830/",
+      "license": "CC BY-NC-ND",
+      "score": 0.4222
+    },
+    {
+      "index": 10,
+      "chunk_id": "local_limitations#0003",
+      "title": "limitations.md",
+      "section": "4.1 模型行为的实测局限",
+      "url": "docs/limitations.md",
+      "license": "本项目自有文档",
+      "score": 0.398
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "list_pens",
+      "args": {},
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "胴体品质 屠宰 肉质指标",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 438.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "屠宰性能 胴体重 肉质评定",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 734.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "胴体品质 评定标准 肉质指标",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 359.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": true,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 5,
+    "tool_calls": 4,
+    "input_tokens": 20639,
+    "output_tokens": 498,
+    "elapsed_seconds": 38.89,
+    "used_tools": [
+      "list_pens",
+      "search_knowledge"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 38.885,
+  "finished_at": "2026-11-07T18:43:23+08:00"
+}

@@ -1,0 +1,49 @@
+{
+  "question_id": "K3",
+  "category": "knowledge",
+  "condition": "direct",
+  "question": "YOLOv5 是怎么用于单头猪的姿态检测的？",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "pmc_8147168"
+    ],
+    "keyword_hits": {
+      "pmc_8147168": {
+        "YOLOv5": 10
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：YOLOv5",
+  "image_path": null,
+  "ok": true,
+  "answer": "关于YOLOv5用于单头猪姿态检测的具体方法，我无法核实具体的技术细节和参数设置。YOLOv5是一种目标检测算法，通常用于图像识别任务，包括动物姿态检测。\n\n在猪只姿态检测方面，YOLOv5可能被用于：\n1. 检测猪只的位置和边界框\n2. 结合关键点检测技术识别猪只的关键身体部位\n3. 通过分析这些关键点的相对位置来判断猪只的姿态\n\n不过，具体的模型架构、训练数据集、预处理方法、评估指标等详细信息，我没有检索到相关文献或项目文档可以提供确切的参考。\n\n如果您需要了解YOLOv5在猪只姿态检测中的具体应用，建议查阅计算机视觉在畜牧业领域的专业文献，或者咨询相关技术专家获取更准确的信息。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 460,
+    "output_tokens": 169,
+    "elapsed_seconds": 17.3,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "dfad32b7cb0d2e1f12f1b247ac8179c6a68b5978d53a2f2b9e8931108af9815f",
+    "chars": 696,
+    "tools": [],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 17.315,
+  "finished_at": "2026-11-07T17:57:33+08:00"
+}

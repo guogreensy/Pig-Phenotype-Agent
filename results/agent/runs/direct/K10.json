@@ -1,0 +1,50 @@
+{
+  "question_id": "K10",
+  "category": "knowledge",
+  "condition": "direct",
+  "question": "本项目的姿态识别实验用了哪几组提示词、多少张样本？",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "local_experiment_report"
+    ],
+    "keyword_hits": {
+      "local_experiment_report": {
+        "提示词": 13,
+        "样本": 14
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：提示词、样本",
+  "image_path": null,
+  "ok": true,
+  "answer": "我无法核实本项目的姿态识别实验具体使用了哪些提示词和样本数量。由于我没有检索到具体的项目文档或相关实验记录，无法提供这些详细信息。\n\n如果您需要了解姿态识别实验的具体参数，建议您查阅项目文档或直接咨询项目负责人。这些信息通常会在实验设计部分详细记录，包括使用的提示词组别、样本数量、实验目的等关键信息。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 462,
+    "output_tokens": 80,
+    "elapsed_seconds": 19.92,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "dfad32b7cb0d2e1f12f1b247ac8179c6a68b5978d53a2f2b9e8931108af9815f",
+    "chars": 696,
+    "tools": [],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 19.915,
+  "finished_at": "2026-11-07T18:00:28+08:00"
+}

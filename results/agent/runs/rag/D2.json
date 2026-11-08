@@ -1,0 +1,238 @@
+{
+  "question_id": "D2",
+  "category": "data",
+  "condition": "rag",
+  "question": "最近 7 天各栏位的平均采食量分别是多少？",
+  "answerable": true,
+  "expected": {
+    "numbers": [
+      {
+        "label": "P1 平均采食量",
+        "value": 2.4418,
+        "tol": 0.0366,
+        "unit": "kg"
+      },
+      {
+        "label": "P2 平均采食量",
+        "value": 2.4018,
+        "tol": 0.036,
+        "unit": "kg"
+      },
+      {
+        "label": "P3 平均采食量",
+        "value": 2.4048,
+        "tol": 0.0361,
+        "unit": "kg"
+      },
+      {
+        "label": "P4 平均采食量",
+        "value": 2.4407,
+        "tol": 0.0366,
+        "unit": "kg"
+      }
+    ],
+    "tokens": [
+      "P1",
+      "P2",
+      "P3",
+      "P4"
+    ]
+  },
+  "evidence_hint": "aggregate_metric(group_by=pen) 的四个分组均值",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据我对项目知识库的检索，没有找到关于最近7天各栏位平均采食量的具体数据信息。\n\n检索结果主要包含了以下内容：\n1. 关于猪只姿态识别和饮水行为的研究，但没有具体的采食量统计数据\n2. 提到了商业养殖系统中使用RFID技术监测个体猪只采食行为的方法\n3. 描述了实验设计中的饮水和饲喂设施设置\n4. 提供了数据集的基本信息，但没有包含采食量相关的具体数据\n\n要回答您关于最近7天各栏位平均采食量的问题，我需要能够直接访问养殖数据库的工具，而不仅仅是知识库检索工具。目前我没有找到能够直接查询养殖数据的工具接口，因此无法提供您所需的采食量统计信息。",
+  "stop_reason": "forced_answer",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "pmc_7423952#0016",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Group-wise measures for the food restriction experiment",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.4591
+    },
+    {
+      "index": 2,
+      "chunk_id": "pmc_7423952#0055",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Animals and experimental design",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.4497
+    },
+    {
+      "index": 3,
+      "chunk_id": "local_data_card#0003",
+      "title": "data_card.md",
+      "section": "规模与分布（实测）",
+      "url": "docs/data_card.md",
+      "license": "本项目自有文档",
+      "score": 0.4422
+    },
+    {
+      "index": 4,
+      "chunk_id": "pmc_7423952#0067",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Dataset and ethogram",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.4422
+    },
+    {
+      "index": 5,
+      "chunk_id": "local_README#0001",
+      "title": "README.md",
+      "section": "",
+      "url": "data/README.md",
+      "license": "本项目自有文档",
+      "score": 0.4364
+    },
+    {
+      "index": 6,
+      "chunk_id": "local_data_card#0001",
+      "title": "data_card.md",
+      "section": "",
+      "url": "docs/data_card.md",
+      "license": "本项目自有文档",
+      "score": 0.4558
+    },
+    {
+      "index": 7,
+      "chunk_id": "pmc_5110645#0042",
+      "title": "Early detection of health and welfare compromises through automated detection of behavioural changes in pigs",
+      "section": "Feeding, drinking, and elimination behaviours",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5110645/",
+      "license": "CC BY",
+      "score": 0.4468
+    },
+    {
+      "index": 8,
+      "chunk_id": "pmc_7423952#0042",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Behavioural observations",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.4464
+    },
+    {
+      "index": 9,
+      "chunk_id": "pmc_11635830#0014",
+      "title": "Determining the posture and location of pigs using an object detection model under different lighting conditions",
+      "section": "Animals And Data Collection",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11635830/",
+      "license": "CC BY-NC-ND",
+      "score": 0.443
+    },
+    {
+      "index": 10,
+      "chunk_id": "pmc_5110645#0007",
+      "title": "Early detection of health and welfare compromises through automated detection of behavioural changes in pigs",
+      "section": "Pig behaviours associated with compromised health and welfare",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5110645/",
+      "license": "CC BY",
+      "score": 0.4348
+    },
+    {
+      "index": 11,
+      "chunk_id": "pmc_6749226#0012",
+      "title": "Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749226/",
+      "license": "CC BY",
+      "score": 0.4289
+    },
+    {
+      "index": 12,
+      "chunk_id": "pmc_8147168#0047",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "4.3. Discussion",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.4897
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "采食量统计 栏位 平均值",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 657.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "采食量 栏位 统计 数据",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 422.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "栏位 采食量 平均值 统计",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 407.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "猪只 采食量 数据 统计",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 375.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "养殖数据 采食量 栏位",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 469.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": true
+  },
+  "metrics": {
+    "model_calls": 6,
+    "tool_calls": 5,
+    "input_tokens": 24747,
+    "output_tokens": 358,
+    "elapsed_seconds": 166.81,
+    "used_tools": [
+      "search_knowledge"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "73157381dd888bd98cdd9d27c39737fcfb1ca289e130a8d33b43693b2d97e846",
+    "chars": 799,
+    "tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 166.809,
+  "finished_at": "2026-11-07T18:06:42+08:00"
+}

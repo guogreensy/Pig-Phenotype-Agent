@@ -1,0 +1,208 @@
+{
+  "question_id": "U2",
+  "category": "unanswerable",
+  "condition": "rag",
+  "question": "2025 年 3 月这批猪的平均采食量是多少？",
+  "answerable": false,
+  "expected": {
+    "doc_ids": [],
+    "must_admit": true
+  },
+  "evidence_hint": "数据从 2026-10-08 开始，2025 年 3 月没有记录",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据我对项目知识库的检索，没有找到关于2025年3月这批猪的平均采食量的具体数据。\n\n检索结果主要涉及猪只姿态识别数据集、猪只行为观察（包括站立、坐下、侧卧等行为分类）以及一些关于猪只饲养的基本信息，但没有包含2025年3月期间猪只采食量的统计数据。\n\n知识库中提到采食量是评估猪只健康和福利的重要指标，但没有提供具体的采食量数值或平均值。现有数据集主要关注猪只的姿态识别和行为分析，而非采食量记录。\n\n因此，无法回答2025年3月这批猪的平均采食量是多少的问题。",
+  "stop_reason": "forced_answer",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "pmc_7423952#0055",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Animals and experimental design",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.4333
+    },
+    {
+      "index": 2,
+      "chunk_id": "pmc_5730557#0050",
+      "title": "Automated tracking to measure behavioural changes in pigs for health and welfare monitoring",
+      "section": "Animals",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5730557/",
+      "license": "CC BY",
+      "score": 0.4168
+    },
+    {
+      "index": 3,
+      "chunk_id": "local_technical_report#0012",
+      "title": "technical_report.md",
+      "section": "9.4 其他工程验证",
+      "url": "docs/technical_report.md",
+      "license": "本项目自有文档",
+      "score": 0.4081
+    },
+    {
+      "index": 4,
+      "chunk_id": "local_data_card#0003",
+      "title": "data_card.md",
+      "section": "规模与分布（实测）",
+      "url": "docs/data_card.md",
+      "license": "本项目自有文档",
+      "score": 0.407
+    },
+    {
+      "index": 5,
+      "chunk_id": "local_README#0001",
+      "title": "README.md",
+      "section": "",
+      "url": "data/README.md",
+      "license": "本项目自有文档",
+      "score": 0.4063
+    },
+    {
+      "index": 6,
+      "chunk_id": "pmc_8147168#0004",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.4236
+    },
+    {
+      "index": 7,
+      "chunk_id": "pmc_7423952#0042",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Behavioural observations",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.4046
+    },
+    {
+      "index": 8,
+      "chunk_id": "local_data_card#0001",
+      "title": "data_card.md",
+      "section": "",
+      "url": "docs/data_card.md",
+      "license": "本项目自有文档",
+      "score": 0.4528
+    },
+    {
+      "index": 9,
+      "chunk_id": "local_feasibility_report#0004",
+      "title": "feasibility_report.md",
+      "section": "4. 数据集",
+      "url": "docs/feasibility_report.md",
+      "license": "本项目自有文档",
+      "score": 0.4233
+    },
+    {
+      "index": 10,
+      "chunk_id": "pmc_6749226#0012",
+      "title": "Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749226/",
+      "license": "CC BY",
+      "score": 0.4783
+    },
+    {
+      "index": 11,
+      "chunk_id": "pmc_7423952#0067",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Dataset and ethogram",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.4377
+    },
+    {
+      "index": 12,
+      "chunk_id": "pmc_5730557#0055",
+      "title": "Automated tracking to measure behavioural changes in pigs for health and welfare monitoring",
+      "section": "Analysis of Behavioural Observations",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5730557/",
+      "license": "CC BY",
+      "score": 0.4369
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "2025年3月 采食量 平均",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 438.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "采食量 平均值 2025年3月",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 375.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "采食量 数据集 统计",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 390.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "2025年3月 猪只 采食量",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 485.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "采食量 统计数据",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 421.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": true
+  },
+  "metrics": {
+    "model_calls": 6,
+    "tool_calls": 5,
+    "input_tokens": 25905,
+    "output_tokens": 328,
+    "elapsed_seconds": 27.08,
+    "used_tools": [
+      "search_knowledge"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "73157381dd888bd98cdd9d27c39737fcfb1ca289e130a8d33b43693b2d97e846",
+    "chars": 799,
+    "tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 27.076,
+  "finished_at": "2026-11-07T18:18:31+08:00"
+}

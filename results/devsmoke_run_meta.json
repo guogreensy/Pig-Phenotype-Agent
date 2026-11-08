@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "run_id": "devsmoke",
+    "数据划分": "dev（样本 12 条）",
+    "模型": "zhipu / glm-4.1v-thinking-flash",
+    "调用参数": "temperature=0.0, max_tokens=2048, image_max_side=512",
+    "提示词 SHA256": "A=098f7653cb3ec2854bea8e91e27e1703cfdb68f0756460426c03dc6dfbfb58fe；B=914878c32ff2c99d9384861cec5ae33e7a0edfc38ee28bd78880397d7b2eb998；C=e5c513d404ddacb484c5743abcf5c2f34d32bd457ead29bea2dd40f95db89b2f",
+    "重复次数": 1,
+    "计划调用": 36,
+    "实际完成": 36,
+    "调用失败": 0,
+    "总 Token": 23639,
+    "原始记录": "results\\raw\\devsmoke_raw.csv",
+    "指标汇总": "results\\metrics\\devsmoke_metrics.csv",
+    "分类明细": "results\\metrics\\devsmoke_per_class.csv"
+  },
+  "summary": {
+    "run_id": "devsmoke",
+    "n_planned": 36,
+    "n_done": 36,
+    "n_skipped": 0,
+    "n_failed": 0,
+    "n_aborted": 0,
+    "total_tokens": 23639,
+    "elapsed_seconds": 90.67200000002049,
+    "stop_reason": "",
+    "raw_path": "C:\\WorkSource\\DSH_workspace\\智能育种评估系统\\results\\raw\\devsmoke_raw.csv",
+    "notes": []
+  }
+}

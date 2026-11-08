@@ -1,0 +1,170 @@
+{
+  "question_id": "K2",
+  "category": "knowledge",
+  "condition": "full",
+  "question": "有哪些公开可用的猪只姿态识别数据集？",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "hf_dataset_readme",
+      "pmc_8147168"
+    ],
+    "keyword_hits": {
+      "hf_dataset_readme": {
+        "dataset": 7,
+        "Dataset": 5
+      },
+      "pmc_8147168": {
+        "dataset": 25,
+        "Dataset": 2
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：dataset、Dataset",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据知识库检索结果，目前公开可用的猪只姿态识别数据集主要包括：\n\n## 1. Viewpoint-Aware Pig Posture Recognition Dataset\n- **来源**：HuggingFace平台上的 `anilbhujel/viewpoint-aware-pig-posture-recognition`\n- **许可协议**：CC BY 4.0（使用时必须署名）\n- **数据规模**：10K-100K级别\n- **特点**：\n  - 支持多摄像头、视角感知的猪只姿态识别\n  - 包含真实养殖场环境中的猪只图像\n  - 提供边界框标注、姿态类别标签和相机视角角度信息\n  - 姿态类别包括：站立(standing)、侧卧(lying lateral)、其他躺姿(lying other)、坐姿(sitting)\n- **获取地址**：https://huggingface.co/datasets/anilbhujel/viewpoint-aware-pig-posture-recognition\n\n## 2. Pig-Posture Recognition Dataset\n- **来源**：基于计算机视觉的猪只姿态识别研究数据集\n- **许可协议**：CC BY\n- **特点**：\n  - 被描述为\"世界上第一个人工标注的猪只姿态识别数据集\"\n  - 包含四种常见姿态：站立、躺卧、侧卧、探索姿态\n  - 专注于猪只生长过程中的姿态识别\n- **出处**：Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration\n\n## 数据集使用建议\n1. **Viewpoint-Aware数据集**更适合需要考虑多摄像头视角和复杂养殖场环境的研究\n2. **Pig-Posture数据集**更适合基础姿态分类研究，标注相对简单\n3. 两个数据集都采用开放许可协议，便于学术研究和应用开发\n\n需要注意的是，这些数据集主要用于研究目的，实际应用时需要考虑养殖环境的差异和模型泛化能力。",
+  "stop_reason": "answered",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "local_experiment_report#0002",
+      "title": "experiment_report.md",
+      "section": "2. 数据集来源与样本统计",
+      "url": "docs/experiment_report.md",
+      "license": "本项目自有文档",
+      "score": 0.6557
+    },
+    {
+      "index": 2,
+      "chunk_id": "hf_dataset_readme#0001",
+      "title": "Viewpoint-Aware Pig Posture Recognition（数据集说明）",
+      "section": "",
+      "url": "https://hf-mirror.com/datasets/anilbhujel/viewpoint-aware-pig-posture-recognition/raw/main/README.md",
+      "license": "CC BY 4.0（数据集卡片声明）",
+      "score": 0.6285
+    },
+    {
+      "index": 3,
+      "chunk_id": "local_README#0001",
+      "title": "README.md",
+      "section": "",
+      "url": "data/README.md",
+      "license": "本项目自有文档",
+      "score": 0.6278
+    },
+    {
+      "index": 4,
+      "chunk_id": "local_technical_report#0001",
+      "title": "technical_report.md",
+      "section": "",
+      "url": "docs/technical_report.md",
+      "license": "本项目自有文档",
+      "score": 0.6255
+    },
+    {
+      "index": 5,
+      "chunk_id": "local_data_card#0001",
+      "title": "data_card.md",
+      "section": "",
+      "url": "docs/data_card.md",
+      "license": "本项目自有文档",
+      "score": 0.6247
+    },
+    {
+      "index": 6,
+      "chunk_id": "pmc_8147168#0001",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.6173
+    },
+    {
+      "index": 7,
+      "chunk_id": "local_feasibility_report#0004",
+      "title": "feasibility_report.md",
+      "section": "4. 数据集",
+      "url": "docs/feasibility_report.md",
+      "license": "本项目自有文档",
+      "score": 0.6166
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "猪只姿态识别数据集 公开数据集",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 484.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "hf_dataset_readme#0001"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "猪只姿态识别数据集 其他公开数据集",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 422.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_8147168#0001"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 5,
+    "tool_calls": 4,
+    "input_tokens": 19507,
+    "output_tokens": 537,
+    "elapsed_seconds": 168.31,
+    "used_tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 168.32,
+  "finished_at": "2026-11-07T18:29:25+08:00"
+}

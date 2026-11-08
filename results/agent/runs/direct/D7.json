@@ -1,0 +1,73 @@
+{
+  "question_id": "D7",
+  "category": "data",
+  "condition": "direct",
+  "question": "最近 7 天各栏位的平均体重是多少？",
+  "answerable": true,
+  "expected": {
+    "numbers": [
+      {
+        "label": "P1 平均体重",
+        "value": 105.6981,
+        "tol": 1.5855,
+        "unit": "kg"
+      },
+      {
+        "label": "P2 平均体重",
+        "value": 107.1477,
+        "tol": 1.6072,
+        "unit": "kg"
+      },
+      {
+        "label": "P3 平均体重",
+        "value": 104.2226,
+        "tol": 1.5633,
+        "unit": "kg"
+      },
+      {
+        "label": "P4 平均体重",
+        "value": 106.0046,
+        "tol": 1.5901,
+        "unit": "kg"
+      }
+    ],
+    "tokens": [
+      "P1",
+      "P2",
+      "P3",
+      "P4"
+    ]
+  },
+  "evidence_hint": "aggregate_metric(group_by=pen, metric=weight_kg)",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据我的知识，我无法直接查询实时数据或模拟数据集中的具体数值。要获取最近7天各栏位的平均体重数据，需要访问养殖场的数据库或管理系统。\n\n如果您能提供具体的数据，我可以帮您分析各栏位的平均体重情况，并进行比较或异常筛查。或者，如果您有特定的分析需求，也可以告诉我，我可以提供相应的分析方法建议。\n\n请注意，我无法核实具体的体重数值，因为我无法直接访问您的养殖场数据系统。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 457,
+    "output_tokens": 97,
+    "elapsed_seconds": 3.58,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "dfad32b7cb0d2e1f12f1b247ac8179c6a68b5978d53a2f2b9e8931108af9815f",
+    "chars": 696,
+    "tools": [],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 3.589,
+  "finished_at": "2026-11-07T17:56:24+08:00"
+}

@@ -1,0 +1,183 @@
+{
+  "kind": "real_api_verification",
+  "note": "真实调用记录；raw_text 为服务端原始返回，未做任何改写",
+  "provider": "zhipu",
+  "model": "glm-4.6v-flash",
+  "base_url": "https://open.bigmodel.cn/api/paas/v4/chat/completions",
+  "prompt_variant": "C",
+  "prompt_sha256": "e5c513d404ddacb484c5743abcf5c2f34d32bd457ead29bea2dd40f95db89b2f",
+  "params": {
+    "temperature": 0.0,
+    "max_tokens": 512,
+    "image_max_side": 512,
+    "jpeg_quality": 90
+  },
+  "started_at": "2026-10-19T12:51:20",
+  "finished_at": "2026-10-19T12:51:57",
+  "requested": 8,
+  "success": 3,
+  "failed": 5,
+  "records": [
+    {
+      "index": 1,
+      "sample_id": "test_pen1_tur_cam2_20250921_050022_0000",
+      "image_path": "data\\samples\\test\\standing\\test_pen1_tur_cam2_20250921_050022_0000.jpg",
+      "true_label": "standing",
+      "image_sent": "276x353",
+      "estimated_visual_tokens": 90,
+      "request_success": true,
+      "http_status": 200,
+      "latency_seconds": 3.0,
+      "attempt": 1,
+      "input_tokens": 633,
+      "output_tokens": 47,
+      "error": null,
+      "raw_text": "{\"posture\": \"standing\", \"description\": \"四肢支撑身体，躯干离开地面，可见腿和站立姿态的躯干轮廓。\", \"uncertain\": false, \"uncertainty_reason\": null}",
+      "parse": {
+        "json_valid": true,
+        "method": "direct",
+        "error": null
+      },
+      "schema": {
+        "valid": true,
+        "posture": "standing",
+        "errors": [],
+        "warnings": []
+      }
+    },
+    {
+      "index": 2,
+      "sample_id": "test_pen1_tur_cam2_20250921_050022_0002",
+      "image_path": "data\\samples\\test\\lying_lateral\\test_pen1_tur_cam2_20250921_050022_0002.jpg",
+      "true_label": "lying_lateral",
+      "image_sent": "241x169",
+      "estimated_visual_tokens": 37,
+      "request_success": true,
+      "http_status": 200,
+      "latency_seconds": 2.281,
+      "attempt": 2,
+      "input_tokens": 557,
+      "output_tokens": 43,
+      "error": null,
+      "raw_text": "{\"posture\": \"standing\", \"description\": \"四肢支撑身体，躯干离开地面，可见站立姿态的轮廓。\", \"uncertain\": false, \"uncertainty_reason\": null}",
+      "parse": {
+        "json_valid": true,
+        "method": "direct",
+        "error": null
+      },
+      "schema": {
+        "valid": true,
+        "posture": "standing",
+        "errors": [],
+        "warnings": []
+      }
+    },
+    {
+      "index": 3,
+      "sample_id": "test_pen1_tur_cam2_20250921_050022_0003",
+      "image_path": "data\\samples\\test\\lying_lateral\\test_pen1_tur_cam2_20250921_050022_0003.jpg",
+      "true_label": "lying_lateral",
+      "image_sent": "264x158",
+      "estimated_visual_tokens": 34,
+      "request_success": false,
+      "http_status": 429,
+      "latency_seconds": 0.594,
+      "attempt": 3,
+      "input_tokens": null,
+      "output_tokens": null,
+      "error": "HTTP 429：1305: 该模型当前访问量过大，请您稍后再试（触发限流，可降低 PIG_QPS 或 PIG_CONCURRENCY）",
+      "raw_text": ""
+    },
+    {
+      "index": 4,
+      "sample_id": "test_pen1_tur_cam2_20250921_050022_0006",
+      "image_path": "data\\samples\\test\\lying_lateral\\test_pen1_tur_cam2_20250921_050022_0006.jpg",
+      "true_label": "lying_lateral",
+      "image_sent": "184x141",
+      "estimated_visual_tokens": 22,
+      "request_success": false,
+      "http_status": 429,
+      "latency_seconds": 0.469,
+      "attempt": 3,
+      "input_tokens": null,
+      "output_tokens": null,
+      "error": "HTTP 429：1305: 该模型当前访问量过大，请您稍后再试（触发限流，可降低 PIG_QPS 或 PIG_CONCURRENCY）",
+      "raw_text": ""
+    },
+    {
+      "index": 5,
+      "sample_id": "test_pen1_tur_cam2_20250921_052427_0000",
+      "image_path": "data\\samples\\test\\lying_other\\test_pen1_tur_cam2_20250921_052427_0000.jpg",
+      "true_label": "lying_other",
+      "image_sent": "233x474",
+      "estimated_visual_tokens": 100,
+      "request_success": false,
+      "http_status": 429,
+      "latency_seconds": 0.828,
+      "attempt": 3,
+      "input_tokens": null,
+      "output_tokens": null,
+      "error": "HTTP 429：1305: 该模型当前访问量过大，请您稍后再试（触发限流，可降低 PIG_QPS 或 PIG_CONCURRENCY）",
+      "raw_text": ""
+    },
+    {
+      "index": 6,
+      "sample_id": "test_pen1_tur_cam2_20250921_052427_0001",
+      "image_path": "data\\samples\\test\\lying_other\\test_pen1_tur_cam2_20250921_052427_0001.jpg",
+      "true_label": "lying_other",
+      "image_sent": "206x512",
+      "estimated_visual_tokens": 98,
+      "request_success": false,
+      "http_status": 429,
+      "latency_seconds": 0.86,
+      "attempt": 3,
+      "input_tokens": null,
+      "output_tokens": null,
+      "error": "HTTP 429：1305: 该模型当前访问量过大，请您稍后再试（触发限流，可降低 PIG_QPS 或 PIG_CONCURRENCY）",
+      "raw_text": ""
+    },
+    {
+      "index": 7,
+      "sample_id": "test_pen1_tur_cam2_20250921_052427_0003",
+      "image_path": "data\\samples\\test\\standing\\test_pen1_tur_cam2_20250921_052427_0003.jpg",
+      "true_label": "standing",
+      "image_sent": "281x295",
+      "estimated_visual_tokens": 74,
+      "request_success": false,
+      "http_status": 429,
+      "latency_seconds": 0.719,
+      "attempt": 3,
+      "input_tokens": null,
+      "output_tokens": null,
+      "error": "HTTP 429：1305: 该模型当前访问量过大，请您稍后再试（触发限流，可降低 PIG_QPS 或 PIG_CONCURRENCY）",
+      "raw_text": ""
+    },
+    {
+      "index": 8,
+      "sample_id": "test_pen1_tur_cam2_20250921_052427_0006",
+      "image_path": "data\\samples\\test\\lying_lateral\\test_pen1_tur_cam2_20250921_052427_0006.jpg",
+      "true_label": "lying_lateral",
+      "image_sent": "122x117",
+      "estimated_visual_tokens": 11,
+      "request_success": true,
+      "http_status": 200,
+      "latency_seconds": 3.25,
+      "attempt": 1,
+      "input_tokens": 519,
+      "output_tokens": 49,
+      "error": null,
+      "raw_text": "{\"posture\": \"lying_lateral\", \"description\": \"身体一侧着地，躯干长轴大致水平贴地，可见一侧体侧。\", \"uncertain\": false, \"uncertainty_reason\": null}",
+      "parse": {
+        "json_valid": true,
+        "method": "direct",
+        "error": null
+      },
+      "schema": {
+        "valid": true,
+        "posture": "lying_lateral",
+        "errors": [],
+        "warnings": []
+      }
+    }
+  ]
+}

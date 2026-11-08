@@ -1,0 +1,195 @@
+{
+  "question_id": "K9",
+  "category": "knowledge",
+  "condition": "rag",
+  "question": "妊娠期限位栏母猪的行为识别用了什么计算机视觉方法？",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "pmc_8071751"
+    ],
+    "keyword_hits": {
+      "pmc_8071751": {
+        "gestating sows": 1,
+        "sows": 55
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：gestating sows、sows",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据检索结果，关于妊娠期限位栏母猪行为识别的计算机视觉方法，我可以提供以下信息：\n\n妊娠期限位栏母猪行为识别主要采用了以下计算机视觉方法：\n\n1. **深度学习方法**：深度学习作为计算机视觉技术中的优秀研究方法，已被广泛应用于动物行为研究中。一些方法通过目标检测网络模型从图像中检测猪只，进而进行猪只行为识别。\n\n2. **Faster Region-Convolutional Neural Networks (Faster-RCNN)**：这是一种有效的目标检测网络，可以检测猪只并识别猪的姿势和采食行为。\n\n3. **Fully Convolutional Network (FCN)模型**：通过FCN模型可以将母猪从所有帧中分割出来，帮助识别母猪的哺乳行为，准确率达到97.6%。\n\n4. **多种检测器方法**：包括Faster R-CNN、单次多框检测器(SSD)和R-FCN等，用于识别猪的姿势。\n\n这些方法的优势在于不需要手动设计特征提取方法，可以从数据中自动学习特征，实现更准确的行为识别。这些信息来源于《Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks》和《Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs》等文献。",
+  "stop_reason": "forced_answer",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "pmc_8147168#0001",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.6092
+    },
+    {
+      "index": 2,
+      "chunk_id": "pmc_8071751#0001",
+      "title": "A computer vision-based approach for behavior recognition of gestating sows fed different fiber levels during high ambient temperature",
+      "section": "",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8071751/",
+      "license": "CC BY-NC",
+      "score": 0.6016
+    },
+    {
+      "index": 3,
+      "chunk_id": "pmc_6749226#0004",
+      "title": "Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749226/",
+      "license": "CC BY",
+      "score": 0.5867
+    },
+    {
+      "index": 4,
+      "chunk_id": "pmc_7423952#0047",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Individual pig profiles",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.582
+    },
+    {
+      "index": 5,
+      "chunk_id": "pmc_8614322#0015",
+      "title": "Deep-Learning-Based Automatic Monitoring of Pigs’ Physico-Temporal Activities at Different Greenhouse Gas Concentrations",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8614322/",
+      "license": "CC BY",
+      "score": 0.5768
+    },
+    {
+      "index": 6,
+      "chunk_id": "pmc_7070994#0011",
+      "title": "Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7070994/",
+      "license": "CC BY",
+      "score": 0.6391
+    },
+    {
+      "index": 7,
+      "chunk_id": "pmc_7070994#0051",
+      "title": "Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks",
+      "section": "3.2. Results and Discussion of the Experiments",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7070994/",
+      "license": "CC BY",
+      "score": 0.6138
+    },
+    {
+      "index": 8,
+      "chunk_id": "pmc_6749226#0009",
+      "title": "Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749226/",
+      "license": "CC BY",
+      "score": 0.6066
+    },
+    {
+      "index": 9,
+      "chunk_id": "pmc_7070994#0053",
+      "title": "Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks",
+      "section": "3.2. Results and Discussion of the Experiments",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7070994/",
+      "license": "CC BY",
+      "score": 0.6018
+    },
+    {
+      "index": 10,
+      "chunk_id": "pmc_7070994#0002",
+      "title": "Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks",
+      "section": "Abstract",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7070994/",
+      "license": "CC BY",
+      "score": 0.5993
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "妊娠期限位栏母猪行为识别 计算机视觉方法",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 453.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_8071751#0001"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_6749226#0004"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "妊娠母猪 行为识别 深度学习 计算机视觉 方法",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 437.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_7070994#0011"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": true
+  },
+  "metrics": {
+    "model_calls": 6,
+    "tool_calls": 5,
+    "input_tokens": 14614,
+    "output_tokens": 441,
+    "elapsed_seconds": 26.41,
+    "used_tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "73157381dd888bd98cdd9d27c39737fcfb1ca289e130a8d33b43693b2d97e846",
+    "chars": 799,
+    "tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 26.412,
+  "finished_at": "2026-11-07T18:15:47+08:00"
+}

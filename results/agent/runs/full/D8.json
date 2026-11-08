@@ -1,0 +1,86 @@
+{
+  "question_id": "D8",
+  "category": "data",
+  "condition": "full",
+  "question": "P4-003 这头猪最近 7 天的活动指数是否偏低？",
+  "answerable": true,
+  "expected": {
+    "numbers": [],
+    "tokens": [
+      "P4-003"
+    ],
+    "z_score": -5.099
+  },
+  "evidence_hint": "注入场景 low_activity_P4-003；构建时验证 z < -3（实测 z=-5.10）",
+  "image_path": null,
+  "ok": true,
+  "answer": "是的，P4-003 这头猪最近 7 天的活动指数确实偏低。\n\n**具体数据：**\n- P4-007 最近 7 天活动指数平均值为 0.261（数据为模拟）\n- 同栏位其他猪只的活动指数平均值在 0.434-0.509 之间\n- 全场猪只的活动指数平均值为 0.452\n\n**详细日记录：**\n- 10月31日：0.422\n- 11月1日：0.24  \n- 11月2日：0.255\n- 11月3日：0.263\n- 11月4日：0.367\n- 11月5日：0.194\n- 11月6日：0.086\n\n可以看出，P4-003 的活动指数不仅低于同栏位平均水平，还明显低于全场平均水平，特别是最后几天（11月5-6日）活动指数持续下降至 0.2 以下，这确实属于偏低的情况。建议关注这头猪的健康状况。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [
+    {
+      "tool": "query_pig_records",
+      "args": {
+        "pig_id": "P4-003",
+        "start_date": "2026-10-31",
+        "end_date": "2026-11-06",
+        "metrics": [
+          "activity_index"
+        ]
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "aggregate_metric",
+      "args": {
+        "metric": "activity_index",
+        "group_by": "pig",
+        "start_date": "2026-10-31",
+        "end_date": "2026-11-06",
+        "stat": "mean"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": true,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 3,
+    "tool_calls": 2,
+    "input_tokens": 8040,
+    "output_tokens": 379,
+    "elapsed_seconds": 29.38,
+    "used_tools": [
+      "query_pig_records",
+      "aggregate_metric"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 29.363,
+  "finished_at": "2026-11-07T18:26:02+08:00"
+}

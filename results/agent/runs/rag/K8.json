@@ -1,0 +1,154 @@
+{
+  "question_id": "K8",
+  "category": "knowledge",
+  "condition": "rag",
+  "question": "如何通过行为变化早期发现猪只的健康与福利问题？",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "pmc_5110645",
+      "pmc_5730557"
+    ],
+    "keyword_hits": {
+      "pmc_5110645": {
+        "health": 26,
+        "welfare": 32
+      },
+      "pmc_5730557": {
+        "health": 13,
+        "welfare": 12
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：health、welfare",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据检索到的知识库内容，我可以为您提供关于通过行为变化早期发现猪只健康与福利问题的信息：\n\n## 结论\n\n通过持续监测猪只的行为变化可以早期发现健康与福利问题，这比依赖临床症状发现疾病更为有效。猪只的姿态变化往往是疾病的早期预警信号，而自动化监测系统能够捕捉这些细微变化。\n\n## 依据\n\n1. **持续监测的重要性**（来源：《Pattern Mining-Based Pig Behavior Analysis for Health and Welfare Monitoring》）：\n   - 持续监测猪只行为可以帮助识别疾病或损伤的亚临床和临床症状出现前或伴随的细微变化\n   - 自动化系统能够监测、识别和跟踪个体猪只，并分析其行为模式，为养殖场提供可视化信息\n\n2. **关键行为指标**（来源：《Early detection of health and welfare compromises through automated detection of behavioural changes in pigs》）：\n   - 五类行为被用于评估猪只健康与福利状况\n   - 行为变化可以映射到可行的传感器进行自动检测\n   - 站立频率等细微行为变化可能与健康和福利问题相关\n\n3. **姿态变化的预警作用**（来源：《Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration》）：\n   - 猪只在生长过程中的姿态变化往往是疾病的先兆\n   - 监测猪只行为活动可以更早地发现病理变化，提前识别威胁猪只健康的因素\n   - 计算机视觉技术可以实时监测猪只的生长过程，识别猪只随时间变化的姿态持续时间和频率\n\n这些研究表明，通过建立自动化监测系统，养殖场可以更早地发现猪只健康问题，及时采取措施，提高养殖效率和动物福利水平。",
+  "stop_reason": "forced_answer",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "pmc_11013991#0105",
+      "title": "Pattern Mining-Based Pig Behavior Analysis for Health and Welfare Monitoring",
+      "section": "5. Conclusions",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11013991/",
+      "license": "CC BY",
+      "score": 0.6568
+    },
+    {
+      "index": 2,
+      "chunk_id": "pmc_5110645#0001",
+      "title": "Early detection of health and welfare compromises through automated detection of behavioural changes in pigs",
+      "section": "",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5110645/",
+      "license": "CC BY",
+      "score": 0.6119
+    },
+    {
+      "index": 3,
+      "chunk_id": "pmc_5110645#0024",
+      "title": "Early detection of health and welfare compromises through automated detection of behavioural changes in pigs",
+      "section": "Towards quantification of behavioural changes",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5110645/",
+      "license": "CC BY",
+      "score": 0.6069
+    },
+    {
+      "index": 4,
+      "chunk_id": "pmc_5730557#0003",
+      "title": "Automated tracking to measure behavioural changes in pigs for health and welfare monitoring",
+      "section": "Abstract",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5730557/",
+      "license": "CC BY",
+      "score": 0.6035
+    },
+    {
+      "index": 5,
+      "chunk_id": "pmc_8147168#0002",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "Abstract",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.5987
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "猪只行为变化健康福利监测早期发现",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 500.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_11013991#0105"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_5110645#0001"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_5110645#0024"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_8147168#0002"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": true
+  },
+  "metrics": {
+    "model_calls": 6,
+    "tool_calls": 5,
+    "input_tokens": 13154,
+    "output_tokens": 512,
+    "elapsed_seconds": 50.97,
+    "used_tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "73157381dd888bd98cdd9d27c39737fcfb1ca289e130a8d33b43693b2d97e846",
+    "chars": 799,
+    "tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 50.97,
+  "finished_at": "2026-11-07T18:15:20+08:00"
+}

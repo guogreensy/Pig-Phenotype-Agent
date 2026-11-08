@@ -1,0 +1,59 @@
+{
+  "question_id": "V4",
+  "category": "vision",
+  "condition": "rag",
+  "question": "这张图片里的猪是什么姿态？data/experiment/images/v4.jpg",
+  "answerable": true,
+  "expected": {
+    "label": "lying_other",
+    "label_cn": "其他卧姿",
+    "doc_ids": []
+  },
+  "evidence_hint": "类别来自原图所在目录名（人工标注）；题目使用中性文件名避免泄漏",
+  "image_path": "data/experiment/images/v4.jpg",
+  "ok": true,
+  "answer": "抱歉，我目前可用的工具只有知识库检索功能，无法直接分析图片内容。我无法查看您提到的图片文件 `data/experiment/images/v4.jpg` 来识别猪的姿态。\n\n如果您需要分析猪只姿态，建议您：\n1. 使用专门的图像分析工具或软件\n2. 或者如果您有关于猪姿态分析的具体问题，我可以帮您在知识库中查找相关的技术文档或论文资料\n\n您是否需要我帮您在知识库中搜索关于猪姿态分析的相关信息？",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [
+    {
+      "tool": "analyze_image",
+      "args": {
+        "image_path": "data/experiment/images/v4.jpg"
+      },
+      "ok": false,
+      "error": "未注册的工具：analyze_image（可用：search_knowledge、fetch_passage）",
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 2,
+    "tool_calls": 1,
+    "input_tokens": 1734,
+    "output_tokens": 151,
+    "elapsed_seconds": 12.06,
+    "used_tools": [
+      "analyze_image"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "73157381dd888bd98cdd9d27c39737fcfb1ca289e130a8d33b43693b2d97e846",
+    "chars": 799,
+    "tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 12.05,
+  "finished_at": "2026-11-07T18:45:57+08:00"
+}

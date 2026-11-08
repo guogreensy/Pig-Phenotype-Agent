@@ -1,0 +1,177 @@
+{
+  "question_id": "K5",
+  "category": "knowledge",
+  "condition": "rag",
+  "question": "母猪行走姿态（locomotion）的深度学习姿态检测模型是怎么做的？",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "pmc_11252330"
+    ],
+    "keyword_hits": {
+      "pmc_11252330": {
+        "locomotion": 40,
+        "pose": 28
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：locomotion、pose",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据检索到的信息，我可以为您提供关于母猪行走姿态深度学习检测模型的相关内容：\n\n## 母猪行走姿态检测模型方法\n\n### 1. 基于Faster R-CNN的检测系统\n根据《Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs》中的研究，有研究团队开发了基于Kinect v2传感器的检测系统，采用Faster R-CNN技术结合区域提议网络(RPN)和Zeiler & Fergus Net(ZFnet)来识别母猪的不同姿态，包括站立和坐姿行为，以及胸卧、腹卧和侧卧等躺卧姿态。\n\n### 2. 联合训练方法\n根据《Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration》的研究，提出了一种联合训练方法，结合目标检测和语义分割：\n- 首先收集包含多只猪的图像数据集\n- 使用目标检测技术从图像中提取单个猪只\n- 由专业人员对这些猪只进行分类和标注\n- 为解决语义分割中的边缘混叠问题，使用非局部平均滤波进行图像预处理\n- 使用改进的DeepLab v3+模型进行多次实验\n\n### 3. 基于YOLO的检测系统\n在《Deep-Learning-Based Automatic Monitoring of Pigs' Physico-Temporal Activities at Different Greenhouse Gas Concentrations》中提到，研究人员开发了基于深度学习的自动算法，利用计算机视觉系统来监测猪的姿势和行走活动。该研究实现了两种广泛使用的目标检测模型：YOLOv4和Faster R-CNN，并最终采用了YOLO模型。\n\n这些研究表明，深度学习技术在母猪行走姿态检测方面有多种实现方法，包括基于Faster R-CNN、YOLO等目标检测模型，以及结合语义分割的联合训练方法，能够有效识别母猪的各种姿态和行为。",
+  "stop_reason": "forced_answer",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "pmc_11252330#0001",
+      "title": "Deep learning pose detection model for sow locomotion",
+      "section": "",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11252330/",
+      "license": "CC BY",
+      "score": 0.6639
+    },
+    {
+      "index": 2,
+      "chunk_id": "local_experiment_report#0002",
+      "title": "experiment_report.md",
+      "section": "2. 数据集来源与样本统计",
+      "url": "docs/experiment_report.md",
+      "license": "本项目自有文档",
+      "score": 0.6007
+    },
+    {
+      "index": 3,
+      "chunk_id": "pmc_8614322#0074",
+      "title": "Deep-Learning-Based Automatic Monitoring of Pigs’ Physico-Temporal Activities at Different Greenhouse Gas Concentrations",
+      "section": "5. Conclusions",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8614322/",
+      "license": "CC BY",
+      "score": 0.5942
+    },
+    {
+      "index": 4,
+      "chunk_id": "pmc_8614322#0055",
+      "title": "Deep-Learning-Based Automatic Monitoring of Pigs’ Physico-Temporal Activities at Different Greenhouse Gas Concentrations",
+      "section": "3.2. Group-Wise Pig Posture and Walking Behavior Score",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8614322/",
+      "license": "CC BY",
+      "score": 0.5871
+    },
+    {
+      "index": 5,
+      "chunk_id": "local_technical_report#0001",
+      "title": "technical_report.md",
+      "section": "",
+      "url": "docs/technical_report.md",
+      "license": "本项目自有文档",
+      "score": 0.5721
+    },
+    {
+      "index": 6,
+      "chunk_id": "pmc_8147168#0051",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "5. Conclusions",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.6853
+    },
+    {
+      "index": 7,
+      "chunk_id": "pmc_6749226#0001",
+      "title": "Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs",
+      "section": "",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749226/",
+      "license": "CC BY",
+      "score": 0.683
+    },
+    {
+      "index": 8,
+      "chunk_id": "pmc_6749226#0009",
+      "title": "Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749226/",
+      "license": "CC BY",
+      "score": 0.6746
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "母猪行走姿态 深度学习 姿态检测模型 locomotion",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 406.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_11252330#0001"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "\"Deep learning pose detection model for sow locomotion\" 模型方法 架构",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 453.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_8147168#0051"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_6749226#0009"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": true
+  },
+  "metrics": {
+    "model_calls": 6,
+    "tool_calls": 5,
+    "input_tokens": 15806,
+    "output_tokens": 567,
+    "elapsed_seconds": 27.95,
+    "used_tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "73157381dd888bd98cdd9d27c39737fcfb1ca289e130a8d33b43693b2d97e846",
+    "chars": 799,
+    "tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 27.946,
+  "finished_at": "2026-11-07T18:13:31+08:00"
+}

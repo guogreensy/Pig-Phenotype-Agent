@@ -1,0 +1,50 @@
+{
+  "question_id": "K5",
+  "category": "knowledge",
+  "condition": "direct",
+  "question": "母猪行走姿态（locomotion）的深度学习姿态检测模型是怎么做的？",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "pmc_11252330"
+    ],
+    "keyword_hits": {
+      "pmc_11252330": {
+        "locomotion": 40,
+        "pose": 28
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：locomotion、pose",
+  "image_path": null,
+  "ok": true,
+  "answer": "关于母猪行走姿态的深度学习姿态检测模型，我可以提供一些一般性的信息，但需要说明这些内容可能无法完全核实具体研究细节。\n\n母猪行走姿态检测模型通常基于深度学习技术，主要流程包括：\n\n1. **数据收集与标注**：\n   - 使用摄像头采集母猪行走的视频或图像数据\n   - 对关键身体部位（如关节点、脊椎等）进行人工标注，建立训练数据集\n\n2. **模型架构选择**：\n   - 常用的模型包括CNN（卷积神经网络）结合RNN（循环神经网络）处理时序信息\n   - 或者使用专门的人体姿态估计模型如OpenPose、HRNet等进行迁移学习\n   - 一些研究采用3D CNN来处理空间信息\n\n3. **训练与优化**：\n   - 使用标注数据集训练模型\n   - 采用迁移学习策略，利用在大型数据集上预训练的模型\n   - 针对母猪体型特点进行模型微调\n\n4. **应用场景**：\n   - 评估母猪健康状态（如跛行检测）\n   - 监测母猪活动量\n   - 辅助繁殖管理\n\n需要注意的是，以上内容是基于一般深度学习姿态检测方法的概述，具体到母猪行走姿态的模型细节可能因研究而异。如果您需要特定研究的详细方法，建议查阅相关领域的学术论文或技术文档。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 463,
+    "output_tokens": 289,
+    "elapsed_seconds": 23.38,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "dfad32b7cb0d2e1f12f1b247ac8179c6a68b5978d53a2f2b9e8931108af9815f",
+    "chars": 696,
+    "tools": [],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 23.373,
+  "finished_at": "2026-11-07T17:58:22+08:00"
+}

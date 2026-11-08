@@ -1,0 +1,75 @@
+{
+  "question_id": "D6",
+  "category": "data",
+  "condition": "full",
+  "question": "这个猪场一共有几个栏位、多少头猪？",
+  "answerable": true,
+  "expected": {
+    "numbers": [
+      {
+        "label": "栏位数",
+        "value": 4.0,
+        "tol": 0.5,
+        "unit": "个"
+      },
+      {
+        "label": "猪只数",
+        "value": 48.0,
+        "tol": 0.5,
+        "unit": "头"
+      }
+    ],
+    "tokens": []
+  },
+  "evidence_hint": "list_pens 返回的栏位与猪只数量（4 个栏位，共 48 头猪）",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据查询结果，这个猪场共有**4个栏位**，**48头猪**。\n\n具体分布如下：\n- **东区**：2个栏位（P1、P2），每个栏位12头猪，共24头\n- **西区**：2个栏位（P3、P4），每个栏位12头猪，共24头\n\n每个栏位的详细信息：\n- P1（东区）：12头猪，平均体重107.86公斤，面积28.3平方米\n- P2（东区）：12头猪，平均体重109.12公斤，面积27.5平方米  \n- P3（西区）：12头猪，平均体重106.36公斤，面积29.2平方米\n- P4（西区）：12头猪，平均体重108.15公斤，面积26.6平方米\n\n*注：数据为模拟数据，仅用于验证工具调用链路与报表口径，不代表任何真实养殖场。*",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [
+    {
+      "tool": "list_pens",
+      "args": {},
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": true,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 2,
+    "tool_calls": 1,
+    "input_tokens": 4160,
+    "output_tokens": 225,
+    "elapsed_seconds": 13.94,
+    "used_tools": [
+      "list_pens"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 13.94,
+  "finished_at": "2026-11-07T18:25:13+08:00"
+}

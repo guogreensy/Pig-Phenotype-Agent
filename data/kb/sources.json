@@ -1,0 +1,520 @@
+{
+  "generated_at": "2026-11-07T12:38:18",
+  "generator": "scripts/fetch_corpus.py",
+  "queries": [
+    "(pig OR swine) AND (posture OR lying) AND (deep learning OR computer vision)",
+    "(pig OR swine) AND (behaviour OR behavior) AND (monitoring OR recognition)",
+    "(pig OR swine) AND (body condition OR body weight) AND (image OR vision)",
+    "(pig OR swine) AND welfare AND (lying OR resting OR activity)",
+    "(precision livestock farming) AND (machine vision OR camera)"
+  ],
+  "rate_limit_seconds": 1.0,
+  "request_count": 7,
+  "documents": [
+    {
+      "doc_id": "local_data_card",
+      "kind": "local_md",
+      "title": "data_card.md",
+      "url": "docs/data_card.md",
+      "license": "本项目自有文档",
+      "fetched_at": "2026-11-07T12:37:53",
+      "path": "docs/data_card.md",
+      "bytes": 3808,
+      "sha256": "85c9ec8ae91f409bd75de13313504f075461a68b8f185cef4e399f25d44ce85a",
+      "cached": true
+    },
+    {
+      "doc_id": "local_experiment_report",
+      "kind": "local_md",
+      "title": "experiment_report.md",
+      "url": "docs/experiment_report.md",
+      "license": "本项目自有文档",
+      "fetched_at": "2026-11-07T12:37:53",
+      "path": "docs/experiment_report.md",
+      "bytes": 15573,
+      "sha256": "3d97ff266d7a520a7e7c42ae1ccd4e71152659a2808599cb9586cc3512c8c41b",
+      "cached": true
+    },
+    {
+      "doc_id": "local_technical_report",
+      "kind": "local_md",
+      "title": "technical_report.md",
+      "url": "docs/technical_report.md",
+      "license": "本项目自有文档",
+      "fetched_at": "2026-11-07T12:37:53",
+      "path": "docs/technical_report.md",
+      "bytes": 20756,
+      "sha256": "80715d24c30aba1228d3d273ab215e3c5ba1679eb7a2f015d62dc4a2e7198fda",
+      "cached": true
+    },
+    {
+      "doc_id": "local_limitations",
+      "kind": "local_md",
+      "title": "limitations.md",
+      "url": "docs/limitations.md",
+      "license": "本项目自有文档",
+      "fetched_at": "2026-11-07T12:37:53",
+      "path": "docs/limitations.md",
+      "bytes": 5871,
+      "sha256": "2c00b73fa912faf19bb8326e43c930850722e098bd04dd31691ad49683daba28",
+      "cached": true
+    },
+    {
+      "doc_id": "local_feasibility_report",
+      "kind": "local_md",
+      "title": "feasibility_report.md",
+      "url": "docs/feasibility_report.md",
+      "license": "本项目自有文档",
+      "fetched_at": "2026-11-07T12:37:53",
+      "path": "docs/feasibility_report.md",
+      "bytes": 7404,
+      "sha256": "71eb461872ebef010a1bac8d1c47c002d65e86ed6780a567795c9c2ac166874c",
+      "cached": true
+    },
+    {
+      "doc_id": "local_README",
+      "kind": "local_md",
+      "title": "README.md",
+      "url": "data/README.md",
+      "license": "本项目自有文档",
+      "fetched_at": "2026-11-07T12:37:53",
+      "path": "data/README.md",
+      "bytes": 4022,
+      "sha256": "6af6349a359cb0fdabc7033c2f6f13bac7fe4b6f40182ae328114ad98b056b3e",
+      "cached": true
+    },
+    {
+      "doc_id": "hf_dataset_readme",
+      "kind": "hf_md",
+      "title": "Viewpoint-Aware Pig Posture Recognition（数据集说明）",
+      "url": "https://hf-mirror.com/datasets/anilbhujel/viewpoint-aware-pig-posture-recognition/raw/main/README.md",
+      "license": "CC BY 4.0（数据集卡片声明）",
+      "fetched_at": "2026-11-07T12:37:53",
+      "path": "data/kb/cache/hf_dataset_readme.md",
+      "bytes": 11251,
+      "sha256": "ea9d37a5c2501634daa113803d02c460ca49a134b4d4556ae52cdb6fc819e438",
+      "cached": true
+    },
+    {
+      "doc_id": "pmc_6749226",
+      "kind": "pmc_xml",
+      "title": "Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749226/",
+      "license": "CC BY",
+      "fetched_at": "2026-11-07T12:38:08",
+      "path": "data/kb/cache/pmc_6749226.xml",
+      "bytes": 94562,
+      "sha256": "d7c53c9b4415a943f388e2f294b850faf540ceb7b22a02f13f751ab0cbb0b0e3",
+      "cached": true,
+      "has_body": true,
+      "abstract_chars": 1376,
+      "topic_hits": [
+        "posture",
+        "postures",
+        "lying",
+        "vision",
+        "image",
+        "images",
+        "detection",
+        "monitor",
+        "pose",
+        "welfare",
+        "deep learning",
+        "neural"
+      ],
+      "species_hits": [
+        "pig",
+        "pigs"
+      ]
+    },
+    {
+      "doc_id": "pmc_8147168",
+      "kind": "pmc_xml",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "fetched_at": "2026-11-07T12:38:08",
+      "path": "data/kb/cache/pmc_8147168.xml",
+      "bytes": 88967,
+      "sha256": "18b5a1b4c562faf636b583c4ee285ff4b41a8989add68c0387a9193cbe477461",
+      "cached": true,
+      "has_body": true,
+      "abstract_chars": 1496,
+      "topic_hits": [
+        "posture",
+        "postures",
+        "lying",
+        "behavio",
+        "vision",
+        "image",
+        "monitor",
+        "pose",
+        "recognition"
+      ],
+      "species_hits": [
+        "pig",
+        "pigs",
+        "porcine"
+      ]
+    },
+    {
+      "doc_id": "pmc_11635830",
+      "kind": "pmc_xml",
+      "title": "Determining the posture and location of pigs using an object detection model under different lighting conditions",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11635830/",
+      "license": "CC BY-NC-ND",
+      "fetched_at": "2026-11-07T12:38:08",
+      "path": "data/kb/cache/pmc_11635830.xml",
+      "bytes": 101958,
+      "sha256": "c87bc64170ab74ca247946e7905d5391931ed79f00a5c93916d272bed7de0b21",
+      "cached": true,
+      "has_body": true,
+      "abstract_chars": 2523,
+      "topic_hits": [
+        "posture",
+        "postures",
+        "lying",
+        "behavio",
+        "vision",
+        "camera",
+        "detection",
+        "tracking",
+        "monitor"
+      ],
+      "species_hits": [
+        "pig",
+        "pigs"
+      ]
+    },
+    {
+      "doc_id": "pmc_11252330",
+      "kind": "pmc_xml",
+      "title": "Deep learning pose detection model for sow locomotion",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11252330/",
+      "license": "CC BY",
+      "fetched_at": "2026-11-07T12:38:08",
+      "path": "data/kb/cache/pmc_11252330.xml",
+      "bytes": 133867,
+      "sha256": "7b7e800b1fcb17ef6188979fc4d51135d5b4c5659253a0f23f0001d538903d42",
+      "cached": true,
+      "has_body": true,
+      "abstract_chars": 2019,
+      "topic_hits": [
+        "posture",
+        "postures",
+        "vision",
+        "camera",
+        "video",
+        "image",
+        "images",
+        "detection",
+        "tracking",
+        "pose",
+        "welfare",
+        "deep learning"
+      ],
+      "species_hits": [
+        "pig",
+        "pigs",
+        "sow",
+        "sows"
+      ]
+    },
+    {
+      "doc_id": "pmc_8071751",
+      "kind": "pmc_xml",
+      "title": "A computer vision-based approach for behavior recognition of gestating sows fed different fiber levels during high ambient temperature",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8071751/",
+      "license": "CC BY-NC",
+      "fetched_at": "2026-11-07T12:38:08",
+      "path": "data/kb/cache/pmc_8071751.xml",
+      "bytes": 81993,
+      "sha256": "1f3adf5c06efe571876b9d8b97e299231d072425c1d2d0f28853856418a12cd2",
+      "cached": true,
+      "has_body": true,
+      "abstract_chars": 1866,
+      "topic_hits": [
+        "posture",
+        "lying",
+        "behavio",
+        "vision",
+        "image",
+        "weight",
+        "deep learning",
+        "neural",
+        "recognition"
+      ],
+      "species_hits": [
+        "swine",
+        "sow",
+        "sows"
+      ]
+    },
+    {
+      "doc_id": "pmc_8614322",
+      "kind": "pmc_xml",
+      "title": "Deep-Learning-Based Automatic Monitoring of Pigs’ Physico-Temporal Activities at Different Greenhouse Gas Concentrations",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8614322/",
+      "license": "CC BY",
+      "fetched_at": "2026-11-07T12:38:08",
+      "path": "data/kb/cache/pmc_8614322.xml",
+      "bytes": 136351,
+      "sha256": "b14492754d7fde7f2e52ab856923d0a1db6f30bc19ff045a60953ca908d8deb1",
+      "cached": true,
+      "has_body": true,
+      "abstract_chars": 2757,
+      "topic_hits": [
+        "posture",
+        "lying",
+        "behavio",
+        "activity",
+        "vision",
+        "camera",
+        "detection",
+        "tracking",
+        "monitor",
+        "pose",
+        "welfare"
+      ],
+      "species_hits": [
+        "pig",
+        "pigs"
+      ]
+    },
+    {
+      "doc_id": "pmc_11013991",
+      "kind": "pmc_xml",
+      "title": "Pattern Mining-Based Pig Behavior Analysis for Health and Welfare Monitoring",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11013991/",
+      "license": "CC BY",
+      "fetched_at": "2026-11-07T12:38:08",
+      "path": "data/kb/cache/pmc_11013991.xml",
+      "bytes": 282760,
+      "sha256": "fb251236e58bf0af7caff52b7ddec409cee9867150d1b6a2659c2629ddaf894d",
+      "cached": true,
+      "has_body": true,
+      "abstract_chars": 1551,
+      "topic_hits": [
+        "behavio",
+        "video",
+        "image",
+        "images",
+        "detection",
+        "tracking",
+        "monitor",
+        "pose",
+        "welfare",
+        "recognition"
+      ],
+      "species_hits": [
+        "pig",
+        "pigs"
+      ]
+    },
+    {
+      "doc_id": "pmc_5110645",
+      "kind": "pmc_xml",
+      "title": "Early detection of health and welfare compromises through automated detection of behavioural changes in pigs",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5110645/",
+      "license": "CC BY",
+      "fetched_at": "2026-11-07T12:38:08",
+      "path": "data/kb/cache/pmc_5110645.xml",
+      "bytes": 169809,
+      "sha256": "18d5314126d3e5d9ce3c8a48908e94b5b96b8dc3125c92ea1f35a2b149ec72d3",
+      "cached": true,
+      "has_body": true,
+      "abstract_chars": 462,
+      "topic_hits": [
+        "behavio",
+        "detection",
+        "monitor",
+        "welfare",
+        "sensor"
+      ],
+      "species_hits": [
+        "pig",
+        "pigs"
+      ]
+    },
+    {
+      "doc_id": "pmc_5730557",
+      "kind": "pmc_xml",
+      "title": "Automated tracking to measure behavioural changes in pigs for health and welfare monitoring",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5730557/",
+      "license": "CC BY",
+      "fetched_at": "2026-11-07T12:38:08",
+      "path": "data/kb/cache/pmc_5730557.xml",
+      "bytes": 107561,
+      "sha256": "e3993c3a7042a50b2062cc17b1f7195e2c83a823d55820144ee792fe94eddd56",
+      "cached": true,
+      "has_body": true,
+      "abstract_chars": 1416,
+      "topic_hits": [
+        "behavio",
+        "camera",
+        "video",
+        "tracking",
+        "monitor",
+        "welfare",
+        "feeding",
+        "drinking"
+      ],
+      "species_hits": [
+        "pig",
+        "pigs"
+      ]
+    },
+    {
+      "doc_id": "pmc_7423952",
+      "kind": "pmc_xml",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "fetched_at": "2026-11-07T12:38:08",
+      "path": "data/kb/cache/pmc_7423952.xml",
+      "bytes": 141541,
+      "sha256": "948553a3b58c3c20e2d276903d6503bac970c43dafe76457fb292e4fc57d7bb3",
+      "cached": true,
+      "has_body": true,
+      "abstract_chars": 1633,
+      "topic_hits": [
+        "posture",
+        "postures",
+        "lying",
+        "behavio",
+        "detection",
+        "monitor",
+        "welfare",
+        "feeding",
+        "drinking",
+        "deep learning",
+        "recognition",
+        "sensor"
+      ],
+      "species_hits": [
+        "pig",
+        "pigs"
+      ]
+    },
+    {
+      "doc_id": "pmc_7070994",
+      "kind": "pmc_xml",
+      "title": "Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7070994/",
+      "license": "CC BY",
+      "fetched_at": "2026-11-07T12:38:08",
+      "path": "data/kb/cache/pmc_7070994.xml",
+      "bytes": 138036,
+      "sha256": "ee4dea16ed6c60b8d6b7ff970d684b278a9133f14e7bca7c10cee951795044ec",
+      "cached": true,
+      "has_body": true,
+      "abstract_chars": 1984,
+      "topic_hits": [
+        "posture",
+        "lying",
+        "behavio",
+        "video",
+        "image",
+        "detection",
+        "monitor",
+        "pose",
+        "feeding",
+        "deep learning",
+        "recognition"
+      ],
+      "species_hits": [
+        "pig",
+        "pigs"
+      ]
+    },
+    {
+      "doc_id": "pmc_6739619",
+      "kind": "pmc_xml",
+      "title": "Design and evaluation of an imager for assessing wound inflammatory responses and bioburden in a pig model",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6739619/",
+      "license": "CC BY",
+      "fetched_at": "2026-11-07T12:38:08",
+      "path": "data/kb/cache/pmc_6739619.xml",
+      "bytes": 113663,
+      "sha256": "d3e7e520e5588cbef9527a54f5cec2ed6617af224ec080f6ede7c7ec475bba35",
+      "cached": true,
+      "has_body": true,
+      "abstract_chars": 1394,
+      "topic_hits": [
+        "activity",
+        "camera",
+        "image"
+      ],
+      "species_hits": [
+        "pig",
+        "porcine"
+      ]
+    },
+    {
+      "doc_id": "pmc_11833201",
+      "kind": "pmc_xml",
+      "title": "RGB-based machine vision for enhanced pig disease symptoms monitoring and health management: a review",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11833201/",
+      "license": "CC BY-NC",
+      "fetched_at": "2026-11-07T12:38:08",
+      "path": "data/kb/cache/pmc_11833201.xml",
+      "bytes": 188067,
+      "sha256": "f34c90974e1a1f6cab569e4212956039019c7605ba7cb7ae8a916ef0b073f130",
+      "cached": true,
+      "has_body": true,
+      "abstract_chars": 2276,
+      "topic_hits": [
+        "posture",
+        "behavio",
+        "activity",
+        "vision",
+        "camera",
+        "image",
+        "detection",
+        "tracking",
+        "monitor",
+        "welfare",
+        "weight",
+        "feeding",
+        "drinking"
+      ],
+      "species_hits": [
+        "pig"
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "stage": "pmc_filter",
+      "doc_id": "pmc_13123084",
+      "error": "不符合主题/物种门槛（主题 4、物种 0）：Recognising dog movement with behaviour-specific m"
+    },
+    {
+      "stage": "pmc_body",
+      "doc_id": "pmc_2710749",
+      "error": "无 <body>，可能是摘要级记录"
+    },
+    {
+      "stage": "pmc_body",
+      "doc_id": "pmc_7447136",
+      "error": "无 <body>，可能是摘要级记录"
+    },
+    {
+      "stage": "pmc_body",
+      "doc_id": "pmc_6313152",
+      "error": "无 <body>，可能是摘要级记录"
+    },
+    {
+      "stage": "pmc_filter",
+      "doc_id": "pmc_8599541",
+      "error": "不符合主题/物种门槛（主题 2、物种 4）：Epigenetic clock and DNA methylation analysis of p"
+    }
+  ],
+  "summary": {
+    "documents": 20,
+    "pmc_papers": 13,
+    "local_docs": 6,
+    "total_bytes": 1847820,
+    "errors": 5
+  }
+}

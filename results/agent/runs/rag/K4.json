@@ -1,0 +1,140 @@
+{
+  "question_id": "K4",
+  "category": "knowledge",
+  "condition": "rag",
+  "question": "如何用目标检测模型确定猪只的姿态和位置？",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "pmc_11635830"
+    ],
+    "keyword_hits": {
+      "pmc_11635830": {
+        "object detection": 10,
+        "posture": 76
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：object detection、posture",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据检索到的文献资料，使用目标检测模型确定猪只姿态和位置的方法主要包括以下几个方面：\n\n## 1. 基于边界框的目标检测\n\n**核心方法**：使用目标检测模型生成猪只的边界框（bounding boxes）来精确定位猪只位置。\n\n**性能指标**：\n- 平均交并比（IoU）达到94.6%，表明模型能够准确检测和定位猪只\n- 75%的检测框IoU高于0.955，显示出很高的定位精度\n- 最大IoU可达0.998，最低为0（对应漏检或误检情况）\n\n## 2. 姿态检测的具体流程\n\n**三步处理流程**：\n1. **姿态检测与定位**：在输入视频帧中检测猪只姿态并定位其位置\n2. **个体跟踪**：使用跟踪算法将检测结果与ID关联，并在连续帧中保持同一ID\n3. **姿态评分**：对每个猪只的姿态进行时间序列量化评分\n\n## 3. 数据驱动的姿态识别方法\n\n**技术特点**：\n- 采用数据驱动的方法，无需人工设置深度阈值或分割数量等参数\n- 通过大量猪只行为样本来学习姿态识别任务\n- 基于猪只的整体结构特征进行检测，即使头部被遮挡也能识别\n- 不特别依赖猪只头部来识别行为，避免了头部自遮挡问题\n\n## 4. 实际应用中的考虑因素\n\n**光照条件适应性**：研究表明模型在不同光照条件下仍能保持较好的检测性能\n\n**个体识别**：通过跟踪算法实现个体猪只的持续识别，为建立个体行为档案提供基础\n\n这种方法为养殖场自动化监控提供了技术基础，能够有效支持猪只行为分析、健康监测和福利评估等应用场景。",
+  "stop_reason": "answered",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "pmc_11635830#0040",
+      "title": "Determining the posture and location of pigs using an object detection model under different lighting conditions",
+      "section": "Detection And Localization Of Pigs",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11635830/",
+      "license": "CC BY-NC-ND",
+      "score": 0.6201
+    },
+    {
+      "index": 2,
+      "chunk_id": "pmc_8614322#0039",
+      "title": "Deep-Learning-Based Automatic Monitoring of Pigs’ Physico-Temporal Activities at Different Greenhouse Gas Concentrations",
+      "section": "2.4. Proposed Methodology",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8614322/",
+      "license": "CC BY",
+      "score": 0.6156
+    },
+    {
+      "index": 3,
+      "chunk_id": "local_technical_report#0001",
+      "title": "technical_report.md",
+      "section": "",
+      "url": "docs/technical_report.md",
+      "license": "本项目自有文档",
+      "score": 0.6108
+    },
+    {
+      "index": 4,
+      "chunk_id": "local_experiment_report#0002",
+      "title": "experiment_report.md",
+      "section": "2. 数据集来源与样本统计",
+      "url": "docs/experiment_report.md",
+      "license": "本项目自有文档",
+      "score": 0.588
+    },
+    {
+      "index": 5,
+      "chunk_id": "pmc_7423952#0047",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Individual pig profiles",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.5788
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "目标检测模型 猪只姿态 位置检测",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 484.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_11635830#0040"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_8614322#0039"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_7423952#0047"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 5,
+    "tool_calls": 4,
+    "input_tokens": 11800,
+    "output_tokens": 512,
+    "elapsed_seconds": 21.38,
+    "used_tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "73157381dd888bd98cdd9d27c39737fcfb1ca289e130a8d33b43693b2d97e846",
+    "chars": 799,
+    "tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 21.377,
+  "finished_at": "2026-11-07T18:13:03+08:00"
+}

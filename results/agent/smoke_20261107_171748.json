@@ -1,0 +1,173 @@
+{
+  "generated_at": "2026-11-07T17:17:48+08:00",
+  "mode": "live",
+  "tools": [
+    "list_pens",
+    "query_pig_records",
+    "aggregate_metric",
+    "detect_anomalies",
+    "analyze_pig_posture",
+    "list_sample_images",
+    "search_knowledge",
+    "fetch_passage"
+  ],
+  "tool_stats": {
+    "calls": 4,
+    "failed": 0,
+    "success_rate": 1.0,
+    "by_tool": {
+      "search_knowledge": 1,
+      "fetch_passage": 3
+    }
+  },
+  "prompts": {
+    "version": "1.0",
+    "sha256": "ac1ee7c57c6007ff871cf1323db7835c5865c3f90a02208f5c886b069c7817f3",
+    "chars": 1152,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 6
+  },
+  "records": [
+    {
+      "kind": "custom",
+      "report": {
+        "question": "猪只姿态识别常用的深度学习方法有哪些？请给出出处。",
+        "answer": "根据检索到的文献资料，猪只姿态识别常用的深度学习方法主要包括以下几种：\n\n## 1. 目标检测方法\n\n**Faster R-CNN**\n- **出处**：Zheng et al. [2] 和 Yang et al. [22] 使用 Faster-RCNN 来识别猪只姿态和采食行为\n- **特点**：结合区域提议网络和ZFnet，能够准确识别猪只位置并分类姿态\n- **应用**：Zheng et al. [84] 利用Kinect v2传感器和Faster R-CNN技术开发了母猪姿态检测系统，在5 fps数据集上达到87.1%的检测准确率\n\n**SSD (Single Shot MultiBox Detector)**\n- **出处**：Nasirahmadi et al. [16] 提出的三种检测器方法之一\n- **特点**：实时性能较好，与MobileNet结合可用于实时识别母猪饮水、排尿和爬跨行为\n\n**R-FCN (Region-based Fully Convolutional Networks)**\n- **出处**：Nasirahmadi et al. [16] 提出的三种检测器方法之一\n- **特点**：基于全卷积网络，适合猪只姿态识别\n\n## 2. 实例分割方法\n\n**Mask R-CNN**\n- **出处**：Li et al. [10] 提出\n- **特点**：先使用Mask R-CNN从图像中分割猪只，然后提取特征向量进行爬跨行为识别\n- **优势**：能够精确分割猪只轮廓，为姿态分析提供更精确的空间信息\n\n## 3. 语义分割方法\n\n**DeepLab v3+**\n- **出处**：Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration\n- **特点**：改进的DeepLab v3+用于猪只姿态识别，通过非局部平均滤波处理边缘混叠问题\n- **方法**：采用联合训练方法，结合目标检测和语义分割技术\n\n## 4. 双流卷积网络\n\n**Two-Stream Convolutional Networks**\n- **出处**：Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks\n- **特点**：同时考虑空间和时间特征，用于视频行为识别\n\n这些方法各有优势，Faster R-CNN和SSD在实时性和准确性方面表现较好，Mask R-CNN提供更精确的分割结果，而DeepLab v3+则在语义分割方面有优势。研究者通常会根据具体应用场景选择合适的深度学习方法。",
+        "ok": true,
+        "error": null,
+        "stop_reason": "answered",
+        "stop_reason_cn": "正常作答",
+        "citations": [
+          {
+            "index": 1,
+            "chunk_id": "pmc_8147168#0051",
+            "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+            "section": "5. Conclusions",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+            "license": "CC BY",
+            "score": 0.6319
+          },
+          {
+            "index": 2,
+            "chunk_id": "pmc_7070994#0053",
+            "title": "Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks",
+            "section": "3.2. Results and Discussion of the Experiments",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7070994/",
+            "license": "CC BY",
+            "score": 0.6234
+          },
+          {
+            "index": 3,
+            "chunk_id": "pmc_6749226#0001",
+            "title": "Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs",
+            "section": "",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749226/",
+            "license": "CC BY",
+            "score": 0.6219
+          },
+          {
+            "index": 4,
+            "chunk_id": "pmc_7423952#0047",
+            "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+            "section": "Individual pig profiles",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+            "license": "CC BY",
+            "score": 0.6149
+          },
+          {
+            "index": 5,
+            "chunk_id": "pmc_11833201#0067",
+            "title": "RGB-based machine vision for enhanced pig disease symptoms monitoring and health management: a review",
+            "section": "Integrating deep learning and RGB Imaging techniques for enhanced detection and monitoring",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11833201/",
+            "license": "CC BY-NC",
+            "score": 0.6074
+          }
+        ],
+        "tool_trace": [
+          {
+            "tool": "search_knowledge",
+            "args": {
+              "query": "猪只姿态识别 深度学习方法",
+              "k": 5
+            },
+            "ok": true,
+            "error": null,
+            "ms": 703.0
+          },
+          {
+            "tool": "fetch_passage",
+            "args": {
+              "chunk_id": "pmc_7070994#0053"
+            },
+            "ok": true,
+            "error": null,
+            "ms": 0.0
+          },
+          {
+            "tool": "fetch_passage",
+            "args": {
+              "chunk_id": "pmc_8147168#0051"
+            },
+            "ok": true,
+            "error": null,
+            "ms": 0.0
+          },
+          {
+            "tool": "fetch_passage",
+            "args": {
+              "chunk_id": "pmc_11833201#0067"
+            },
+            "ok": true,
+            "error": null,
+            "ms": 0.0
+          }
+        ],
+        "flags": {
+          "uses_simulated_data": false,
+          "uses_knowledge": true,
+          "uses_vision": false,
+          "has_citations": true,
+          "degraded": false
+        },
+        "metrics": {
+          "model_calls": 5,
+          "tool_calls": 4,
+          "input_tokens": 15599,
+          "output_tokens": 664,
+          "elapsed_seconds": 67.12,
+          "used_tools": [
+            "search_knowledge",
+            "fetch_passage"
+          ]
+        },
+        "degraded": [],
+        "prompt_meta": {
+          "version": "1.0",
+          "sha256": "ac1ee7c57c6007ff871cf1323db7835c5865c3f90a02208f5c886b069c7817f3",
+          "chars": 1152,
+          "tools": [
+            "list_pens",
+            "query_pig_records",
+            "aggregate_metric",
+            "detect_anomalies",
+            "analyze_pig_posture",
+            "list_sample_images",
+            "search_knowledge",
+            "fetch_passage"
+          ],
+          "max_steps": 6
+        }
+      }
+    }
+  ]
+}

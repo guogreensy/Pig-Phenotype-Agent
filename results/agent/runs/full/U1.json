@@ -1,0 +1,137 @@
+{
+  "question_id": "U1",
+  "category": "unanswerable",
+  "condition": "full",
+  "question": "这批猪是什么品种？是大白、长白还是杜洛克？",
+  "answerable": false,
+  "expected": {
+    "doc_ids": [],
+    "must_admit": true
+  },
+  "evidence_hint": "模拟数据只有性别和体重，没有品种字段",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据查询结果，我无法确定这批猪的具体品种。从养殖数据中只能看到栏位信息（P1-P4），但没有包含品种信息。\n\n从知识库检索到的信息显示，在相关研究中常见的猪品种组合包括：\n- **大白猪（Large White）**和**长白猪（Landrace）**的杂交组合\n- **杜洛克（Pietrain）**与**大白×长白**的杂交组合\n- **汉普夏（Hampshire）**与**长白×大白**的杂交组合\n\n**重要说明**：当前数据为模拟数据，仅用于验证工具调用链路与报表口径，不代表任何真实养殖场，不可用于生产决策。如果您需要了解具体的猪品种信息，建议您直接咨询养殖场管理人员或查看相关的养殖记录。",
+  "stop_reason": "answered",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "pmc_6749226#0012",
+      "title": "Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749226/",
+      "license": "CC BY",
+      "score": 0.4355
+    },
+    {
+      "index": 2,
+      "chunk_id": "pmc_7423952#0054",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Animals and experimental design",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.4313
+    },
+    {
+      "index": 3,
+      "chunk_id": "pmc_7423952#0055",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Animals and experimental design",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.4226
+    },
+    {
+      "index": 4,
+      "chunk_id": "pmc_8147168#0004",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.4196
+    },
+    {
+      "index": 5,
+      "chunk_id": "pmc_6749226#0013",
+      "title": "Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs",
+      "section": "2.1. Housing and Data Collection",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749226/",
+      "license": "CC BY",
+      "score": 0.4139
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "list_pens",
+      "args": {},
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "猪品种 大白 长白 杜洛克"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 672.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_7423952#0054"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_6749226#0013"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": true,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 5,
+    "tool_calls": 4,
+    "input_tokens": 15766,
+    "output_tokens": 276,
+    "elapsed_seconds": 12.81,
+    "used_tools": [
+      "list_pens",
+      "search_knowledge",
+      "fetch_passage"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 12.807,
+  "finished_at": "2026-11-07T18:41:05+08:00"
+}

@@ -1,0 +1,145 @@
+{
+  "question_id": "K6",
+  "category": "knowledge",
+  "condition": "full",
+  "question": "双流卷积网络如何识别猪只的视频行为？",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "pmc_7070994"
+    ],
+    "keyword_hits": {
+      "pmc_7070994": {
+        "two-stream": 15,
+        "Two-Stream": 3
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：two-stream、Two-Stream",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据《Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks》这篇研究，双流卷积网络在猪只视频行为识别中的应用原理如下：\n\n## 双流卷积网络的基本架构\n\n双流卷积网络是一个经典的行为识别框架，由两个并行的网络组成：\n- **空间流网络（Spatial Stream）**：提取单帧图像的空间特征\n- **时间流网络（Temporal Stream）**：提取视频序列的时间特征\n\n## 在猪只行为识别中的具体应用\n\n### 1. 网络模型选择\n研究中采用了两种双流卷积网络模型：\n- **I3D（Inflated 3D ConvNet）**：3D卷积网络\n- **TSN（Temporal Segment Networks）**：时间分段网络\n\n特征提取网络使用：\n- **ResNet系列**（如ResNet101）\n- **Inception系列**（如InceptionV3、InceptionV4、InceptionResNetV2）\n\n### 2. 数据集构建\n研究建立了一个标准的猪只视频行为数据集，包含：\n- **1000个视频样本**\n- **5种行为类别**：采食、躺卧、行走、抓挠、爬跨\n- **自然条件下的视频采集**\n\n### 3. 训练与测试\n- **训练集**：773个视频\n- **测试集**：227个视频\n- **识别准确率**：TSN模型（ResNet101）达到98.99%\n\n## 技术优势\n\n1. **时空特征融合**：同时提取空间和时间信息，克服了传统方法只使用静态图像的局限性\n2. **行为连贯性**：能够捕捉连续帧之间的时间信息，更好地理解行为的动态特征\n3. **高精度识别**：在自然条件下仍能保持很高的识别准确率\n\n这种双流卷积网络方法为猪只行为的自动化监测提供了有效的技术支持，有助于实现养殖场的智能化管理。",
+  "stop_reason": "answered",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "pmc_7070994#0001",
+      "title": "Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks",
+      "section": "",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7070994/",
+      "license": "CC BY",
+      "score": 0.6398
+    },
+    {
+      "index": 2,
+      "chunk_id": "pmc_7070994#0004",
+      "title": "Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks",
+      "section": "Abstract",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7070994/",
+      "license": "CC BY",
+      "score": 0.6144
+    },
+    {
+      "index": 3,
+      "chunk_id": "pmc_7070994#0057",
+      "title": "Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks",
+      "section": "4. Conclusions",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7070994/",
+      "license": "CC BY",
+      "score": 0.6117
+    },
+    {
+      "index": 4,
+      "chunk_id": "pmc_7070994#0014",
+      "title": "Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7070994/",
+      "license": "CC BY",
+      "score": 0.6072
+    },
+    {
+      "index": 5,
+      "chunk_id": "pmc_7423952#0047",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Individual pig profiles",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.5956
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "双流卷积网络 猪只 视频行为识别"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 672.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_7070994#0004"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_7070994#0014"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_7070994#0057"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 5,
+    "tool_calls": 4,
+    "input_tokens": 15683,
+    "output_tokens": 549,
+    "elapsed_seconds": 24.22,
+    "used_tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 24.218,
+  "finished_at": "2026-11-07T18:38:17+08:00"
+}

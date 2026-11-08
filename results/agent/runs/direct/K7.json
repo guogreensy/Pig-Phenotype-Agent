@@ -1,0 +1,49 @@
+{
+  "question_id": "K7",
+  "category": "knowledge",
+  "condition": "direct",
+  "question": "基于 RGB 图像的机器视觉如何用于猪只疾病症状监测？",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "pmc_11833201"
+    ],
+    "keyword_hits": {
+      "pmc_11833201": {
+        "RGB": 72
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：RGB",
+  "image_path": null,
+  "ok": true,
+  "answer": "基于 RGB 图像的机器视觉在猪只疾病症状监测方面有广泛应用，我可以为您介绍一些主要方法：\n\n## 主要监测方法\n\n1. **外观症状识别**\n   - 皮肤病变检测：识别红斑、溃烂、脱毛等异常\n   - 眼部疾病监测：检测结膜炎、眼分泌物增多等症状\n   - 呼吸道症状：观察鼻分泌物、咳嗽姿势等\n\n2. **行为异常分析**\n   - 活动量减少：通过连续图像序列分析猪只活动频率\n   - 姿态异常：识别跛行、站立困难等异常姿态\n   - 采食行为变化：监测采食时间和频率变化\n\n3. **生长指标评估**\n   - 体重估算：通过图像尺寸和体型比例估算体重\n   - 背膘厚度评估：通过图像分析估算背膘厚度\n\n## 技术实现方式\n\n1. **深度学习模型**\n   - 卷积神经网络(CNN)用于图像分类和目标检测\n   - 目标检测算法(如YOLO、Faster R-CNN)用于猪只定位和识别\n   - 姿态估计模型用于关键点检测和分析\n\n2. **图像处理技术**\n   - 色彩空间转换增强特定症状可见性\n   - 纹理分析识别皮肤异常\n   - 光照补偿减少环境因素影响\n\n## 应用优势\n\n- 非接触式监测，减少应激反应\n- 连续24小时监测，提高早期发现率\n- 客观量化评估，减少人为判断偏差\n- 可集成到现有养殖管理系统，实现自动化预警\n\n## 局限性\n\n- 光照条件变化可能影响识别准确性\n- 猪只密集饲养时个体识别困难\n- 某些早期症状在 RGB 图像中可能不明显\n- 需要大量标注数据进行模型训练\n\n注：以上内容基于一般机器视觉在畜牧业应用的通用知识，具体技术参数和效果数据无法核实。实际应用中需根据具体养殖环境和猪只品种进行调整。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 461,
+    "output_tokens": 440,
+    "elapsed_seconds": 20.33,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "dfad32b7cb0d2e1f12f1b247ac8179c6a68b5978d53a2f2b9e8931108af9815f",
+    "chars": 696,
+    "tools": [],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 20.338,
+  "finished_at": "2026-11-07T17:59:00+08:00"
+}

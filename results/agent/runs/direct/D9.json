@@ -1,0 +1,73 @@
+{
+  "question_id": "D9",
+  "category": "data",
+  "condition": "direct",
+  "question": "2026-11-06 这一天各栏位的平均饮水量是多少？",
+  "answerable": true,
+  "expected": {
+    "numbers": [
+      {
+        "label": "P1 平均饮水量",
+        "value": 6.6292,
+        "tol": 0.0994,
+        "unit": "L"
+      },
+      {
+        "label": "P2 平均饮水量",
+        "value": 6.2392,
+        "tol": 0.0936,
+        "unit": "L"
+      },
+      {
+        "label": "P3 平均饮水量",
+        "value": 5.9908,
+        "tol": 0.0899,
+        "unit": "L"
+      },
+      {
+        "label": "P4 平均饮水量",
+        "value": 6.36,
+        "tol": 0.0954,
+        "unit": "L"
+      }
+    ],
+    "tokens": [
+      "P1",
+      "P2",
+      "P3",
+      "P4"
+    ]
+  },
+  "evidence_hint": "单日聚合，检验模型是否守住时间范围",
+  "image_path": null,
+  "ok": true,
+  "answer": "我无法直接查询具体数据，因为我没有可调用的工具来访问模拟数据库。\n\n根据我的知识，猪只的饮水量受多种因素影响，包括环境温度、湿度、猪只体重、饲料类型和健康状况等。在正常情况下，生长猪的饮水量通常是采食量的2-3倍。\n\n如果您需要2026-11-06这一天各栏位的平均饮水量数据，建议您直接查看养殖场的记录系统或数据平台。由于我无法访问模拟数据集，无法提供具体的数值。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 462,
+    "output_tokens": 109,
+    "elapsed_seconds": 7.48,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "dfad32b7cb0d2e1f12f1b247ac8179c6a68b5978d53a2f2b9e8931108af9815f",
+    "chars": 696,
+    "tools": [],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 7.484,
+  "finished_at": "2026-11-07T17:56:43+08:00"
+}

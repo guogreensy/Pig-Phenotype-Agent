@@ -1,0 +1,135 @@
+{
+  "question_id": "K3",
+  "category": "knowledge",
+  "condition": "full",
+  "question": "YOLOv5 是怎么用于单头猪的姿态检测的？",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "pmc_8147168"
+    ],
+    "keyword_hits": {
+      "pmc_8147168": {
+        "YOLOv5": 10
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：YOLOv5",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据项目知识库中的文献《Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration》，YOLOv5用于单头猪姿态检测的方法如下：\n\n## YOLOv5在单头猪姿态检测中的应用\n\n### 1. 模型选择\nYOLOv5提供了四个版本：YOLOv5s、YOLOv5m、YOLOv5l和YOLOv5x。研究测试发现：\n- **YOLOv5s**具有最快的检测速度和相对较高的准确性\n- 因此选择YOLOv5s作为单目标提取的模型\n\n### 2. 处理流程\n**第一步：单目标提取**\n- 从包含多头猪的输入图像中提取单头猪目标\n- 将多角度单猪图像通过自适应图像缩放调整为608×608尺寸\n- 输入网络进行目标检测\n\n### 3. 技术特点\n- **Focus结构**：原始608×608×3图像通过切片操作转换为304×304×12的特征图\n- **多尺度预测**：YOLOv5继承了YOLOv3的多尺度预测特性，能够独立地在多个尺度的融合特征图上进行检测\n- **训练速度和精度**：相比YOLOv4，YOLOv5在训练速度和准确性方面有显著提升\n\n### 4. 应用目的\n该方法的主要目标是**快速检测单头猪的身体位置**，为后续的姿态识别提供精确的目标区域。YOLOv5s在保持较高准确性的同时，提供了最快的检测速度，非常适合实时监控系统中的应用。\n\n这种基于YOLOv5的单目标提取方法是猪只姿态识别系统的第一步，为后续的姿态分类提供了准确的目标定位基础。",
+  "stop_reason": "answered",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "pmc_8147168#0028",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "3.2.1. Single-Target Extraction by Target Detection",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.6458
+    },
+    {
+      "index": 2,
+      "chunk_id": "pmc_8147168#0019",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "2.1. YOLOv5-Based Detection Network for a Single Pig",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.615
+    },
+    {
+      "index": 3,
+      "chunk_id": "pmc_11635830#0017",
+      "title": "Determining the posture and location of pigs using an object detection model under different lighting conditions",
+      "section": "Description Of The Detection Model",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11635830/",
+      "license": "CC BY-NC-ND",
+      "score": 0.6063
+    },
+    {
+      "index": 4,
+      "chunk_id": "pmc_8614322#0058",
+      "title": "Deep-Learning-Based Automatic Monitoring of Pigs’ Physico-Temporal Activities at Different Greenhouse Gas Concentrations",
+      "section": "3.4. Pig-Activity Detection and Tracking Model Performance",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8614322/",
+      "license": "CC BY",
+      "score": 0.5884
+    },
+    {
+      "index": 5,
+      "chunk_id": "pmc_7423952#0037",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Discussion",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.5846
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "YOLOv5 单头猪姿态检测"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 391.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_8147168#0028"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_8147168#0019"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 4,
+    "tool_calls": 3,
+    "input_tokens": 12313,
+    "output_tokens": 460,
+    "elapsed_seconds": 128.22,
+    "used_tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 128.225,
+  "finished_at": "2026-11-07T18:31:34+08:00"
+}

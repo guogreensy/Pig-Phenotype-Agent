@@ -1,0 +1,98 @@
+{
+  "question_id": "D7",
+  "category": "data",
+  "condition": "full",
+  "question": "最近 7 天各栏位的平均体重是多少？",
+  "answerable": true,
+  "expected": {
+    "numbers": [
+      {
+        "label": "P1 平均体重",
+        "value": 105.6981,
+        "tol": 1.5855,
+        "unit": "kg"
+      },
+      {
+        "label": "P2 平均体重",
+        "value": 107.1477,
+        "tol": 1.6072,
+        "unit": "kg"
+      },
+      {
+        "label": "P3 平均体重",
+        "value": 104.2226,
+        "tol": 1.5633,
+        "unit": "kg"
+      },
+      {
+        "label": "P4 平均体重",
+        "value": 106.0046,
+        "tol": 1.5901,
+        "unit": "kg"
+      }
+    ],
+    "tokens": [
+      "P1",
+      "P2",
+      "P3",
+      "P4"
+    ]
+  },
+  "evidence_hint": "aggregate_metric(group_by=pen, metric=weight_kg)",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据最近7天（2026-10-31至2026-11-06）的模拟数据，各栏位的平均体重如下：\n\n- **P1栏位**：105.7公斤（基于84条记录）\n- **P2栏位**：107.1公斤（基于84条记录）  \n- **P3栏位**：104.2公斤（基于84条记录）\n- **P4栏位**：106.0公斤（基于84条记录）\n\n从数据可以看出，P2栏位的猪只平均体重最高，为107.1公斤；P3栏位的平均体重最低，为104.2公斤。各栏位之间的体重差异相对较小，整体表现较为均衡。\n\n*注：以上数据为模拟数据，仅用于验证工具调用链路与报表口径，不代表任何真实养殖场，不可用于生产决策。*",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [
+    {
+      "tool": "aggregate_metric",
+      "args": {
+        "metric": "weight_kg",
+        "group_by": "pen",
+        "start_date": "2026-10-31",
+        "end_date": "2026-11-06",
+        "stat": "mean"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": true,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 2,
+    "tool_calls": 1,
+    "input_tokens": 4059,
+    "output_tokens": 259,
+    "elapsed_seconds": 18.64,
+    "used_tools": [
+      "aggregate_metric"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 18.634,
+  "finished_at": "2026-11-07T18:25:32+08:00"
+}

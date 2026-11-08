@@ -1,0 +1,52 @@
+{
+  "question_id": "D1",
+  "category": "data",
+  "condition": "direct",
+  "question": "P2-007 这头猪最近 7 天的平均采食量是多少？",
+  "answerable": true,
+  "expected": {
+    "numbers": [
+      {
+        "label": "平均采食量",
+        "value": 1.6257,
+        "tol": 0.0244,
+        "unit": "kg"
+      }
+    ],
+    "tokens": [
+      "P2-007"
+    ]
+  },
+  "evidence_hint": "query_pig_records 或 detect_anomalies 的均值",
+  "image_path": null,
+  "ok": true,
+  "answer": "我无法查询具体的养殖数据，因为我没有可用的工具来访问模拟数据集。根据我的知识，我无法核实P2-007这头猪最近7天的平均采食量具体数值。\n\n如果您需要获取这头猪的采食量数据，建议您直接查看养殖场的记录系统或联系相关技术人员获取准确信息。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 463,
+    "output_tokens": 71,
+    "elapsed_seconds": 4.66,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "dfad32b7cb0d2e1f12f1b247ac8179c6a68b5978d53a2f2b9e8931108af9815f",
+    "chars": 696,
+    "tools": [],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 4.64,
+  "finished_at": "2026-11-07T17:51:27+08:00"
+}

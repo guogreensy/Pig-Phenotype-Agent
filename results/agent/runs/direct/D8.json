@@ -1,0 +1,46 @@
+{
+  "question_id": "D8",
+  "category": "data",
+  "condition": "direct",
+  "question": "P4-003 这头猪最近 7 天的活动指数是否偏低？",
+  "answerable": true,
+  "expected": {
+    "numbers": [],
+    "tokens": [
+      "P4-003"
+    ],
+    "z_score": -5.099
+  },
+  "evidence_hint": "注入场景 low_activity_P4-003；构建时验证 z < -3（实测 z=-5.10）",
+  "image_path": null,
+  "ok": true,
+  "answer": "我无法核实 P4-003 这头猪最近 7 天的活动指数数据，因为我没有可用的工具来查询具体的养殖数据。\n\n根据我的知识，猪只的活动指数是评估其健康状况和行为的重要指标。一般来说，活动指数偏低可能表明猪只存在健康问题、应激反应或行为异常。但是，要判断 P4-003 这头猪的活动指数是否确实偏低，需要将其与同栏位其他猪只的活动指数进行比较，或者与该猪只历史活动数据进行对比。\n\n如果您能提供具体的数据，我可以帮助分析该猪只的活动指数是否处于正常范围。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 463,
+    "output_tokens": 126,
+    "elapsed_seconds": 9.97,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "dfad32b7cb0d2e1f12f1b247ac8179c6a68b5978d53a2f2b9e8931108af9815f",
+    "chars": 696,
+    "tools": [],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 9.977,
+  "finished_at": "2026-11-07T17:56:35+08:00"
+}

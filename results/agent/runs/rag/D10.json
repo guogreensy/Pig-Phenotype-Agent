@@ -1,0 +1,156 @@
+{
+  "question_id": "D10",
+  "category": "data",
+  "condition": "rag",
+  "question": "P1 栏最近 7 天的平均躺卧比例是多少？",
+  "answerable": true,
+  "expected": {
+    "numbers": [
+      {
+        "label": "P1 平均躺卧比例",
+        "value": 0.585,
+        "tol": 0.02,
+        "unit": ""
+      }
+    ],
+    "tokens": [
+      "P1"
+    ]
+  },
+  "evidence_hint": "比例型指标，检验小数精度",
+  "image_path": null,
+  "ok": true,
+  "answer": "抱歉，我无法直接查询P1栏最近7天的平均躺卧比例数据。\n\n根据我的知识库检索结果，目前可用的工具只能搜索项目文档和论文内容，无法直接访问养殖场的实时数据或历史统计数据。知识库中主要包含的是猪只姿态识别相关的技术文档、实验报告和数据集说明，但没有找到关于具体栏位（如P1栏）的时间序列躺卧比例数据。\n\n如果您需要获取P1栏最近7天的平均躺卧比例，建议您：\n1. 直接联系养殖场的数据管理系统\n2. 查看养殖场的监控平台或数据仪表板\n3. 咨询养殖场的技术人员获取相关统计数据\n\n如果您需要了解猪只姿态识别相关的技术信息，我很乐意为您搜索相关知识库内容。",
+  "stop_reason": "answered",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "local_data_card#0002",
+      "title": "data_card.md",
+      "section": "标签体系",
+      "url": "docs/data_card.md",
+      "license": "本项目自有文档",
+      "score": 0.5788
+    },
+    {
+      "index": 2,
+      "chunk_id": "local_experiment_report#0006",
+      "title": "experiment_report.md",
+      "section": "8.1 总体指标",
+      "url": "docs/experiment_report.md",
+      "license": "本项目自有文档",
+      "score": 0.5386
+    },
+    {
+      "index": 3,
+      "chunk_id": "local_experiment_report#0008",
+      "title": "experiment_report.md",
+      "section": "8.3 混淆矩阵",
+      "url": "docs/experiment_report.md",
+      "license": "本项目自有文档",
+      "score": 0.5203
+    },
+    {
+      "index": 4,
+      "chunk_id": "local_README#0002",
+      "title": "README.md",
+      "section": "3. 实际结果（2026-10-19 构建）",
+      "url": "data/README.md",
+      "license": "本项目自有文档",
+      "score": 0.5057
+    },
+    {
+      "index": 5,
+      "chunk_id": "local_README#0003",
+      "title": "README.md",
+      "section": "4. 文件说明",
+      "url": "data/README.md",
+      "license": "本项目自有文档",
+      "score": 0.489
+    },
+    {
+      "index": 6,
+      "chunk_id": "local_data_card#0001",
+      "title": "data_card.md",
+      "section": "",
+      "url": "docs/data_card.md",
+      "license": "本项目自有文档",
+      "score": 0.492
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "aggregate_metric",
+      "args": {
+        "metric": "躺卧比例",
+        "group_by": "栏位",
+        "start_date": "2026-10-31",
+        "end_date": "2026-11-06"
+      },
+      "ok": false,
+      "error": "未注册的工具：aggregate_metric（可用：search_knowledge、fetch_passage）",
+      "ms": 0.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "躺卧比例 P1栏 数据",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 344.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "P1栏 数据集 躺卧比例 统计",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 359.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "躺卧比例 时间序列 栏位 统计数据",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 469.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": true,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 5,
+    "tool_calls": 4,
+    "input_tokens": 14580,
+    "output_tokens": 377,
+    "elapsed_seconds": 33.61,
+    "used_tools": [
+      "aggregate_metric",
+      "search_knowledge"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "73157381dd888bd98cdd9d27c39737fcfb1ca289e130a8d33b43693b2d97e846",
+    "chars": 799,
+    "tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 33.61,
+  "finished_at": "2026-11-07T18:11:44+08:00"
+}

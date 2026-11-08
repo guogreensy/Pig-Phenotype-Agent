@@ -1,0 +1,4 @@
+﻿prompt_variant,model_name,n_total,n_success,n_failed,failure_rate,n_json_valid,json_valid_rate,n_schema_valid,schema_valid_rate,n_unknown,unknown_rate,n_classified,n_correct,accuracy_valid,accuracy_strict,macro_f1,weighted_f1,latency_mean_s,latency_median_s,latency_p95_s
+A,glm-4.1v-thinking-flash,12,12,0,0.0000,0,0.0000,0,0.0000,0,0.0000,12,5,0.4167,0.4167,0.2821,0.3376,3.5977,3.5780,6.0320
+B,glm-4.1v-thinking-flash,12,12,0,0.0000,0,0.0000,0,0.0000,0,0.0000,12,5,0.4167,0.4167,0.2821,0.3376,3.8464,3.1870,10.0000
+C,glm-4.1v-thinking-flash,12,12,0,0.0000,12,1.0000,12,1.0000,0,0.0000,12,5,0.4167,0.4167,0.2821,0.3376,3.5715,3.0930,6.1570

@@ -1,0 +1,183 @@
+{
+  "question_id": "K9",
+  "category": "knowledge",
+  "condition": "full",
+  "question": "妊娠期限位栏母猪的行为识别用了什么计算机视觉方法？",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "pmc_8071751"
+    ],
+    "keyword_hits": {
+      "pmc_8071751": {
+        "gestating sows": 1,
+        "sows": 55
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：gestating sows、sows",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据检索结果，关于妊娠期限位栏母猪行为识别的计算机视觉方法，我可以提供以下信息：\n\n妊娠期限位栏母猪行为识别主要采用了以下计算机视觉方法：\n\n1. **深度学习方法**：在《Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs》中提到，深度学习已被用于检测和识别不同成像系统中母猪的行为。\n\n2. **Faster R-CNN技术**：有研究基于Kinect v2传感器，使用Faster R-CNN（快速区域卷积神经网络）技术结合区域提议网络(RPN)和Zeiler & Fergus Net(ZFnet)来识别母猪的不同姿态。\n\n3. **两流卷积网络**：在《Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks》中提到，使用两流卷积网络进行母猪行为的自动视频识别。\n\n4. **数据驱动的方法**：有系统采用数据驱动的方法测量站立和躺卧姿态，不需要校准，仅通过使用大量展示特定行为的猪的图像样本来学习任务。\n\n这些方法能够基于猪的整体结构特征来检测行为，即使头部完全不可见也能进行检测，这解决了头部自遮挡对行为识别的挑战。\n\n需要注意的是，以上信息来自项目知识库中的文献，数据为模拟。",
+  "stop_reason": "forced_answer",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "pmc_8147168#0001",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.6092
+    },
+    {
+      "index": 2,
+      "chunk_id": "pmc_8071751#0001",
+      "title": "A computer vision-based approach for behavior recognition of gestating sows fed different fiber levels during high ambient temperature",
+      "section": "",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8071751/",
+      "license": "CC BY-NC",
+      "score": 0.6016
+    },
+    {
+      "index": 3,
+      "chunk_id": "pmc_6749226#0004",
+      "title": "Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749226/",
+      "license": "CC BY",
+      "score": 0.5867
+    },
+    {
+      "index": 4,
+      "chunk_id": "pmc_7423952#0047",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Individual pig profiles",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.582
+    },
+    {
+      "index": 5,
+      "chunk_id": "pmc_8614322#0015",
+      "title": "Deep-Learning-Based Automatic Monitoring of Pigs’ Physico-Temporal Activities at Different Greenhouse Gas Concentrations",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8614322/",
+      "license": "CC BY",
+      "score": 0.5768
+    },
+    {
+      "index": 6,
+      "chunk_id": "pmc_6749226#0009",
+      "title": "Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749226/",
+      "license": "CC BY",
+      "score": 0.6226
+    },
+    {
+      "index": 7,
+      "chunk_id": "pmc_7070994#0011",
+      "title": "Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks",
+      "section": "1. Introduction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7070994/",
+      "license": "CC BY",
+      "score": 0.6136
+    },
+    {
+      "index": 8,
+      "chunk_id": "pmc_7070994#0053",
+      "title": "Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks",
+      "section": "3.2. Results and Discussion of the Experiments",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7070994/",
+      "license": "CC BY",
+      "score": 0.6053
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "妊娠期限位栏母猪行为识别 计算机视觉方法",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 390.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_8071751#0001"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_6749226#0004"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_7423952#0047"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "妊娠母猪 行为识别 深度学习 CNN",
+        "k": 3
+      },
+      "ok": true,
+      "error": null,
+      "ms": 328.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": true
+  },
+  "metrics": {
+    "model_calls": 6,
+    "tool_calls": 5,
+    "input_tokens": 18920,
+    "output_tokens": 437,
+    "elapsed_seconds": 20.44,
+    "used_tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 20.432,
+  "finished_at": "2026-11-07T18:39:29+08:00"
+}

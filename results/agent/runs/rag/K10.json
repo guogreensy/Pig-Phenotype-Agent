@@ -1,0 +1,166 @@
+{
+  "question_id": "K10",
+  "category": "knowledge",
+  "condition": "rag",
+  "question": "本项目的姿态识别实验用了哪几组提示词、多少张样本？",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "local_experiment_report"
+    ],
+    "keyword_hits": {
+      "local_experiment_report": {
+        "提示词": 13,
+        "样本": 14
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：提示词、样本",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据项目知识库的检索结果，本项目的姿态识别实验使用了以下信息：\n\n## 提示词设计（3组）\n\n| 组别 | 文件 | 特征 | 字符数 |\n|------|------|------|--------|\n| **A组** | prompts/prompt_a.txt | 只给任务、类别列表与简短输出要求 | 124字符 |\n| **B组** | prompts/prompt_b.txt | 增加各类定义、易混淆区分规则、只依据可见信息 | 484字符 |\n| **C组** | prompts/prompt_c.txt | 再增加严格JSON字段、只允许5个取值、允许拒答、禁止虚构 | 946字符 |\n\n## 样本数量\n\n实验使用了**200张测试样本**，具体分布如下：\n\n| 姿态类别 | 样本数量 |\n|----------|----------|\n| standing（站立） | 78张 |\n| lyinglateral（侧卧） | 62张 |\n| lyingother（俯卧） | 47张 |\n| sitting（坐姿） | 13张 |\n| **合计** | **200张** |\n\n这些样本来自HuggingFace数据集anilbhujel/viewpoint-aware-pig-posture-recognition的官方seen-VP test划分，经过逐实例bbox裁剪为单猪图。实验通过比较三组不同提示词的设计，研究其对多模态大模型猪只姿态识别准确率的影响。",
+  "stop_reason": "answered",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "local_experiment_report#0002",
+      "title": "experiment_report.md",
+      "section": "2. 数据集来源与样本统计",
+      "url": "docs/experiment_report.md",
+      "license": "本项目自有文档",
+      "score": 0.624
+    },
+    {
+      "index": 2,
+      "chunk_id": "local_experiment_report#0008",
+      "title": "experiment_report.md",
+      "section": "8.3 混淆矩阵",
+      "url": "docs/experiment_report.md",
+      "license": "本项目自有文档",
+      "score": 0.5993
+    },
+    {
+      "index": 3,
+      "chunk_id": "local_experiment_report#0001",
+      "title": "experiment_report.md",
+      "section": "",
+      "url": "docs/experiment_report.md",
+      "license": "本项目自有文档",
+      "score": 0.5974
+    },
+    {
+      "index": 4,
+      "chunk_id": "local_data_card#0002",
+      "title": "data_card.md",
+      "section": "标签体系",
+      "url": "docs/data_card.md",
+      "license": "本项目自有文档",
+      "score": 0.587
+    },
+    {
+      "index": 5,
+      "chunk_id": "local_feasibility_report#0004",
+      "title": "feasibility_report.md",
+      "section": "4. 数据集",
+      "url": "docs/feasibility_report.md",
+      "license": "本项目自有文档",
+      "score": 0.5721
+    },
+    {
+      "index": 6,
+      "chunk_id": "local_technical_report#0007",
+      "title": "technical_report.md",
+      "section": "4.6 src/evaluation.py —— 指标",
+      "url": "docs/technical_report.md",
+      "license": "本项目自有文档",
+      "score": 0.4773
+    },
+    {
+      "index": 7,
+      "chunk_id": "local_experiment_report#0010",
+      "title": "experiment_report.md",
+      "section": "9.4 RQ4：为什么 C 组更差？",
+      "url": "docs/experiment_report.md",
+      "license": "本项目自有文档",
+      "score": 0.4744
+    },
+    {
+      "index": 8,
+      "chunk_id": "local_limitations#0002",
+      "title": "limitations.md",
+      "section": "3. 模型依赖",
+      "url": "docs/limitations.md",
+      "license": "本项目自有文档",
+      "score": 0.4708
+    },
+    {
+      "index": 9,
+      "chunk_id": "local_technical_report#0008",
+      "title": "technical_report.md",
+      "section": "6.2 逐样本记录字段",
+      "url": "docs/technical_report.md",
+      "license": "本项目自有文档",
+      "score": 0.4364
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "姿态识别实验 提示词 样本数量"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 531.0
+    },
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "提示词设计 A组 B组 C组"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 437.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "local_technical_report#0007"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 4,
+    "tool_calls": 3,
+    "input_tokens": 12404,
+    "output_tokens": 399,
+    "elapsed_seconds": 18.59,
+    "used_tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "73157381dd888bd98cdd9d27c39737fcfb1ca289e130a8d33b43693b2d97e846",
+    "chars": 799,
+    "tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 18.591,
+  "finished_at": "2026-11-07T18:16:06+08:00"
+}

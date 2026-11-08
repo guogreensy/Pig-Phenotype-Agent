@@ -1,0 +1,50 @@
+{
+  "question_id": "K9",
+  "category": "knowledge",
+  "condition": "direct",
+  "question": "妊娠期限位栏母猪的行为识别用了什么计算机视觉方法？",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "pmc_8071751"
+    ],
+    "keyword_hits": {
+      "pmc_8071751": {
+        "gestating sows": 1,
+        "sows": 55
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：gestating sows、sows",
+  "image_path": null,
+  "ok": true,
+  "answer": "关于妊娠期限位栏母猪行为识别的计算机视觉方法，我无法从现有知识库中检索到具体信息。我没有找到关于妊娠期限位栏母猪行为识别所使用的特定计算机视觉方法的文献或项目文档。\n\n如果您需要这方面的信息，建议您查阅以下可能的相关文献方向：\n1. 母猪行为识别的深度学习方法\n2. 限位栏环境下动物行为监测技术\n3. 计算机视觉在畜牧业中的应用\n\n如果您有具体的文献标题或研究方向，我可以尝试帮您检索更精确的信息。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 459,
+    "output_tokens": 113,
+    "elapsed_seconds": 25.81,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "dfad32b7cb0d2e1f12f1b247ac8179c6a68b5978d53a2f2b9e8931108af9815f",
+    "chars": 696,
+    "tools": [],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 25.818,
+  "finished_at": "2026-11-07T18:00:07+08:00"
+}

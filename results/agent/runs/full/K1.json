@@ -1,0 +1,154 @@
+{
+  "question_id": "K1",
+  "category": "knowledge",
+  "condition": "full",
+  "question": "猪只姿态识别常用的深度学习方法有哪些？请给出出处。",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "pmc_8147168",
+      "pmc_7070994",
+      "pmc_6749226"
+    ],
+    "keyword_hits": {
+      "pmc_8147168": {
+        "YOLOv5": 10
+      },
+      "pmc_7070994": {
+        "two-stream": 15,
+        "Faster R-CNN": 2
+      },
+      "pmc_6749226": {
+        "Faster R-CNN": 22
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：YOLOv5、two-stream、Faster R-CNN",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据检索到的文献资料，猪只姿态识别常用的深度学习方法主要包括以下几种：\n\n## 1. 目标检测方法\n\n**Faster R-CNN**\n- **出处**：Zheng et al. [2] 和 Yang et al. [22] 使用 Faster-RCNN 来识别猪只姿态和采食行为\n- **特点**：结合区域提议网络和ZFnet，能够准确识别猪只位置并分类姿态\n- **应用**：Zheng et al. [84] 利用Kinect v2传感器和Faster R-CNN技术开发了母猪姿态检测系统，在5 fps数据集上达到87.1%的检测准确率\n\n**SSD (Single Shot MultiBox Detector)**\n- **出处**：Nasirahmadi et al. [16] 提出的三种检测器方法之一\n- **特点**：实时性能好，结合MobileNet可用于实时识别母猪饮水、排尿和爬跨行为\n\n**R-FCN (Region-based Fully Convolutional Networks)**\n- **出处**：Nasirahmadi et al. [16] 提出的三种检测器方法之一\n- **特点**：基于全卷积网络，适合猪只姿态识别\n\n## 2. 语义分割方法\n\n**Mask R-CNN**\n- **出处**：Li et al. [10]\n- **特点**：能够分割图像中的猪只，然后提取特征向量用于爬跨行为识别\n\n**DeepLab v3+**\n- **出处**：Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration\n- **特点**：改进的DeepLab v3+用于猪只姿态识别，通过非局部平均滤波处理边缘混叠问题\n\n## 3. 双流卷积网络\n\n**Two-Stream Convolutional Networks**\n- **出处**：Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks\n- **特点**：同时考虑空间和时间特征，能够更好地识别视频中的猪只行为\n\n## 4. 联合训练方法\n\n**目标检测与语义分割联合训练**\n- **出处**：Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration\n- **特点**：先通过目标检测提取单个猪只，再进行分类和标注，构建了世界上第一个猪只姿态数据集\n\n这些方法各有优势，Faster R-CNN在精度上表现较好，SSD在实时性方面更有优势，而Mask R-CNN和DeepLab v3+则在像素级分割方面更为精确。研究者通常会根据具体应用场景选择合适的深度学习方法。",
+  "stop_reason": "answered",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "pmc_8147168#0051",
+      "title": "Pig-Posture Recognition Based on Computer Vision: Dataset and Exploration",
+      "section": "5. Conclusions",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8147168/",
+      "license": "CC BY",
+      "score": 0.6319
+    },
+    {
+      "index": 2,
+      "chunk_id": "pmc_7070994#0053",
+      "title": "Automated Video Behavior Recognition of Pigs Using Two-Stream Convolutional Networks",
+      "section": "3.2. Results and Discussion of the Experiments",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7070994/",
+      "license": "CC BY",
+      "score": 0.6234
+    },
+    {
+      "index": 3,
+      "chunk_id": "pmc_6749226#0001",
+      "title": "Deep Learning and Machine Vision Approaches for Posture Detection of Individual Pigs",
+      "section": "",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6749226/",
+      "license": "CC BY",
+      "score": 0.6219
+    },
+    {
+      "index": 4,
+      "chunk_id": "pmc_7423952#0047",
+      "title": "Automated recognition of postures and drinking behaviour for the detection of compromised health in pigs",
+      "section": "Individual pig profiles",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7423952/",
+      "license": "CC BY",
+      "score": 0.6149
+    },
+    {
+      "index": 5,
+      "chunk_id": "pmc_11833201#0067",
+      "title": "RGB-based machine vision for enhanced pig disease symptoms monitoring and health management: a review",
+      "section": "Integrating deep learning and RGB Imaging techniques for enhanced detection and monitoring",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11833201/",
+      "license": "CC BY-NC",
+      "score": 0.6074
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "猪只姿态识别 深度学习方法",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 438.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_7070994#0053"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_8147168#0051"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_11833201#0067"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 5,
+    "tool_calls": 4,
+    "input_tokens": 15888,
+    "output_tokens": 680,
+    "elapsed_seconds": 49.03,
+    "used_tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 49.027,
+  "finished_at": "2026-11-07T17:55:15+08:00"
+}

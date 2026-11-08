@@ -1,0 +1,65 @@
+{
+  "question_id": "V4",
+  "category": "vision",
+  "condition": "full",
+  "question": "这张图片里的猪是什么姿态？data/experiment/images/v4.jpg",
+  "answerable": true,
+  "expected": {
+    "label": "lying_other",
+    "label_cn": "其他卧姿",
+    "doc_ids": []
+  },
+  "evidence_hint": "类别来自原图所在目录名（人工标注）；题目使用中性文件名避免泄漏",
+  "image_path": "data/experiment/images/v4.jpg",
+  "ok": true,
+  "answer": "根据图片分析结果，这张图片中的猪只姿态是**侧卧**。\n\n具体分析结果：\n- **姿态类别**：侧卧（lying_lateral）\n- **姿态描述**：身体一侧贴地，躯干呈水平姿态\n- **分析确定性**：确定（uncertain: false）\n\n模型识别为侧卧姿态，表明这头猪正侧身躺在地面上，这是猪只常见的休息姿态之一。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [
+    {
+      "tool": "analyze_pig_posture",
+      "args": {
+        "image_path": "data/experiment/images/v4.jpg"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 11344.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": true,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 2,
+    "tool_calls": 1,
+    "input_tokens": 4086,
+    "output_tokens": 128,
+    "elapsed_seconds": 27.38,
+    "used_tools": [
+      "analyze_pig_posture"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 27.379,
+  "finished_at": "2026-11-07T18:48:19+08:00"
+}

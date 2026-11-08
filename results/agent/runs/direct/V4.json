@@ -1,0 +1,44 @@
+{
+  "question_id": "V4",
+  "category": "vision",
+  "condition": "direct",
+  "question": "这张图片里的猪是什么姿态？data/experiment/images/v4.jpg",
+  "answerable": true,
+  "expected": {
+    "label": "lying_other",
+    "label_cn": "其他卧姿",
+    "doc_ids": []
+  },
+  "evidence_hint": "类别来自原图所在目录名（人工标注）；题目使用中性文件名避免泄漏",
+  "image_path": "data/experiment/images/v4.jpg",
+  "ok": true,
+  "answer": "很抱歉，我目前无法直接查看或分析图片内容。作为猪只表型智能分析助手，我本可以对给定的猪只图片进行姿态识别，但需要您提供图片内容或描述，以便我进行分析。\n\n如果您能描述图片中猪只的姿态，或者提供其他相关信息，我很乐意帮助您分析猪只的姿势状态。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 460,
+    "output_tokens": 73,
+    "elapsed_seconds": 8.53,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "dfad32b7cb0d2e1f12f1b247ac8179c6a68b5978d53a2f2b9e8931108af9815f",
+    "chars": 696,
+    "tools": [],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 8.532,
+  "finished_at": "2026-11-07T18:45:07+08:00"
+}

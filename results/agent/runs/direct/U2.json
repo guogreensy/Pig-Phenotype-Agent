@@ -1,0 +1,43 @@
+{
+  "question_id": "U2",
+  "category": "unanswerable",
+  "condition": "direct",
+  "question": "2025 年 3 月这批猪的平均采食量是多少？",
+  "answerable": false,
+  "expected": {
+    "doc_ids": [],
+    "must_admit": true
+  },
+  "evidence_hint": "数据从 2026-10-08 开始，2025 年 3 月没有记录",
+  "image_path": null,
+  "ok": true,
+  "answer": "我无法核实2025年3月的采食量数据，因为我的数据范围仅覆盖2026-10-08至2026-11-06，不包含2025年的数据。根据提供的信息，我只能查询2026年10月8日至11月6日期间的模拟数据。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 461,
+    "output_tokens": 62,
+    "elapsed_seconds": 12.17,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "dfad32b7cb0d2e1f12f1b247ac8179c6a68b5978d53a2f2b9e8931108af9815f",
+    "chars": 696,
+    "tools": [],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 12.171,
+  "finished_at": "2026-11-07T18:02:55+08:00"
+}

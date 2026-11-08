@@ -1,0 +1,78 @@
+{
+  "question_id": "D1",
+  "category": "data",
+  "condition": "full",
+  "question": "P2-007 这头猪最近 7 天的平均采食量是多少？",
+  "answerable": true,
+  "expected": {
+    "numbers": [
+      {
+        "label": "平均采食量",
+        "value": 1.6257,
+        "tol": 0.0244,
+        "unit": "kg"
+      }
+    ],
+    "tokens": [
+      "P2-007"
+    ]
+  },
+  "evidence_hint": "query_pig_records 或 detect_anomalies 的均值",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据查询结果，P2-007 这头猪最近 7 天（2026-10-31 至 2026-11-06）的采食量数据如下：\n\n- 2026-10-31：1.52 kg\n- 2026-11-01：1.83 kg  \n- 2026-11-02：1.50 kg\n- 2026-11-03：1.66 kg\n- 2026-11-04：1.81 kg\n- 2026-11-05：1.52 kg\n- 2026-11-06：1.54 kg\n\n**平均采食量为 1.63 kg/天**\n\n*注：数据为模拟数据，仅用于验证工具调用链路与报表口径，不代表任何真实养殖场，不可用于生产决策。*",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [
+    {
+      "tool": "query_pig_records",
+      "args": {
+        "pig_id": "P2-007",
+        "start_date": "2026-10-31",
+        "end_date": "2026-11-06",
+        "metrics": [
+          "feed_kg"
+        ]
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": true,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 2,
+    "tool_calls": 1,
+    "input_tokens": 4280,
+    "output_tokens": 262,
+    "elapsed_seconds": 24.05,
+    "used_tools": [
+      "query_pig_records"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 24.047,
+  "finished_at": "2026-11-07T17:54:25+08:00"
+}

@@ -1,0 +1,145 @@
+{
+  "question_id": "K7",
+  "category": "knowledge",
+  "condition": "full",
+  "question": "基于 RGB 图像的机器视觉如何用于猪只疾病症状监测？",
+  "answerable": true,
+  "expected": {
+    "doc_ids": [
+      "pmc_11833201"
+    ],
+    "keyword_hits": {
+      "pmc_11833201": {
+        "RGB": 72
+      }
+    }
+  },
+  "evidence_hint": "期望来源需命中关键词：RGB",
+  "image_path": null,
+  "ok": true,
+  "answer": "基于RGB图像的机器视觉技术在猪只疾病症状监测方面具有显著优势，以下是主要应用方式：\n\n## 核心优势\nRGB成像和机器视觉技术为猪只健康监测提供了**非侵入性**的解决方案，能够实现**早期疾病检测**和**主动疾病管理**，超越了传统的观察方法。\n\n## 主要监测指标\n\n### 1. **外观特征监测**\n- **皮肤病变检测**：通过分析皮肤颜色、纹理变化识别皮肤病、感染等\n- **呼吸问题识别**：监测呼吸频率、姿势等视觉指标\n- **跛行检测**：通过步态分析识别腿部疾病\n\n### 2. **行为模式分析**\n- **活动量变化**：检测活动减少或异常增加\n- **姿势异常**：识别躺卧姿势、站立姿势的变化\n- **社交行为**：监测与其他猪只的互动模式\n\n### 3. **个体追踪**\n- **个体识别**：持续跟踪特定猪只的健康状况\n- **体重估算**：通过图像分析估算体重变化\n- **体况评分**：评估猪只的整体健康状况\n\n## 技术实现方式\n\n### 数据采集\n- 在养殖场环境中安装RGB摄像头\n- 实时采集猪只图像数据\n- 连续监测物理特征、行为和活动\n\n### 智能分析\n- 使用机器学习算法处理图像\n- 训练模型识别疾病相关的视觉模式\n- 检测细微的外观和行为变化\n\n### 实际应用效果\n- **早期预警**：在疾病症状明显出现前识别潜在健康问题\n- **及时干预**：允许饲养人员及时采取措施，防止疾病传播\n- **精准管理**：支持数据驱动的决策制定\n\n## 特别优势\n- **非侵入性**：无需接触猪只，减少应激\n- **成本效益高**：相比传统检测方法更加经济\n- **实时监测**：提供连续的健康状况数据\n- **个体化关注**：能够针对特定猪只进行精准监测\n\n这种技术特别适用于识别猪仔的痛苦或受伤迹象，能够快速采取预防措施，避免挤压等意外情况发生。",
+  "stop_reason": "answered",
+  "citations": [
+    {
+      "index": 1,
+      "chunk_id": "pmc_11833201#0001",
+      "title": "RGB-based machine vision for enhanced pig disease symptoms monitoring and health management: a review",
+      "section": "",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11833201/",
+      "license": "CC BY-NC",
+      "score": 0.6823
+    },
+    {
+      "index": 2,
+      "chunk_id": "pmc_11833201#0002",
+      "title": "RGB-based machine vision for enhanced pig disease symptoms monitoring and health management: a review",
+      "section": "Abstract",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11833201/",
+      "license": "CC BY-NC",
+      "score": 0.6653
+    },
+    {
+      "index": 3,
+      "chunk_id": "pmc_11833201#0085",
+      "title": "RGB-based machine vision for enhanced pig disease symptoms monitoring and health management: a review",
+      "section": "FUTURE PERSPECTIVES, CHALLENGES AND SUMMARY",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11833201/",
+      "license": "CC BY-NC",
+      "score": 0.6494
+    },
+    {
+      "index": 4,
+      "chunk_id": "pmc_11833201#0043",
+      "title": "RGB-based machine vision for enhanced pig disease symptoms monitoring and health management: a review",
+      "section": "Early detection and tracking of disease symptoms",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11833201/",
+      "license": "CC BY-NC",
+      "score": 0.6428
+    },
+    {
+      "index": 5,
+      "chunk_id": "pmc_11833201#0039",
+      "title": "RGB-based machine vision for enhanced pig disease symptoms monitoring and health management: a review",
+      "section": "APPLICATIONS OF RGB IMAGING FOR PIG DISEASE AND HEALTH MANAGEMENT",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11833201/",
+      "license": "CC BY-NC",
+      "score": 0.6412
+    }
+  ],
+  "tool_trace": [
+    {
+      "tool": "search_knowledge",
+      "args": {
+        "query": "RGB图像 机器视觉 猪只疾病症状监测",
+        "k": 5
+      },
+      "ok": true,
+      "error": null,
+      "ms": 437.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_11833201#0002"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_11833201#0043"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    },
+    {
+      "tool": "fetch_passage",
+      "args": {
+        "chunk_id": "pmc_11833201#0039"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": true,
+    "uses_vision": false,
+    "has_citations": true,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 5,
+    "tool_calls": 4,
+    "input_tokens": 15579,
+    "output_tokens": 587,
+    "elapsed_seconds": 23.94,
+    "used_tools": [
+      "search_knowledge",
+      "fetch_passage"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 23.931,
+  "finished_at": "2026-11-07T18:38:42+08:00"
+}

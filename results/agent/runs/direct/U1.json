@@ -1,0 +1,43 @@
+{
+  "question_id": "U1",
+  "category": "unanswerable",
+  "condition": "direct",
+  "question": "这批猪是什么品种？是大白、长白还是杜洛克？",
+  "answerable": false,
+  "expected": {
+    "doc_ids": [],
+    "must_admit": true
+  },
+  "evidence_hint": "模拟数据只有性别和体重，没有品种字段",
+  "image_path": null,
+  "ok": true,
+  "answer": "我无法确定这批猪的具体品种信息。根据我的知识范围，我只能提供一般性的猪品种信息，但无法查询到您养殖场中这批猪的具体品种数据。\n\n如果您需要了解这批猪的品种信息，建议您查看养殖场的记录或咨询场内技术人员。大白猪、长白猪和杜洛克都是常见的商业猪品种，各自有不同的特点：\n\n- 大白猪：生长速度快，繁殖性能好，适应性强\n- 长白猪：体型较长，瘦肉率高，生长速度快\n- 杜洛克：肌肉发达，生长速度快，饲料转化率高\n\n数据为模拟，我无法核实这批猪的具体品种信息。",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [],
+  "flags": {
+    "uses_simulated_data": false,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 1,
+    "tool_calls": 0,
+    "input_tokens": 460,
+    "output_tokens": 138,
+    "elapsed_seconds": 58.02,
+    "used_tools": []
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "dfad32b7cb0d2e1f12f1b247ac8179c6a68b5978d53a2f2b9e8931108af9815f",
+    "chars": 696,
+    "tools": [],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 58.01,
+  "finished_at": "2026-11-07T18:02:42+08:00"
+}

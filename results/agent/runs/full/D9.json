@@ -1,0 +1,98 @@
+{
+  "question_id": "D9",
+  "category": "data",
+  "condition": "full",
+  "question": "2026-11-06 这一天各栏位的平均饮水量是多少？",
+  "answerable": true,
+  "expected": {
+    "numbers": [
+      {
+        "label": "P1 平均饮水量",
+        "value": 6.6292,
+        "tol": 0.0994,
+        "unit": "L"
+      },
+      {
+        "label": "P2 平均饮水量",
+        "value": 6.2392,
+        "tol": 0.0936,
+        "unit": "L"
+      },
+      {
+        "label": "P3 平均饮水量",
+        "value": 5.9908,
+        "tol": 0.0899,
+        "unit": "L"
+      },
+      {
+        "label": "P4 平均饮水量",
+        "value": 6.36,
+        "tol": 0.0954,
+        "unit": "L"
+      }
+    ],
+    "tokens": [
+      "P1",
+      "P2",
+      "P3",
+      "P4"
+    ]
+  },
+  "evidence_hint": "单日聚合，检验模型是否守住时间范围",
+  "image_path": null,
+  "ok": true,
+  "answer": "根据查询结果，2026-11-06这一天各栏位的平均饮水量如下：\n\n- **P1栏位**：6.63升/头（12头猪）\n- **P2栏位**：6.24升/头（12头猪）  \n- **P3栏位**：5.99升/头（12头猪）\n- **P4栏位**：6.36升/头（12头猪）\n\n*注：数据为模拟数据，仅用于验证工具调用链路与报表口径，不代表任何真实养殖场，不可用于生产决策。*",
+  "stop_reason": "answered",
+  "citations": [],
+  "tool_trace": [
+    {
+      "tool": "aggregate_metric",
+      "args": {
+        "metric": "water_l",
+        "group_by": "pen",
+        "start_date": "2026-11-06",
+        "end_date": "2026-11-06",
+        "stat": "mean"
+      },
+      "ok": true,
+      "error": null,
+      "ms": 0.0
+    }
+  ],
+  "flags": {
+    "uses_simulated_data": true,
+    "uses_knowledge": false,
+    "uses_vision": false,
+    "has_citations": false,
+    "degraded": false
+  },
+  "metrics": {
+    "model_calls": 2,
+    "tool_calls": 1,
+    "input_tokens": 4072,
+    "output_tokens": 207,
+    "elapsed_seconds": 12.66,
+    "used_tools": [
+      "aggregate_metric"
+    ]
+  },
+  "prompt_meta": {
+    "version": "1.0",
+    "sha256": "49cec26644ac478b842632566bfadf9e3193a3914cd4c181375d0f2f5b7ee738",
+    "chars": 1252,
+    "tools": [
+      "list_pens",
+      "query_pig_records",
+      "aggregate_metric",
+      "detect_anomalies",
+      "analyze_pig_posture",
+      "list_sample_images",
+      "search_knowledge",
+      "fetch_passage"
+    ],
+    "max_steps": 5
+  },
+  "error": null,
+  "wall_seconds": 12.657,
+  "finished_at": "2026-11-07T18:26:15+08:00"
+}
