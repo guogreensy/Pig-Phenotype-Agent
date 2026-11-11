@@ -1,0 +1,19 @@
+# 换行符策略：仓库内存 LF，检出时按类型转换，避免跨平台差异
+* text=auto
+
+# Windows 批处理：-text 表示原样存储 CRLF。
+# 原因：cmd 不接受 LF 行尾（曾报 "'dp0"' is not recognized）；
+# 且 GitHub 的 ZIP 下载不做检出转换，若库内存 LF，下载后必定打不开。
+*.bat -text
+*.cmd -text
+
+# PowerShell 能读 LF，按常规文本处理即可
+*.ps1 text eol=crlf
+
+# 二进制资源，禁止做换行转换
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.npz binary
+*.pkl binary
+*.xlsx binary

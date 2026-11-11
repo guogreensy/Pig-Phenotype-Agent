@@ -23,12 +23,5 @@ data/kb/cache/
 *.log
 logs/
 results/figures/_tmp*
-tests/_tmp_env/
-tests/_tmp_out/
-tests/_tmp_rag/
-tests/_tmp_lexical/
-tests/_tmp_dense/
-tests/_tmp_retrieve/
-tests/_tmp_buildkb/
-tests/_tmp_tools/
-tests/_tmp_vision/
+tests/_tmp_*/
+.tmp_pip/

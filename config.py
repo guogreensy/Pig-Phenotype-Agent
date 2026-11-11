@@ -33,13 +33,13 @@ PROVIDERS: Dict[str, Dict[str, str]] = {
         "base_url": "https://open.bigmodel.cn/api/paas/v4/chat/completions",
         "model": "glm-4.6v-flash",
         "key_env": "ZHIPUAI_API_KEY",
-        "label": "智谱 GLM-4.6V-Flash（免费）",
+        "label": "智谱开放平台（免费额度）",
     },
     "dashscope": {
         "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
         "model": "qwen3-vl-plus",
         "key_env": "DASHSCOPE_API_KEY",
-        "label": "阿里云百炼 qwen3-vl-plus",
+        "label": "阿里云百炼",
     },
 }
 

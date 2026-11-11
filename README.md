@@ -111,11 +111,31 @@ PIG_TOOL_MODEL=glm-4.5-flash          # 工具调用
 
 ### 3.3 启动
 
+**方式一：一键启动（推荐）**
+
+双击项目根目录的 `启动助手.bat`。它会自动完成：找解释器 → 探测空闲端口 → 启动服务 → 等就绪 → 打开浏览器。控制台保留日志，**关闭窗口即停止服务**。
+
+想要桌面图标，先运行一次：
+
+```bat
+powershell -ExecutionPolicy Bypass -File scripts\create_shortcut.ps1
+```
+
+之后双击桌面上的「猪只表型助手」即可。若控制台被强行关闭、端口仍被占用：
+
+```bat
+powershell -ExecutionPolicy Bypass -File scripts\stop_web.ps1
+```
+
+细节：端口被占用时自动顺延（7860→7869），浏览器打开的地址始终是实际监听端口；服务已在运行时再次双击，不会重复起进程，只打开浏览器。
+
+**方式二：命令行**
+
 ```bat
 python app.py
 ```
 
-浏览器打开 <http://127.0.0.1:7860>，四个区块：
+浏览器打开 <http://127.0.0.1:7860>（端口被占用会自动顺延），四个区块：
 
 1. **服务自检** —— 解释器、服务商、模型、密钥状态、提示词指纹
 2. **图像识别** —— 上传图片 → 选提示词方案 → 看结构化结果
@@ -246,6 +266,7 @@ pytest 未安装。`unittest` 是标准库，覆盖等价：
 |---|---|
 | [PROJECT_REQUIREMENTS.md](PROJECT_REQUIREMENTS.md) | 需求说明书：架构、模块、实验设计、验收、限制 |
 | [docs/technical_report_agent.md](docs/technical_report_agent.md) | 技术报告：知识库构建、工具层、Agent、工程决策、缺陷清单 |
+| [docs/learning_guide.md](docs/learning_guide.md) | 学习路线：目录意义、六步阅读顺序、三个自测问题、动手练习 |
 | [docs/experiment_report_agent.md](docs/experiment_report_agent.md) | 实验报告：90 次对照实验、指标、8 个案例、有效性威胁 |
 | [docs/experiment_report.md](docs/experiment_report.md) | 阶段一：提示词对姿态识别的影响（600 次调用） |
 | [docs/technical_report.md](docs/technical_report.md) | 阶段一：技术报告 |

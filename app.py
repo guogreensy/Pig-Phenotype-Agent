@@ -19,6 +19,13 @@ from src.webapp import make_app
 
 
 def main() -> int:
+    # 输出被重定向到文件时也能实时看到启动信息
+    try:
+        sys.stdout.reconfigure(line_buffering=True)
+        sys.stderr.reconfigure(line_buffering=True)
+    except (AttributeError, OSError):
+        pass
+
     try:
         settings = get_settings()
     except ConfigError as exc:
