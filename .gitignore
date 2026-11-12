@@ -25,3 +25,8 @@ logs/
 results/figures/_tmp*
 tests/_tmp_*/
 .tmp_pip/
+# 结课报告与项目内部材料：仅本地保留，不入库
+/_report_build/
+/大语言模型技术与应用-结课报告.docx
+/猪只表型助手.lnk
+/任务书-*.pdf
