@@ -113,15 +113,21 @@ PIG_TOOL_MODEL=glm-4.5-flash          # 工具调用
 
 **方式一：一键启动（推荐）**
 
-双击项目根目录的 `启动助手.bat`。它会自动完成：找解释器 → 探测空闲端口 → 启动服务 → 等就绪 → 打开浏览器。控制台保留日志，**关闭窗口即停止服务**。
+双击项目根目录的 `启动助手.bat`，或直接双击同目录下的快捷方式 `猪只表型助手.lnk`。它会自动完成：找解释器 → 探测空闲端口 → 启动服务 → 等就绪 → 打开浏览器。控制台保留日志，**关闭窗口即停止服务**。
 
-想要桌面图标，先运行一次：
+快捷方式默认就放在项目根目录（不写桌面），重装或换机器后重新生成：
 
 ```bat
 powershell -ExecutionPolicy Bypass -File scripts\create_shortcut.ps1
 ```
 
-之后双击桌面上的「猪只表型助手」即可。若控制台被强行关闭、端口仍被占用：
+确实想要桌面图标时加一个开关：
+
+```bat
+powershell -ExecutionPolicy Bypass -File scripts\create_shortcut.ps1 -Desktop
+```
+
+若控制台被强行关闭、端口仍被占用：
 
 ```bat
 powershell -ExecutionPolicy Bypass -File scripts\stop_web.ps1

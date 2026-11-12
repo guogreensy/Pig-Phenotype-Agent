@@ -3,14 +3,15 @@ chcp 65001 >nul
 setlocal
 cd /d "%~dp0"
 
-rem ???????PIG_PYTHON ???? > ?? conda ?? > PATH ?? python
+rem Order: PIG_PYTHON -> conda env python -> whatever python is on PATH
 set "PY=%PIG_PYTHON%"
 if not defined PY set "PY=C:\Users\Programs\Miniconda3\envs\data_science\python.exe"
 if not exist "%PY%" set "PY=python"
 
 echo ============================================================
-echo   Pig Phenotype Agent - one click launcher
-echo   (close this window or press Ctrl+C to stop the service)
+echo   Pig Phenotype Analysis Assistant
+echo   The browser opens automatically when the service is ready.
+echo   Keep this window open; close it (or press Ctrl+C) to stop.
 echo ============================================================
 echo.
 

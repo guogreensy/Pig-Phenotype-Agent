@@ -115,6 +115,20 @@ def describe_env(path: Path = ENV_FILE) -> Optional[str]:
 
 
 def open_browser(url: str, opener: Callable = webbrowser.open) -> bool:
+    """打开默认浏览器。
+
+    Windows 上优先交给系统 shell（等价于在命令行执行 ``start <url>``）。
+    ``webbrowser`` 走的也是 ShellExecute，但某些环境下会静默失败却仍返回
+    True，用户只能再手动双击控制台里的地址；直接交给 shell 更可靠，
+    失败时再退回 ``webbrowser``。
+    """
+    if sys.platform.startswith("win") and opener is webbrowser.open:
+        try:
+            subprocess.Popen(["cmd", "/c", "start", "", url],
+                             creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
+            return True
+        except OSError:
+            pass
     try:
         opener(url)
         return True
@@ -128,7 +142,7 @@ def parse_args(argv: Optional[list] = None) -> argparse.Namespace:
     parser.add_argument("--host", default=os.environ.get("PIG_HOST", DEFAULT_HOST))
     parser.add_argument("--port", type=int,
                         default=int(os.environ.get("PIG_PORT", DEFAULT_PORT)))
-    parser.add_argument("--timeout", type=float, default=30.0,
+    parser.add_argument("--timeout", type=float, default=60.0,
                         help="等待服务就绪的秒数")
     parser.add_argument("--no-browser", action="store_true", help="不自动打开浏览器")
     parser.add_argument("--python", default=sys.executable,
@@ -180,8 +194,11 @@ def main(argv: Optional[list] = None) -> int:
             return 3
         url = build_url(args.host, actual)
         print("[就绪] {0}".format(url))
-        if not args.no_browser and not open_browser(url):
-            print("浏览器未能自动打开，请手动访问：{0}".format(url))
+        if not args.no_browser:
+            if open_browser(url):
+                print("[浏览器] 已自动打开；若没有弹出，把上面的地址复制到浏览器即可。")
+            else:
+                print("浏览器未能自动打开，请手动访问：{0}".format(url))
         print("关闭本窗口（或按 Ctrl+C）即可停止服务。")
         process.wait()
         return process.returncode or 0
