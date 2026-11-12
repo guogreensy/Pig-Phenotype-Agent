@@ -30,3 +30,6 @@ tests/_tmp_*/
 /大语言模型技术与应用-结课报告.docx
 /猪只表型助手.lnk
 /任务书-*.pdf
+# 本地截图与外部评审意见（不入库，截图成品见 results/figures/ui_*.jpeg）
+屏幕截图_*.jpeg
+suggestions.txt

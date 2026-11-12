@@ -4,6 +4,8 @@
 
 上传一张图 → 识别姿态；提一个问题 → 查数据、查文献、看图，并给出带来源的回答。
 
+仓库地址：<https://github.com/guogreensy/Pig-Phenotype-Agent>
+
 > 本项目**不训练任何模型**，全部推理通过云端 API 完成。
 > 养殖数据为**模拟数据**，视觉识别结论**不构成**疾病诊断或体尺、背膘、肌内脂肪的估计。
 
@@ -58,7 +60,26 @@
 
 ---
 
-## 2. 实验结果速览
+## 2. 界面截图
+
+单页应用，浅色卡片布局；页头固定标注"养殖数据为模拟数据"，避免截图被误读为真实生产结果。
+
+<table>
+<tr>
+<td width="50%"><img src="results/figures/ui_1_home.jpeg" width="480" alt="系统首页"></td>
+<td width="50%"><img src="results/figures/ui_3_qa.jpeg" width="480" alt="智能问答结果"></td>
+</tr>
+<tr>
+<td align="center">系统首页（服务自检 / 图像识别 / 智能助手）</td>
+<td align="center">智能问答的实际输出（一次真实会话）</td>
+</tr>
+</table>
+
+截图取自本地运行实例（`http://127.0.0.1:7860`）。同一组图片也作为图 4、图 5 出现在结课报告中。
+
+---
+
+## 3. 实验结果速览
 
 **三条件消融**：90 次对话、285 次模型调用、195 次工具调用、82 万输入 token、52 分钟、**0 失败**。
 
@@ -76,9 +97,9 @@
 
 ---
 
-## 3. 快速开始
+## 4. 快速开始
 
-### 3.1 环境
+### 4.1 环境
 
 本项目在当前机器上**零安装**运行。使用已存在的 conda 环境：
 
@@ -90,7 +111,7 @@ Python 3.9，依赖（requests、tornado、numpy、scikit-learn、Pillow、matpl
 
 > 项目期间唯一新增安装的包是 `pymupdf==1.24.14`，但最终语料全部是 HTML 与 Markdown，**它从未被调用**。项目收尾时已卸载，当前环境零新增依赖。
 
-### 3.2 配置密钥
+### 4.2 配置密钥
 
 ```bat
 copy .env.example .env
@@ -109,7 +130,7 @@ PIG_TOOL_MODEL=glm-4.5-flash          # 工具调用
 
 密钥缺失时，界面与接口会**明确说明阻塞原因**，不会显示任何假的识别或回答结果。
 
-### 3.3 启动
+### 4.3 启动
 
 **方式一：一键启动（推荐）**
 
@@ -152,7 +173,7 @@ python app.py
 
 ---
 
-## 4. 命令行使用
+## 5. 命令行使用
 
 ```bat
 REM ① 构建知识库（抓取 → 分块 → 词法索引 → 向量索引，带状态检查）
@@ -176,6 +197,9 @@ python scripts\run_agent_experiment.py --conditions full --ids D1,V1 --force
 REM ⑤ 指标与图表
 python scripts\evaluate_agent.py
 python scripts\plot_agent.py
+
+REM ⑥ 导出台账（生成 docs/appendix_*.md，与结课报告附录对应）
+python scripts\export_appendices.py
 ```
 
 产物：
@@ -189,10 +213,12 @@ python scripts\plot_agent.py
 | `results/agent/runs/<cond>/<qid>.json` | 单次对话完整记录（回答、工具轨迹、引用、token、提示词指纹） |
 | `results/metrics/` | 指标表、逐题明细、人工抽查清单 |
 | `results/figures/agent_*.png` | 三张图 |
+| `docs/appendix_corpus.md` | 20 篇语料逐篇清单（编号、许可、片段数、链接） |
+| `docs/appendix_questions.md` | 30 道测试题逐题清单（题面、期望值、容差） |
 
 ---
 
-## 5. 项目结构
+## 6. 项目结构
 
 ```
 ├─ app.py                       Web 入口
@@ -220,7 +246,7 @@ python scripts\plot_agent.py
 
 ---
 
-## 6. 常见问题
+## 7. 常见问题
 
 **Q：为什么不用 Gradio？**
 `gradio==4.44.1` 要求 `pillow<11`，会把现有 pillow 降级，影响同一环境下的其它项目。零安装约束下改用 tornado（随 Jupyter 已装）+ 原生 JS 单页。
@@ -249,7 +275,7 @@ pytest 未安装。`unittest` 是标准库，覆盖等价：
 
 ---
 
-## 7. 已知限制
+## 8. 已知限制
 
 | 限制 | 依据 | 影响 |
 |---|---|---|
@@ -266,7 +292,7 @@ pytest 未安装。`unittest` 是标准库，覆盖等价：
 
 ---
 
-## 8. 文档
+## 9. 文档
 
 | 文档 | 内容 |
 |---|---|
@@ -279,3 +305,7 @@ pytest 未安装。`unittest` 是标准库，覆盖等价：
 | [docs/feasibility_report.md](docs/feasibility_report.md) | 阶段一：可行性与 API 核查 |
 | [docs/data_card.md](docs/data_card.md) | 数据集来源、许可、标签映射 |
 | [docs/limitations.md](docs/limitations.md) | 阶段一的局限与适用边界 |
+| [docs/appendix_corpus.md](docs/appendix_corpus.md) | 附录 A：20 篇检索语料逐篇清单（与结课报告表 A1 对应） |
+| [docs/appendix_questions.md](docs/appendix_questions.md) | 附录 B：30 道测试题逐题清单（与结课报告附录 B 对应） |
+
+结课报告《基于检索增强生成与 Agent 工具调用的猪只表型智能分析助手设计与评估》、任务书等项目内部材料不入库，仅本地保留；报告引用的代码、索引与运行记录在本仓库内。

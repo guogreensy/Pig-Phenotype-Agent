@@ -26,3 +26,13 @@
 {"seq": 2, "timestamp": "2026-11-11T11:52:28+08:00", "tool": "aggregate_metric", "args": {"metric": "feed_kg", "group_by": "pen", "start_date": "2026-10-31", "end_date": "2026-11-06", "stat": "mean"}, "ok": true, "error": null, "duration_ms": 0.0}
 {"seq": 3, "timestamp": "2026-11-11T11:52:31+08:00", "tool": "query_pig_records", "args": {"pig_id": "P2-007", "start_date": "2026-10-31", "end_date": "2026-11-06", "metrics": ["feed_kg"], "limit": 50}, "ok": true, "error": null, "duration_ms": 0.0}
 {"seq": 4, "timestamp": "2026-11-11T11:52:33+08:00", "tool": "detect_anomalies", "args": {"metric": "feed_kg", "scope": "pig", "days": 7, "z_threshold": 2.0}, "ok": true, "error": null, "duration_ms": 16.0}
+{"seq": 1, "timestamp": "2026-11-12T20:09:40+08:00", "tool": "list_sample_images", "args": {"limit": 10}, "ok": true, "error": null, "duration_ms": 234.0}
+{"seq": 1, "timestamp": "2026-11-12T20:16:30+08:00", "tool": "search_knowledge", "args": {"query": "猪只姿态识别 深度学习方法", "k": 5, "mode": "auto"}, "ok": true, "error": null, "duration_ms": 844.0}
+{"seq": 2, "timestamp": "2026-11-12T20:16:33+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_7070994#0053"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 3, "timestamp": "2026-11-12T20:16:34+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_8147168#0051"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 4, "timestamp": "2026-11-12T20:16:41+08:00", "tool": "fetch_passage", "args": {"chunk_id": "pmc_11833201#0067"}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 1, "timestamp": "2026-11-12T20:36:12+08:00", "tool": "detect_anomalies", "args": {"metric": "feed_kg", "scope": "pen", "days": 7, "z_threshold": 2.0}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 2, "timestamp": "2026-11-12T20:36:16+08:00", "tool": "detect_anomalies", "args": {"metric": "feed_kg", "scope": "pig", "days": 7, "z_threshold": 2.0}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 3, "timestamp": "2026-11-12T20:36:17+08:00", "tool": "list_pens", "args": {}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 4, "timestamp": "2026-11-12T20:36:21+08:00", "tool": "query_pig_records", "args": {"pig_id": "P2-007", "start_date": "2026-10-31", "end_date": "2026-11-06", "metrics": ["feed_kg", "weight_kg", "activity_index", "lying_ratio"], "limit": 50}, "ok": true, "error": null, "duration_ms": 0.0}
+{"seq": 5, "timestamp": "2026-11-12T20:36:27+08:00", "tool": "aggregate_metric", "args": {"metric": "feed_kg", "group_by": "pen", "start_date": "2026-10-31", "end_date": "2026-11-06", "stat": "mean"}, "ok": true, "error": null, "duration_ms": 16.0}
