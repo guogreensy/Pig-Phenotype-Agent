@@ -243,7 +243,7 @@ python scripts\export_appendices.py
 │  └─ agent/                    llm_client 客户端 · planner 提示词
 │                               executor 循环 · report 组装
 ├─ scripts/                     构建、实验、评测、绘图、冒烟
-├─ tests/                       478 项单元测试
+├─ tests/                       493 项单元测试（27 个模块，unittest）
 ├─ data/                        samples 样本 · kb 知识库 · records 模拟数据
 │                               experiment 题集 · datasets 视觉样本
 ├─ results/                     agent 运行记录 · metrics 指标 · figures 图表
