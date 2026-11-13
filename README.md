@@ -60,9 +60,13 @@
 
 ---
 
-## 2. 界面截图
+## 2. 界面与架构
 
-单页应用，浅色卡片布局；页头固定标注"养殖数据为模拟数据"，避免截图被误读为真实生产结果。
+系统分为交互层、智能体层、工具与数据层三层，层间以函数调用与结构化返回值耦合（与结课报告图 1 相同）：
+
+<img src="results/figures/architecture.png" width="900" alt="系统三层体系结构">
+
+界面为单页应用，浅色卡片布局；页头固定标注"养殖数据为模拟数据"，避免截图被误读为真实生产结果。
 
 <table>
 <tr>
@@ -75,7 +79,7 @@
 </tr>
 </table>
 
-截图取自本地运行实例（`http://127.0.0.1:7860`）。同一组图片也作为图 4、图 5 出现在结课报告中。
+截图取自本地运行实例（`http://127.0.0.1:7860`）。图 4、图 5 与结课报告中的界面图同源。
 
 ---
 
@@ -198,7 +202,10 @@ REM ⑤ 指标与图表
 python scripts\evaluate_agent.py
 python scripts\plot_agent.py
 
-REM ⑥ 导出台账（生成 docs/appendix_*.md，与结课报告附录对应）
+REM ⑥ 导出模拟数据（4 栏位 / 48 头猪 / 1440 条日记录 → CSV）
+python scripts\export_mock_data.py
+
+REM ⑦ 导出台账（生成 docs/appendix_*.md，与结课报告附录对应）
 python scripts\export_appendices.py
 ```
 
@@ -208,7 +215,8 @@ python scripts\export_appendices.py
 |---|---|
 | `data/kb/sources.json` | 20 篇文献的来源、许可、链接 |
 | `data/kb/chunks.jsonl` | 943 个片段（含章节、字符区间） |
-| `data/kb/dense_index.npz` | 943 × 2048 向量矩阵 |
+| `data/kb/index/` | 稠密矩阵 `dense.npz`、词法模型 `lexical.pkl`、片段编号表 |
+| `data/records/` | 模拟养殖数据：`pens.csv`、`pigs.csv`、`daily_records.csv`、`meta.json` |
 | `data/experiment/agent_questions.jsonl` | 30 题与标准答案 |
 | `results/agent/runs/<cond>/<qid>.json` | 单次对话完整记录（回答、工具轨迹、引用、token、提示词指纹） |
 | `results/metrics/` | 指标表、逐题明细、人工抽查清单 |
@@ -236,7 +244,8 @@ python scripts\export_appendices.py
 │                               executor 循环 · report 组装
 ├─ scripts/                     构建、实验、评测、绘图、冒烟
 ├─ tests/                       478 项单元测试
-├─ data/                        samples 样本 · kb 知识库 · experiment 题集
+├─ data/                        samples 样本 · kb 知识库 · records 模拟数据
+│                               experiment 题集 · datasets 视觉样本
 ├─ results/                     agent 运行记录 · metrics 指标 · figures 图表
 └─ docs/                        technical_report_agent · experiment_report_agent
                                 （另有阶段一的可行性、数据卡、技术/实验报告、局限）

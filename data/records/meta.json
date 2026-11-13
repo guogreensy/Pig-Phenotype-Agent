@@ -1,0 +1,75 @@
+{
+  "source": "simulated",
+  "seed": 20261107,
+  "pens": 4,
+  "pigs": 48,
+  "records": 1440,
+  "start_date": "2026-10-08",
+  "end_date": "2026-11-06",
+  "days": 30,
+  "scenarios": [
+    {
+      "id": "heat_stress_P3",
+      "target": "P3",
+      "kind": "environment",
+      "days": [
+        18,
+        24
+      ],
+      "desc": "P3 栏第 18–24 天热应激：温度 +4.5℃、饮水 +25%、采食 −12%"
+    },
+    {
+      "id": "low_feed_P2-007",
+      "target": "P2-007",
+      "kind": "individual",
+      "days": [
+        20,
+        30
+      ],
+      "desc": "P2-007 自第 20 天起采食 −35%、增重放缓"
+    },
+    {
+      "id": "low_activity_P4-003",
+      "target": "P4-003",
+      "kind": "individual",
+      "days": [
+        12,
+        30
+      ],
+      "desc": "P4-003 自第 12 天起活动指数 −0.22（疑似跛行）"
+    }
+  ],
+  "disclaimer": "模拟数据，仅用于验证工具调用链路与报表口径，不代表任何真实养殖场，不可用于生产决策。",
+  "per_pen_latest": {
+    "P1": {
+      "pigs": 12,
+      "avg_weight_kg": 107.86,
+      "avg_feed_kg": 2.45,
+      "camera": "cam1"
+    },
+    "P2": {
+      "pigs": 12,
+      "avg_weight_kg": 109.12,
+      "avg_feed_kg": 2.36,
+      "camera": "cam2"
+    },
+    "P3": {
+      "pigs": 12,
+      "avg_weight_kg": 106.36,
+      "avg_feed_kg": 2.31,
+      "camera": "cam3"
+    },
+    "P4": {
+      "pigs": 12,
+      "avg_weight_kg": 108.15,
+      "avg_feed_kg": 2.39,
+      "camera": "cam4"
+    }
+  },
+  "files": {
+    "pens.csv": 4,
+    "pigs.csv": 48,
+    "daily_records.csv": 1440
+  },
+  "note": "模拟数据，全部由 src/tools/mock_data.py 以固定种子生成，不代表任何真实养殖场；日记录中的重量、采食量与活动指数均为按预设轨迹合成的数值。"
+}
