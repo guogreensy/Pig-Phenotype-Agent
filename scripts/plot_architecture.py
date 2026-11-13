@@ -49,6 +49,18 @@ _BOXES: list[tuple[str, float, float, float, float]] = []
 _TEXTS: list = []
 _CANVAS = [10.0, 10.0]
 
+#: 成图宽度（英寸）。画布按报告中的印刷宽度出图，图内字号即为纸面字号：
+#: 若按 11.6 英寸画布绘制再缩到 13.6 cm 插入，10 pt 的字落到纸上只剩 4.6 pt。
+PRINT_WIDTH_CM = 13.6
+#: 字号折减系数。设计稿按 11.6 英寸画布调版，改成印刷尺寸后 1 个绘图单位变小，
+#: 同样的 pt 会显得过大，故统一乘以该系数（10 pt → 7.5 pt），再交给 _verify 检查是否溢出。
+FONT_SCALE = 0.82
+
+
+def _pt(size: float) -> float:
+    """把设计稿字号换算为印刷尺寸下的实际字号。"""
+    return size * FONT_SCALE
+
 
 def _register(name, x, y, w, h):
     _BOXES.append((name, x, y, w, h))
@@ -58,34 +70,35 @@ def _box(ax, name, x, y, w, h, text, *, face=GREY_SOFT, edge=LINE,
          weight="normal", size=10, color=INK):
     ax.add_patch(FancyBboxPatch((x, y), w, h,
                                 boxstyle="round,pad=0.01,rounding_size=0.06",
-                                linewidth=1.0, facecolor=face, edgecolor=edge,
+                                linewidth=0.9, facecolor=face, edgecolor=edge,
                                 zorder=2))
     artist = ax.text(x + w / 2, y + h / 2, text, ha="center", va="center",
-                     fontsize=size, color=color, weight=weight, zorder=3,
-                     linespacing=1.7)
+                     fontsize=_pt(size), color=color, weight=weight, zorder=3,
+                     linespacing=1.6)
     _register(name, x, y, w, h)
     _TEXTS.append((name, artist, ax, (x, y, w, h)))
 
 
-def _arrow(ax, start, end, *, color=BLUE, lw=1.3, ls="-", rad=0.0,
+def _arrow(ax, start, end, *, color=BLUE, lw=1.1, ls="-", rad=0.0,
            label=None, label_offset=(0, 0), size=9):
-    ax.add_patch(FancyArrowPatch(start, end, arrowstyle="-|>", mutation_scale=13,
+    ax.add_patch(FancyArrowPatch(start, end, arrowstyle="-|>", mutation_scale=10,
                                  linewidth=lw, color=color, linestyle=ls,
                                  connectionstyle="arc3,rad=%s" % rad,
-                                 shrinkA=3, shrinkB=3, zorder=1))
+                                 shrinkA=2, shrinkB=2, zorder=1))
     if label:
         ax.text((start[0] + end[0]) / 2 + label_offset[0],
                 (start[1] + end[1]) / 2 + label_offset[1], label,
-                ha="center", va="center", fontsize=size, color=color, zorder=4,
-                bbox=dict(boxstyle="round,pad=0.22", fc="white", ec="none"))
+                ha="center", va="center", fontsize=_pt(size), color=color, zorder=4,
+                bbox=dict(boxstyle="round,pad=0.18", fc="white", ec="none"))
 
 
-def _canvas(width, height):
+def _canvas(width, height, print_width_cm=PRINT_WIDTH_CM):
     _BOXES.clear()
     _TEXTS.clear()
     top = 10.0 * height / width
     _CANVAS[0], _CANVAS[1] = 10.0, top
-    fig, ax = plt.subplots(figsize=(width, height))
+    fig_w = print_width_cm / 2.54
+    fig, ax = plt.subplots(figsize=(fig_w, fig_w * height / width))
     ax.set_xlim(0, 10)
     ax.set_ylim(0, top)
     ax.axis("off")
@@ -132,7 +145,7 @@ def draw_architecture() -> Path:
     fig, ax, top = _canvas(11.6, 5.6)
 
     for label, y in (("交互层", 4.22), ("智能体层", 2.62), ("工具与数据层", 0.95)):
-        ax.text(0.14, y, label, ha="center", va="center", fontsize=10,
+        ax.text(0.14, y, label, ha="center", va="center", fontsize=_pt(10),
                 color=MUTED, weight="bold", rotation=90)
 
     _box(ax, "交互层", 1.00, 3.75, 8.55, 0.95,
@@ -155,7 +168,7 @@ def draw_architecture() -> Path:
          "文献知识库\n20 篇 / 943 片段\n双通道索引",
          face=GREEN_SOFT, edge=GREEN_EDGE, size=9.5)
     _box(ax, "工具与视觉", 6.44, 0.30, 3.11, 1.30,
-         "8 个只读工具 + 视觉模型\nJSON Schema 约束 · 结构化错误回填",
+         "8 个只读工具 + 视觉模型\nJSON Schema 约束\n结构化错误回填",
          face=GREEN_SOFT, edge=GREEN_EDGE, size=9.2)
 
     _arrow(ax, (5.30, 3.75), (5.30, 3.30), label="提问", label_offset=(0.45, 0))
@@ -174,16 +187,16 @@ def draw_architecture() -> Path:
 def draw_retrieval_flow() -> Path:
     fig, ax, top = _canvas(11.6, 4.8)
 
-    _box(ax, "问题", 0.20, 1.62, 1.55, 1.05, "问题 q\n（含工具上下文）",
+    _box(ax, "问题", 0.20, 1.62, 1.55, 1.05, "问题 q\n（含上下文）",
          face=BLUE_SOFT, edge=BLUE_MID, size=9.2)
     _box(ax, "词法通道", 2.30, 2.62, 2.65, 1.10,
-         "词法通道　char_wb 2–3 gram\nTF-IDF 28 932 维\n索引 4.2 MB",
-         face="white", edge=BLUE_MID, size=9.2)
+         "词法通道 char_wb 2–3 gram\nTF-IDF 28 932 维\n索引 4.2 MB",
+         face="white", edge=BLUE_MID, size=8.8)
     _box(ax, "稠密通道", 2.30, 1.15, 2.65, 1.10,
          "稠密通道　2048 维嵌入\n943 × 2048 矩阵\n余弦相似度",
          face="white", edge=BLUE_MID, size=9.2)
     _box(ax, "降级", 2.30, 0.25, 2.65, 0.62,
-         "稠密通道异常 → 仅词法（带降级标志）", face=RED_SOFT, edge=RED_EDGE,
+         "降级：稠密异常 → 只走词法", face=RED_SOFT, edge=RED_EDGE,
          size=8.6, color=RED)
     _box(ax, "融合", 5.70, 1.55, 1.95, 1.15,
          "加权 RRF\nk = 60\n权重 1.0 / 0.5", face=AMBER_SOFT, edge=AMBER_EDGE,
@@ -206,9 +219,9 @@ def draw_retrieval_flow() -> Path:
 
 
 def draw_agent_loop() -> Path:
-    fig, ax, top = _canvas(10.6, 5.4)
+    fig, ax, top = _canvas(10.6, 5.4, print_width_cm=12.4)
 
-    _box(ax, "题面", 0.25, 2.30, 1.75, 1.00, "题面 + 工具说明书",
+    _box(ax, "题面", 0.25, 2.30, 1.75, 1.00, "题面\n+ 工具说明书",
          face=BLUE_SOFT, edge=BLUE_MID, size=9.2)
     _box(ax, "模型决策", 2.45, 2.30, 1.85, 1.00, "模型决策\n（本轮输出）",
          face="white", edge=BLUE_MID, size=9.2)
@@ -219,7 +232,7 @@ def draw_agent_loop() -> Path:
     _box(ax, "最终回答", 7.55, 2.30, 1.95, 1.00, "最终回答\n引用 + 轨迹",
          face=BLUE_SOFT, edge=BLUE_MID, size=9.2)
     _box(ax, "约束", 2.45, 0.20, 7.05, 0.55,
-         "同一「工具 + 参数」≤ 2 次　·　总步数 ≤ 6　·　步数耗尽：去除工具定义，强制给出阶段性结论",
+         "同一「工具 + 参数」≤ 2 次　·　总步数 ≤ 6　·　耗尽后强制收尾",
          face=AMBER_SOFT, edge=AMBER_EDGE, size=8.8, color=AMBER)
 
     _arrow(ax, (2.00, 2.80), (2.45, 2.80))

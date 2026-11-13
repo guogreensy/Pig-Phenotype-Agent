@@ -51,7 +51,8 @@ def plot_task_metrics(index: Dict[str, Dict[str, Any]], path: Path) -> Optional[
     if not available:
         return None
 
-    fig, ax = plt.subplots(figsize=(9.2, 4.2))
+    # 画布按印刷宽度（13.6 cm）出图，图内字号即纸面字号，避免整幅缩放后文字过小
+    fig, ax = plt.subplots(figsize=(13.6 / 2.54, 2.75))
     width = 0.8 / len(available)
     positions = list(range(len(metrics)))
     for offset, condition in enumerate(available):
@@ -61,16 +62,17 @@ def plot_task_metrics(index: Dict[str, Dict[str, Any]], path: Path) -> Optional[
                       color=COLORS[condition])
         for bar, value in zip(bars, values):
             ax.text(bar.get_x() + bar.get_width() / 2, value + 0.02,
-                    "{0:.0%}".format(value), ha="center", va="bottom", fontsize=7.5)
+                    "{0:.0%}".format(value), ha="center", va="bottom", fontsize=6.4)
 
     ax.set_xticks(positions)
-    ax.set_xticklabels([label for label, _ in metrics], fontsize=8.5)
+    ax.set_xticklabels([label for label, _ in metrics], fontsize=7.0)
     ax.set_ylim(0, 1.15)
-    ax.set_ylabel("比例", fontsize=9)
-    ax.set_title("三个条件下的任务完成质量（越高越好）", fontsize=10)
-    ax.legend(fontsize=8, ncol=len(available), loc="upper center")
+    ax.set_ylabel("比例", fontsize=7.2)
+    ax.set_title("三个条件下的任务完成质量（越高越好）", fontsize=7.8)
+    ax.legend(fontsize=6.6, ncol=len(available), loc="upper center")
     ax.grid(axis="y", alpha=0.25, linewidth=0.6)
     ax.set_axisbelow(True)
+    fig.tight_layout()
     return save(fig, path)
 
 
@@ -84,7 +86,7 @@ def plot_cost(index: Dict[str, Dict[str, Any]], path: Path) -> Optional[Path]:
     latency = [index[c].get("latency_mean") or 0 for c in available]
     p95 = [index[c].get("latency_p95") or 0 for c in available]
 
-    fig, axes = plt.subplots(1, 2, figsize=(9.6, 3.8))
+    fig, axes = plt.subplots(1, 2, figsize=(14.2 / 2.54, 2.35))
     xs = range(len(available))
     width = 0.36
 
@@ -97,28 +99,28 @@ def plot_cost(index: Dict[str, Dict[str, Any]], path: Path) -> Optional[Path]:
         for bar in bars:
             height = bar.get_height()
             ax.text(bar.get_x() + bar.get_width() / 2, height + 0.1,
-                    "{0:.1f}".format(height), ha="center", va="bottom", fontsize=7.5)
+                    "{0:.1f}".format(height), ha="center", va="bottom", fontsize=6.0)
     ax.set_xticks(list(xs))
-    ax.set_xticklabels(labels, fontsize=8.5)
-    ax.set_ylabel("每次对话平均次数", fontsize=9)
-    ax.set_title("调用开销", fontsize=10)
-    ax.legend(fontsize=8)
+    ax.set_xticklabels(labels, fontsize=6.8)
+    ax.set_ylabel("每次对话平均次数", fontsize=7.0)
+    ax.set_title("调用开销", fontsize=7.4)
+    ax.legend(fontsize=6.2)
     ax.grid(axis="y", alpha=0.25, linewidth=0.6)
     ax.set_axisbelow(True)
 
     ax = axes[1]
     bars = ax.bar(list(xs), latency, 0.55, color=[COLORS[c] for c in available],
                   label="平均耗时")
-    ax.plot(list(xs), p95, "o--", color="#dc2626", markersize=4, linewidth=1,
+    ax.plot(list(xs), p95, "o--", color="#dc2626", markersize=3, linewidth=1,
             label="P95 耗时")
     for x, value in zip(xs, latency):
         ax.text(x, value + 1.5, "{0:.0f}s".format(value), ha="center",
-                va="bottom", fontsize=7.5)
+                va="bottom", fontsize=6.0)
     ax.set_xticks(list(xs))
-    ax.set_xticklabels(labels, fontsize=8.5)
-    ax.set_ylabel("秒", fontsize=9)
-    ax.set_title("单次对话耗时", fontsize=10)
-    ax.legend(fontsize=8)
+    ax.set_xticklabels(labels, fontsize=6.8)
+    ax.set_ylabel("秒", fontsize=7.0)
+    ax.set_title("单次对话耗时", fontsize=7.4)
+    ax.legend(fontsize=6.2)
     ax.grid(axis="y", alpha=0.25, linewidth=0.6)
     ax.set_axisbelow(True)
 
@@ -150,20 +152,21 @@ def plot_data_heatmap(path: Path, out: Path) -> Optional[Path]:
                 line.append(hit / total)
         matrix.append(line)
 
-    fig, ax = plt.subplots(figsize=(8.6, 2.8))
+    fig, ax = plt.subplots(figsize=(14.2 / 2.54, 1.85))
     image = ax.imshow(matrix, aspect="auto", cmap="Blues", vmin=0, vmax=1)
     ax.set_xticks(range(len(questions)))
-    ax.set_xticklabels(questions, fontsize=8)
+    ax.set_xticklabels(questions, fontsize=6.6)
     ax.set_yticks(range(len(CONDITIONS)))
-    ax.set_yticklabels([CONDITION_CN[c] for c in CONDITIONS], fontsize=8.5)
+    ax.set_yticklabels([CONDITION_CN[c] for c in CONDITIONS], fontsize=6.8)
     for i, line in enumerate(matrix):
         for j, value in enumerate(line):
             if value != value:  # NaN
                 continue
             ax.text(j, i, "{0:.0f}%".format(value * 100), ha="center", va="center",
-                    fontsize=7.5, color="white" if value > 0.6 else "#1e293b")
-    ax.set_title("数据题：期望数值被回答命中的比例", fontsize=10)
+                    fontsize=6.0, color="white" if value > 0.6 else "#1e293b")
+    ax.set_title("数据题：期望数值被回答命中的比例", fontsize=7.4)
     fig.colorbar(image, ax=ax, fraction=0.025, pad=0.02)
+    fig.tight_layout()
     return save(fig, out)
 
 

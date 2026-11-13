@@ -22,11 +22,16 @@ from src.schema import POSTURES, POSTURE_CN  # noqa: E402
 PALETTE = ["#3b82f6", "#22c55e", "#f59e0b", "#ef4444", "#a855f7"]
 
 
+#: 出图分辨率。报告中的插图宽度为 12—14 cm，按 400 dpi 输出可保证放大到 200% 仍无锯齿。
+SAVE_DPI = 400
+
+
 def setup_font() -> None:
     """启用系统中文字体（Windows 自带微软雅黑/黑体）。"""
     plt.rcParams["font.sans-serif"] = ["Microsoft YaHei", "SimHei", "SimSun", "DejaVu Sans"]
     plt.rcParams["axes.unicode_minus"] = False
     plt.rcParams["figure.dpi"] = 120
+    plt.rcParams["savefig.dpi"] = SAVE_DPI
     plt.rcParams["savefig.bbox"] = "tight"
 
 
@@ -40,7 +45,7 @@ def _require(results: Sequence[EvaluationResult]) -> bool:
 
 def save(fig, path: Path) -> Path:
     path.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(path)
+    fig.savefig(path, dpi=SAVE_DPI)
     plt.close(fig)
     return path
 
